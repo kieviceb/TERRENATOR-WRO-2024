@@ -1,0 +1,118 @@
+#include <Servo.h>
+#include <Wire.h>
+#include <VL53L0X.h>
+
+VL53L0X sensor;
+VL53L0X sensor2;
+Servo Dir;
+int a;          // varible para datos del sensor derecho
+int b;          // varible para datos del sensor izquiierdo
+int pos = 0;    // variable para almacenar la posición del servomotor
+
+// Definición de pines
+const int motorPin1 = 6;
+const int motorPin2 = 10;
+const int enablePin = 11;
+
+void setup() {
+  Dir.attach(9);  // adjunta el servomotor al pin 9 del Arduino
+
+pinMode(3, OUTPUT);
+pinMode(5, OUTPUT);
+
+digitalWrite(3, LOW);
+digitalWrite(5, LOW);
+delay(500);
+
+Wire.begin();
+Serial.begin (9600);
+digitalWrite(3, HIGH);
+sensor.init(true);
+sensor.setAddress((uint8_t)01);
+
+digitalWrite(5, HIGH);
+sensor2.init(true);
+sensor2.setAddress((uint8_t)02);
+
+//Serial.println("addresses set");
+
+sensor.startContinuous();
+sensor2.startContinuous();
+
+//MOTOR
+
+// Configurar los pines como salida
+  pinMode(motorPin1, OUTPUT);
+  pinMode(motorPin2, OUTPUT);
+  pinMode(enablePin, OUTPUT);
+  
+  // Habilitar el motor
+  digitalWrite(enablePin, HIGH);
+}
+
+void loop() {
+
+  //###GIRAR HACIA ADELANTE###//
+  //digitalWrite(motorPin1, HIGH);
+  //digitalWrite(motorPin2, LOW);
+  //delay(2000); // Gira durante 2 segundos
+
+  //v###GIRAR HACIA ATRAS###
+  //digitalWrite(motorPin1, LOW);
+  //digitalWrite(motorPin2, HIGH);
+  
+  //###DETENER EL MOTOR###//
+  //digitalWrite(motorPin1, LOW);
+  //digitalWrite(motorPin2, LOW);
+
+  //###PRUEBA DE DIRECION###//
+  //Dir.write(100);
+  //delay(2000);
+  //Dir.write(130);
+  //delay(2000);
+  //Dir.write(100);
+  //delay(2000);
+  //Dir.write(70);
+  //delay(2000);
+
+  //###PRUEBA DE DISTANCIA###//
+  //Serial.print("Distance B : ");
+  //Serial.print(b);
+  //Serial.println("");
+  //delay(100);
+
+a=sensor.readRangeContinuousMillimeters(); //lectura derecha
+b=sensor2.readRangeContinuousMillimeters(); //lectura derecha
+
+//Serial.print("Distance B : ");
+//Serial.print(b);
+//Serial.println("");
+//delay(50);
+ Dir.write(100);
+ digitalWrite(motorPin1, HIGH);
+ digitalWrite(motorPin2, LOW);
+ 
+while (true) {
+  a=sensor.readRangeContinuousMillimeters();
+  b=sensor2.readRangeContinuousMillimeters();
+  //delay(100);
+  //Serial.print(a);
+  //Serial.println("");
+  //Dir.write(90);
+  
+  //delay(2700);
+  if (a>500){
+    Dir.write(120);
+    delay(2700);
+    Dir.write(90);
+    delay(500);
+    Serial.print(a);
+    Serial.println("");
+
+  }if (a<250){
+    Dir.write(60);
+  }
+  }
+  }
+
+ 
