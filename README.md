@@ -1,0 +1,1 @@
+Terrenator es un robot construido en impresión 3d, programado con un arduino uno para controlar el motor dc, el servo motor y dos sensores laser; el arduino uno es alimentado por medio de un powwer bank de 5000mAh y el motor alimentado por una batería OVONIC de 12V; juntos todos estos componentes hacen un carro autónomo capaz de cumplir la pista de la WRO 2024.
