@@ -10,5 +10,5 @@ A list of all the electrical and mechanical components in the robot.
 - OVONIC 3s 2200mAh 11.1V Lipo Battery
 - Proto wires
 - Duracell 5000mAh power bank
-- 3d parts (you can find the printables in ´models´ )
+- 3d parts (you can find the printables in `models`)
 
