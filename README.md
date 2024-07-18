@@ -1,4 +1,4 @@
-# Terrenator WRO Future Engineers Panama 2024 
+# Terrenator's readme
 ![BAnner TERRENATOR](https://github.com/user-attachments/assets/4b1e2dc8-cb9b-4220-bdbd-908330c50c6d)
 ## Components
 A list of all the electrical and mechanical components in the robot.
