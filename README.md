@@ -15,9 +15,9 @@ A list of all the electrical and mechanical components in the robot.
 - RC Car wheels x4
 
 ## Overview of our repository
-`schemes`- contains the circuit diagram, wiring diagram and driving diagram.
-`models` - includes all the 3d printed parts of the robot.
-`src` - the codes for both challenges, with and without obstacles.
-`t-photos` - photos of the team one formal and a funny one.
-`v-photos` - photos of every angle of the robot.
-`video` - the link to our youtube channel where you can see our robot in action.
+* `schemes`- contains the circuit diagram, wiring diagram and driving diagram.
+* `models` - includes all the 3d printed parts of the robot.
+* `src` - the codes for both challenges, with and without obstacles.
+* `t-photos` - photos of the team one formal and a funny one.
+* `v-photos` - photos of every angle of the robot.
+* `video` - the link to our youtube channel where you can see our robot in action.
