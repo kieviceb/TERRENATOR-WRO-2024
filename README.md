@@ -20,6 +20,7 @@ A list of all the electrical and mechanical components in the robot.
 - Arduino UNO R3
 - Mini breadboard
 - TB6612FNG motor driver
+- HC-SRO4 ultrasonic sensor
 - TCS3472 colour sensor 
 - POLOLU Metal Gearmotor 25Dx65L mm MP 12V with 48 CPR Encoder
 - Steren Metal gear servo motor 
@@ -39,3 +40,7 @@ For the first challenge we usea the colour sensor to detect the orange and blue 
 Now in this challenge we got the obstacles, the green blocks, red blocks and the parking spot, we found this one much harder than the other one so we decided to go with something more advance, our main component for this round is the PIXY cam, wich is an AI cam that is connected to the arduino and sets the signatures, we recorded 3 signatures in the PIXY cam "g.block", it refers to the green blocks, "r.block", it refers to the red blocks and "pkspot", that refers to the parking spot, so when the camera sees any of this objects in the track it automatically detects it and then the code can process it, with the PIXY cam is much easier to process images than using a normal camera with artificial vision; In the code when the camera sends the signatures it can send many at the same time so in the code there is a conditional that uses the first signature detected and executes the action all that in a three round loop, after that the robot is able to look for the parking spot and execute the function "parkeate" and finish the challenge.
 
 ## Mobility strategy
+For steering we designed our own to make the angles of the servo when turning more precise, that is why we made a steering with gears that is very precise, the gear is mounted to the servo motor and at the bottom a bar with teeth that fits with the gear at the same time. move from side to side.
+<img align="right" alt="NAUT" width="350" src="https://github.com/user-attachments/assets/784ff02c-19eb-4f33-af46-f8d12d021886">
+
+For power we decided to use the POLOLU Metal Gearmotor 25Dx65L mm MP 12V with 48 CPR Encoder because it has good torque and speed, as our robot is based on 3D parts its structure is very light, which makes it go much faster and by having a powerful engine is usefull.
