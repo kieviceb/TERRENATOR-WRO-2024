@@ -28,7 +28,8 @@ A list of all the electrical and mechanical components in the robot.
 - Pixy cam
 - Duracell 5000mAh power bank
 - 3d structure (you can find the printables in `models`)
-- RC Car wheels x4
+- RC Car wheels x2
+- MAkeblock car kit wheels x2
 
 ## Strategy
 **First Challenge**
