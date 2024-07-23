@@ -19,7 +19,7 @@
 A list of all the electrical and mechanical components in the robot.
 - Arduino UNO R3
 - Mini breadboard
-- TB6612FNG motor driver
+- H Bridge
 - HC-SRO4 ultrasonic sensor
 - TCS3472 colour sensor 
 - POLOLU Metal Gearmotor 25Dx65L mm MP 12V with 48 CPR Encoder
