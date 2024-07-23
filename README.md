@@ -21,7 +21,8 @@ A list of all the electrical and mechanical components in the robot.
 - Mini breadboard
 - TB6612FNG motor driver
 - TCS3472 colour sensor 
-- POLOLU Metal Gearmotor 25Dx65L mm MP 12V with 48 CPR Encoder  
+- POLOLU Metal Gearmotor 25Dx65L mm MP 12V with 48 CPR Encoder
+- Steren Metal gear servo motor 
 - OVONIC 3s 2200mAh 11.1V Lipo Battery
 - Proto wires
 - Pixy cam
