@@ -19,22 +19,29 @@
 A list of all the electrical and mechanical components in the robot.
 - Arduino UNO R3
 - Mini breadboard
-- H Bridge
-- HC-SRO4 ultrasonic sensor x2
-- TCS3472 colour sensor 
+- H Bridge L298N
+- HC-SRO4 ultrasonic sensor x3
+- TCS3472 colour sensor X2
 - POLOLU Metal Gearmotor 25Dx65L mm MP 12V with 48 CPR Encoder
 - Steren Metal gear servo motor 
 - OVONIC 3s 2200mAh 11.1V Lipo Battery
 - Proto wires
-- Pixy cam
-- Duracell 5000mAh power bank
+- Pixy cam 2.1
+- Havic 5000mAh power bank Model HV-P8004X
 - 3d structure (you can find the printables in `models`)
 - RC Car wheels x2
-- MAkeblock car kit wheels x2
+- Makeblock car kit wheels x2
+- Plastic straps x2
+- Toggle-Switch SPDT 6A/125VAC
+- Iron bar for the engine
+
+- (for a more detailed explanation of the components, review the engineering journal)
 
 ## Strategy
 **First Challenge**
-For the first challenge we usea the colour sensor to detect the orange and blue lines on te corners like traffic signals, so the robot knows when to turn, if it sees orange first and then blue it means turn to the right, if it sees blue and then orange means turn to the left and to complete the 3 rounds it has to turn 12 times and for that we have a counter in the code, and the ultrasonic sensors, we have one on each side to avoid the walls and dont crash.
+For the first challenge we use the color sensor to detect the orange and blue lines on te corners like traffic signals, so the robot knows when to turn. If it sees orange first and then blue it means turn to the right, if it sees blue and then orange means to turn to the left, and to complete the 3 rounds it has to turn 12 times and for that we have a counter in the code that detect when the robot complete the 12 corners and looks for the starting position, we also have ultrasonic sensors, we have three sensors positioned in front and on the sides, we used as a backup for color sensors, the robot have the capability to save the round if the color sensor don´t detect any of the colors on the floor, that means the robot is trained for make the round in three different modes.
+For national tournament we are planning to use PID A PID (Proportional-Integral-Derivative) is a type of controller used in control systems to maintain a process variable (such as temperature, speed, position, etc.) at a desired value, called a setpoint. The PID controller adjusts the output of a system based on three terms: proportional, integral and derivative, each of which responds to different aspects of the error between the setpoint and the measured process variable. This allow us to have a more efficient way to make the first round in least time.
+
 
 **Second Challenge**
 Now in this challenge we got the obstacles, the green blocks, red blocks and the parking spot, we found this one much harder than the other one so we decided to go with something more advance, our main component for this round is the PIXY cam, wich is an AI cam that is connected to the arduino and sets the signatures, we recorded 3 signatures in the PIXY cam "g.block", it refers to the green blocks, "r.block", it refers to the red blocks and "pkspot", that refers to the parking spot, so when the camera sees any of this objects in the track it automatically detects it and then the code can process it, with the PIXY cam is much easier to process images than using a normal camera with artificial vision; In the code when the camera sends the signatures it can send many at the same time so in the code there is a conditional that uses the first signature detected and executes the action all that in a three round loop, after that the robot is able to look for the parking spot and execute the function "parkeate" and finish the challenge.
