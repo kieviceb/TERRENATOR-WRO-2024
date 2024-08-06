@@ -1,5 +1,6 @@
 # Video.md
-![VIDEO BANNER](https://github.com/user-attachments/assets/05cc7b60-78cf-4e79-9692-8ca5ff0c4c49)
+![Negro Rojo Videojuegos Arte Canal de YouTube (Banner mediano con formato EE  UU  (horizontal)) (Banner mediano con formato EE  UU  (horizontal))](https://github.com/user-attachments/assets/d9df7686-690f-4a9e-bd8a-055dd0b7334d)
+
 
 
 Click down below to go watch the demonstration video on our youtube channel.
