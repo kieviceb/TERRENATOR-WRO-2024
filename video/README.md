@@ -1,5 +1,6 @@
 # Video.md
-![Negro Rojo Videojuegos Arte Canal de YouTube (Banner mediano con formato EE  UU  (horizontal)) (Banner mediano con formato EE  UU  (horizontal))](https://github.com/user-attachments/assets/d9df7686-690f-4a9e-bd8a-055dd0b7334d)
+![Uploading Negro Rojo Videojuegos Arte Canal de YouTube (Banner mediano con formato EE. UU. (horizontal)) (Banner mediano con formato EE. UU. (horizontal)).png…]()
+
 
 
 
