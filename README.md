@@ -58,8 +58,10 @@ Now in this challenge we got the obstacles, the green blocks, red blocks and the
 ## Mobility strategy
 Our robot is completely custom designed, thats why we decide to design their own steering for the robot, the steering we designed is made for have more precision in turns. We made a steering with a gear attached to the servo motor, at the same time the gear is over a custom design piece with theets, this allow us to make al type of turns quickly and on a precise way, this pieces are conected with the wheels that make what we call " The Sterring Wheels of the Robot".This pieces made our robot a front steering robot.
 For the National Championship we are planning to make a 4 wheel steering motor, that meas that te robot will have direction in all there wheels, and is going to make closest turns to avoid obstacles in a better way.
+
 ![WhatsApp Image 2024-08-05 at 3 47 53 PM](https://github.com/user-attachments/assets/aba6bb70-51c1-407b-91e5-7cabb9e5a57a)
 
 
 For power we decided to use the POLOLU Metal Gearmotor 25Dx65L mm MP 12V with 48 CPR Encoder because it has good torque and speed, as our robot is based on 3D parts its structure is very light, which makes it go much faster, at first we decide tu use an axle bigger than the front one, but the car make drift on the turns, there´s when we notice that the back axle must need to be the same size as the front one. the motor bar is attached to a small gear, rhis gear is linked with a bigger one, this big gear is paste on a iron bar that is anckled to the back wheels that make the power of th robot. Thinking far away, we think we can use a four-wheels drive for national championship.
+
 ![WhatsApp Image 2024-08-05 at 3 48 41 PM](https://github.com/user-attachments/assets/d121cff4-57bb-49ff-abe9-caa6e58045c4)
