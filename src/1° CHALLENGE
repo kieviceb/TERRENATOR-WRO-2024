@@ -1,0 +1,338 @@
+#include <Servo.h> //servo motor library
+#include <Wire.h> // I2C bus comunication library
+#include <Adafruit_TCS34725.h> //colour sensor library
+
+// Iniciates the colour sensor TCS34725
+Adafruit_TCS34725 tcs = Adafruit_TCS34725();
+
+//declaring the servo, and calling it "Dir"
+Servo Dir;
+int pos = 0;    // variable to save the servo motor position
+
+// counnters, we use counters to determintate how many laps by counting the color lines of the track
+int contA = 0;
+int contN = 0;
+int final = 0;
+
+// PIN definitons, each components has their pinout so in order to use them, in the code you declare it 
+and put the number of the pin that is connected to.
+
+//we use the term "const int", a constant that doesnt change, the pins 
+
+// H BRIDGE pinout
+const int motorPin1 = 8;
+const int motorPin2 = 9;
+const int enablePin = 10;
+
+//ULTRASONIC SENSORS
+//RIGHT ULTRASONIC SENOSR PINS
+const int trigPin1 = 7;  // Digital trig pin
+const int echoPin1 = 6; // Digital echo pin
+
+//LEFT ULTRASONIC SENSOR PINS
+const int trigPin2 = 5; // Digital trig pin
+const int echoPin2 = 4; // Digital echo pin
+
+//FRONT ULTRASONIC SENSOR PINS
+const int trigPin3 = 11; // Digital trig pin
+const int echoPin3 = 2; // Digital echo pin
+
+// Bool, data type that has one of two possible values true or false
+//Declaring the orange color as false, because the code has not inicate
+bool naranja = false
+//Declaring the blue color as false, because the code has not inicate
+bool azul = false;
+
+//
+bool d2 = false;
+bool d3 = false;
+
+int aux = 0;
+
+uint16_t clear, red, green, blue;
+int C, M, Y, K;
+
+void setup() {
+  Dir.attach(3);  // adds the servo motor through pin 3
+
+  Serial.begin(9600); // Iniciates the serial comunication in the arduino
+  //right ultrasonic sensor
+  pinMode(trigPin1, OUTPUT); // declares trig pin as output
+  pinMode(echoPin1, INPUT);  // declares echo pin as input
+
+  //left ultrasonic sensor
+  pinMode(trigPin2, OUTPUT); // declares trig pin as output
+  pinMode(echoPin2, INPUT);  // declares echo pin as input
+
+  //front ultrasonic sensor
+  pinMode(trigPin3, OUTPUT); // declares trig pin as output
+  pinMode(echoPin3, INPUT);  // declares echo pin as input
+
+//sets the motor pins as outputs
+  pinMode(8, OUTPUT);
+  pinMode(9, OUTPUT);
+
+//sets motor pins in low to have it off
+  digitalWrite(8, LOW);
+  digitalWrite(9, LOW);
+  delay(500);
+
+//indicates if the colour sensor was detected
+  if (tcs.begin()) {
+    Serial.println("Sensor TCS34725 encontrado.");
+  } else {
+//indicates if the colour senosr wasnt detected
+    Serial.println("No se pudo encontrar el sensor TCS34725.");
+    while (1);
+  }
+
+  Wire.begin();
+
+  //MOTOR 
+  // activating the outputs of the motor
+  pinMode(motorPin1, OUTPUT);
+  pinMode(motorPin2, OUTPUT);
+  pinMode(enablePin, OUTPUT);
+  
+  // enable the motor
+  digitalWrite(enablePin, HIGH);
+}
+
+//Converting the sensor values from RGB to CMYK, why we do these?, the track is printed in a CMYK format, 
+so by having the sensor in the same format as the track, makes a more precise lecture.
+void rgbToCmyk(uint16_t r, uint16_t g, uint16_t b, int &c, int &m, int &y, int &k) {
+  float rf = r / 255.0;
+  float gf = g / 255.0;
+  float bf = b / 255.0;
+
+  float kf = 1.0 - max(rf, max(gf, bf));
+  if (kf < 1.0) {
+    c = (int)((1.0 - rf - kf) / (1.0 - kf) * 100);
+    m = (int)((1.0 - gf - kf) / (1.0 - kf) * 100);
+    y = (int)((1.0 - bf - kf) / (1.0 - kf) * 100);
+  } else {
+    c = 0;
+    m = 0;
+    y = 0;
+  }
+}
+
+//this function is to turn on the motor
+void motor_start() {
+  digitalWrite(motorPin1, HIGH);
+  digitalWrite(motorPin2, LOW);
+}
+
+//this function is to turn off the motor
+void motor_stop() {
+  digitalWrite(motorPin1, LOW);
+  digitalWrite(motorPin2, LOW);
+}
+//this is the function to detect the blue color
+void detectazul() {
+  if (Y <= 8) {
+      Serial.println(" * AZUL PASO 1 COMPLETO***");
+      //Serial.print("C: "); Serial.print(C);
+      //Serial.print(" M: "); Serial.print(M);
+      //Serial.print(" Y: "); Serial.println(Y);
+      
+       if (C >= 10 && C <= 85){
+         Serial.println(" * AZUL PASO 2 COMPLETO***");
+         //Serial.print(" C= "); Serial.print(C);
+         //Serial.print(" M= "); Serial.print(M);
+         //Serial.print(" Y= "); Serial.println(Y);
+        
+        azul = true;
+        contA = contA+1;
+      }
+    }
+}
+//this function is to detect the orange color 
+void detectnaranja() {
+  if (C <= 11) {
+              //DETECTOR LINEA Naranja
+              Serial.println(" * NARANJA PASO 1 COMPLETO***"); 
+              /Serial.println(" * PASO 1 COMPLETO *");
+              Serial.print(" C= "); Serial.print(C);
+              Serial.print(" M= "); Serial.print(M);
+              Serial.print(" Y= "); Serial.println(Y);*/
+        
+           if (Y >= 10 && Y <= 80){
+            Serial.println(" * NARANJA PASO 2 COMPLETO***");
+              /Serial.println(" * PASO 3 COMPLETO***");
+              Serial.print(" C= "); Serial.print(C);
+              Serial.print(" M= "); Serial.print(M);
+              Serial.print("Y= "); Serial.println(Y);*/
+              Dir.write(100);
+              naranja = true;
+              contN = contN+1;
+              }
+            }
+          }
+
+//this function calibrates the servo in position to the center
+void align() {
+  Dir.write(130);
+  delay(1000);
+  Dir.write(65);
+  delay(1000);
+  Dir.write(100);
+  delay(2000);
+}
+
+void loop () {
+  
+  // Measures deistance of the right sensor
+  long duration1 = getDistance(trigPin1, echoPin1);
+  float distance1 = duration1 * 0.034 / 2;
+
+  // Measures distance of the left sensor
+  long duration2 = getDistance(trigPin2, echoPin2);
+  float distance2 = duration2 * 0.034 / 2;
+
+   // Measures distance of the front sensor
+  long duration3 = getDistance(trigPin3, echoPin3);
+  float distance3 = duration3 * 0.034 / 2;
+
+  // Reads the data of the colour sensor in C M Y K format because the track is printed in that formation, so is better to read it like that than in RGB colors.
+  tcs.getRawData(&red, &green, &blue, &clear);
+  rgbToCmyk(red, green, blue, C, M, Y, K);
+
+  azul = false;
+  naranja = false;
+  
+  if (aux == 0){
+    alinear();
+    Serial.println("align");
+  }
+  delay(25);  // the lecture speed
+  if (aux == 0){
+    motor_start();
+    Serial.println("motor on");
+    aux = 1; 
+  } 
+  
+//You can use this prints to check the sensor values, but is comented in the regular code
+/*Serial.print(" NADA C= "); Serial.print(C);
+  Serial.print(" NADA M= "); Serial.print(M);
+  Serial.print(" NADA Y= "); Serial.println(Y);
+  Serial.print(" DERECHA "); Serial.println(distance1);
+  Serial.print(" IZQUIERDA "); Serial.println(distance2);
+  Serial.print(" CENTRO "); Serial.println(distance3);*/
+  //Serial.println("aquí 1");
+
+  detectazul();
+
+  if (azul == true){
+    //Serial.println("aquí 3");
+    Dir.write(60);
+     Serial.print("azul ");
+    while (naranja == false){
+      tcs.getRawData(&red, &green, &blue, &clear);
+      rgbToCmyk(red, green, blue, C, M, Y, K);
+      //Serial.println("aquí 4");
+      detectnaranja();
+      
+      
+      if (naranja == true){
+        //Serial.println("aquí 5");
+        Serial.print("naranja ");
+      }
+    }
+    //Serial.println("aquí 6");
+    Dir.write(60);
+    delay(700);
+    Dir.write(100);
+    delay(1000);
+    final = final + 1;
+    Serial.print(" FINAL= "); Serial.println(final);
+  }
+
+  if (distance2 > 1 && distance2 < 20){
+    Dir.write(110);
+    delay(1000);
+    Dir.write(100);
+    /*d2 = false;
+    while(distance2 < 25 && d2 == false){
+       Dir.write(130);
+       Serial.println("estp");
+       long duration2 = getDistance(trigPin2, echoPin2);
+       float distance2 = duration2 * 0.034 / 2;
+       Serial.println(distance2);
+       if (distance2 > 25){
+          d2 = true;
+       }   
+      }
+    Dir.write(130);
+    delay(200);
+    Dir.write(100);
+    Serial.println(" * IZQUIERDA COMPLETO**");/
+  }
+
+  if (distance1 > 1 && distance1 < 20){
+    Dir.write(90);
+    delay(1000);
+    Dir.write(100);
+   /* d3 = false;
+    while(distance1 < 25 && d3 == false){
+       Dir.write(60);
+       Serial.println("estp1");
+       long duration1 = getDistance(trigPin1, echoPin1);
+       float distance1 = duration1 * 0.034 / 2;
+       Serial.println(distance1);
+       if (distance1 > 25){
+          d3 = true;
+       }   
+      }
+    Dir.write(60);
+    delay(200);
+    Dir.write(100);
+    Serial.println(" * DERECHA COMPLETO**");/
+  }
+
+
+
+  Serial.print(" DERECHA "); Serial.println(distance1);
+  Serial.print(" IZQUIERDA "); Serial.println(distance2);
+  Serial.print(" CENTRO "); Serial.println(distance3);
+   if (distance3 < 75 && distance2 > 150 && distance3 > 1 && distance2 < 300  ){
+    Dir.write(60);
+    delay(2000);
+    Dir.write(100);
+    delay(500);
+    Serial.print("NO LEE, PERO GIRA"); 
+    final = final + 1;
+   }
+
+  
+  if (final == 12){
+    Serial.print(" BINGOOOOOO ");
+    Dir.write(100);
+    delay(1500);
+    motor_stop();
+    delay(3131165166154);
+
+  }
+// this condition, the if, contA is a counter that keeps track of how many times it sees the color so it can stop when its done.
+  if (contA == 8){
+    Serial.print(" * 2 LAPS DONE * ");
+  if (contA == 16){
+    Serial.print(" * 3 LAPS DONE * ");
+  }
+  }
+}
+
+
+long getDistance(int trigPin, int echoPin) {
+  // 10 microseconds pulse in the trig pins, one for each sensor to recieve the signal.
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  
+  // time in micro seconds of the ultrasonic sensor pulses (it measures when the sensor signal is bouncing the wall).
+  long duration = pulseIn(echoPin, HIGH);
+  
+  return duration;
+}
