@@ -60,4 +60,9 @@ Our robot is completely custom designed, thats why we decide to design their own
 For the National Championship we are planning to make a 4 wheel steering motor, that meas that te robot will have direction in all there wheels, and is going to make closest turns to avoid obstacles in a better way.
 <img align="right" alt="NAUT" width="350" src="https://github.com/user-attachments/assets/784ff02c-19eb-4f33-af46-f8d12d021886">
 
+![WhatsApp Image 2024-08-05 at 3 48 41 PM](https://github.com/user-attachments/assets/d121cff4-57bb-49ff-abe9-caa6e58045c4)
+
+![WhatsApp Image 2024-08-05 at 3 47 53 PM](https://github.com/user-attachments/assets/aba6bb70-51c1-407b-91e5-7cabb9e5a57a)
+
+
 For power we decided to use the POLOLU Metal Gearmotor 25Dx65L mm MP 12V with 48 CPR Encoder because it has good torque and speed, as our robot is based on 3D parts its structure is very light, which makes it go much faster, at first we decide tu use an axle bigger than the front one, but the car make drift on the turns, there´s when we notice that the back axle must need to be the same size as the front one. the motor bar is attached to a small gear, rhis gear is linked with a bigger one, this big gear is paste on a iron bar that is anckled to the back wheels that make the power of th robot. Thinking far away, we think we can use a four-wheels drive for national championship.
