@@ -58,7 +58,6 @@ Now in this challenge we got the obstacles, the green blocks, red blocks and the
 ## Mobility strategy
 Our robot is completely custom designed, thats why we decide to design their own steering for the robot, the steering we designed is made for have more precision in turns. We made a steering with a gear attached to the servo motor, at the same time the gear is over a custom design piece with theets, this allow us to make al type of turns quickly and on a precise way, this pieces are conected with the wheels that make what we call " The Sterring Wheels of the Robot".This pieces made our robot a front steering robot.
 For the National Championship we are planning to make a 4 wheel steering motor, that meas that te robot will have direction in all there wheels, and is going to make closest turns to avoid obstacles in a better way.
-<img align="right" alt="NAUT" width="350" src="https://github.com/user-attachments/assets/d121cff4-57bb-49ff-abe9-caa6e58045c4">
 
 ![WhatsApp Image 2024-08-05 at 3 48 41 PM](https://github.com/user-attachments/assets/d121cff4-57bb-49ff-abe9-caa6e58045c4)
 
