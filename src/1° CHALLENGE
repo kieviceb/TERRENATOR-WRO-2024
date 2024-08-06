@@ -15,7 +15,7 @@ int contN = 0;
 int final = 0;
 
 // PIN definitons, each components has their pinout so in order to use them, in the code you declare it 
-and put the number of the pin that is connected to.
+//and put the number of the pin that is connected to.
 
 //we use the term "const int", a constant that doesnt change, the pins 
 
@@ -43,12 +43,14 @@ bool naranja = false
 //Declaring the blue color as false, because the code has not inicate
 bool azul = false;
 
-//
+//decalring the left distancia as false, distance is used as a backup for thw colour sensors
 bool d2 = false;
+//declaring the right distance as false, distance is used as a backup for thw colour sensors
 bool d3 = false;
 
 int aux = 0;
 
+//Colour sensors values
 uint16_t clear, red, green, blue;
 int C, M, Y, K;
 
@@ -99,7 +101,7 @@ void setup() {
 }
 
 //Converting the sensor values from RGB to CMYK, why we do these?, the track is printed in a CMYK format, 
-so by having the sensor in the same format as the track, makes a more precise lecture.
+//so by having the sensor in the same format as the track, makes a more precise lecture.
 void rgbToCmyk(uint16_t r, uint16_t g, uint16_t b, int &c, int &m, int &y, int &k) {
   float rf = r / 255.0;
   float gf = g / 255.0;
@@ -170,7 +172,7 @@ void detectnaranja() {
             }
           }
 
-//this function calibrates the servo in position to the center
+//this function calibrates the servo in position to the center wich is 100 degrees
 void align() {
   Dir.write(130);
   delay(1000);
@@ -182,7 +184,7 @@ void align() {
 
 void loop () {
   
-  // Measures deistance of the right sensor
+  // Measures distance of the right sensor
   long duration1 = getDistance(trigPin1, echoPin1);
   float distance1 = duration1 * 0.034 / 2;
 
@@ -223,6 +225,7 @@ void loop () {
 
   detectazul();
 
+//using the condition if, we declare with the bool data that if blue is seen turn to the left.
   if (azul == true){
     //Serial.println("aquí 3");
     Dir.write(60);
@@ -233,13 +236,13 @@ void loop () {
       //Serial.println("aquí 4");
       detectnaranja();
       
-      
+      //Here the bool data of the orange is true after seeing the blue color which means turn to the left and then back to the center.
       if (naranja == true){
         //Serial.println("aquí 5");
         Serial.print("naranja ");
       }
     }
-    //Serial.println("aquí 6");
+
     Dir.write(60);
     delay(700);
     Dir.write(100);
@@ -248,6 +251,8 @@ void loop () {
     Serial.print(" FINAL= "); Serial.println(final);
   }
 
+// this condition if the backup of the colour sensors, if colors dont work as we expected in the worst case scenario, we got the ultrasonic sensors to
+//make the turns and dont loose the round, in the condition says if your left distance is higher than 1 but lower than 2 make a short turn to the right to get straight.
   if (distance2 > 1 && distance2 < 20){
     Dir.write(110);
     delay(1000);
