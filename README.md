@@ -17,24 +17,20 @@
   
 ## Components
 A list of all the electrical and mechanical components in the robot.
-- Arduino UNO R3
-- Mini breadboard
-- H Bridge L298N
+- Arduino NANO 
+- Mini breadboard x2
+- TB6612 motor driver 
 - HC-SRO4 ultrasonic sensor x3
-- TCS3472 colour sensor X2
-- POLOLU Metal Gearmotor 25Dx65L mm MP 12V with 48 CPR Encoder
+- POLOLU Metal Gearmotor 25Dx65L mm MP 12V with 48 CPR Encoder 
 - Steren Metal gear servo motor 
-- OVONIC 3s 2200mAh 11.1V Lipo Battery
+- OVONIC 3s 2200mAh 11.1V Lipo Battery 
 - Proto wires
-- Pixy cam 2.1
-- Havic 5000mAh power bank Model HV-P8004X
+- Pixy cam v2
 - 3d structure (you can find the printables in `models`)
 - RC Car wheels x2
 - Makeblock car kit wheels x2
-- Plastic straps x2
 - Toggle-Switch SPDT 6A/125VAC
 - Iron bar for the engine
-
 - (for a more detailed explanation of the components, review the engineering journal)
 
 ## Strategy
