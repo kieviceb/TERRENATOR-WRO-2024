@@ -17,7 +17,7 @@
   
 ## Components
 A list of all the electrical and mechanical components in the robot.
-- Arduino NANO 
+- Arduino NANO A000005
 - Mini breadboard x2
 - TB6612 motor driver 
 - HC-SRO4 ultrasonic sensor x3
