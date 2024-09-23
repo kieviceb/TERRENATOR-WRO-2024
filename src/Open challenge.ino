@@ -178,7 +178,7 @@ void loop() {
 
   // If an object is detected on the left at less than 35 cm, make a small adjustment
   if (distanciaIzquierdo < 35 && distanciaIzquierdo > 1) {
-    servoDireccion.write(110); // Turn to 110 degrees
+    servoDireccion.write(110); // Turn to 110 slightly to the left to separate wall
     avanzar(255); // Move forward at full speed for a short time
     delay(10);
   }
