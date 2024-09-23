@@ -57,7 +57,7 @@ For the interNational Championship we are planning to make a 4 wheel steering mo
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/c44aed28-b9c0-4dab-8f1e-8f0ccee451fe" alt="Imagen 1" width="300">
-  <img src="https://github.com/user-attachments/assets/22066840-dcbf-4895-86de-d436bbadb6e4" alt="Imagen 2" width="500">
+  <img src="https://github.com/user-attachments/assets/22066840-dcbf-4895-86de-d436bbadb6e4" alt="Imagen 2" width="650">
 </p>
 
 
