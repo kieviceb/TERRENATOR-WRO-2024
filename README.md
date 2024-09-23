@@ -52,7 +52,7 @@ For international tournament we are planning to use PID A PID (Proportional-Inte
 
 
 **- Obstacle Challenge**
-Now in this challenge we got the obstacles, the green blocks, red blocks and the parking spot, we found this one much harder than the other one so we decided to go with something more advance, our main component for this round is the PIXY cam, wich is an AI cam that is connected to the arduino and sets the signatures, we recorded 3 signatures in the PIXY cam "g.block", it refers to the green blocks, "r.block", it refers to the red blocks and "pkspot", that refers to the parking spot. for avoid the color blocks, we devide de camara field of view in 9 sector using the camaras pixels, 
+Now in this challenge we got the obstacles, the green blocks, red blocks and the parking spot, we found this one much harder than the other one so we decided to go with something more advance, our main component for this round is the PIXY cam, wich is an AI cam that is connected to the arduino and sets the signatures, we recorded 3 signatures in the PIXY cam "g.block", it refers to the green blocks, "r.block", it refers to the red blocks and "pkspot", that refers to the parking spot. for avoid the color blocks, we devide de camara field of view in 9 sector using the camara pixels, 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/cc3d6845-a564-4b15-b12f-3d4bc58545e4" alt="Imagen 1" width="300">
 </p> 
