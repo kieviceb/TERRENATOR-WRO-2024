@@ -64,6 +64,6 @@ For the interNational Championship we are planning to make a 4 wheel steering mo
 For power we decided to use the POLOLU Metal Gearmotor 25Dx65L mm MP 12V with 48 CPR Encoder because it has good torque and speed, as our robot is based on 3D parts its structure is very light, which makes it go much faster, at first we decide tu use an axle bigger than the front one, but the car make drift on the turns, there´s when we notice that the back axle must need to be the same size as the front one. the motor bar is attached to a small gear, rhis gear is linked with a bigger one, this big gear is paste on a iron bar that is anckled to the back wheels that make the power of th robot. Thinking far away, we think we can use a four-wheels drive for international championship.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/d121cff4-57bb-49ff-abe9-caa6e58045c4" alt="Imagen 1" width="300">
+  <img src="https://github.com/user-attachments/assets/d121cff4-57bb-49ff-abe9-caa6e58045c4" alt="Imagen 1" width="500">
 </p>
 
