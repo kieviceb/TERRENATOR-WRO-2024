@@ -56,12 +56,9 @@ Our robot is completely custom designed, thats why we decide to design their own
 For the interNational Championship we are planning to make a 4 wheel steering motor, that meas that te robot will have direction in all there wheels, and is going to make closest turns to avoid obstacles in a better way.
 
 <p align="center">
-  <img src="![WhatsApp Image 2024-09-23 at 7 22 28 AM](https://github.com/user-attachments/assets/c44aed28-b9c0-4dab-8f1e-8f0ccee451fe) 
-" alt="Descripción de la imagen 1" width="300">
-  <img src="ruta/de/la/imagen2.jpg" alt="Descripción de la imagen 2" width="300">
+  <img src="https://github.com/user-attachments/assets/c44aed28-b9c0-4dab-8f1e-8f0ccee451fe" alt="Imagen 1" width="300">
+  <img src="https://github.com/user-attachments/assets/22066840-dcbf-4895-86de-d436bbadb6e4" alt="Imagen 2" width="300">
 </p>
-
-![WhatsApp Image 2024-09-23 at 6 12 33 AM](https://github.com/user-attachments/assets/22066840-dcbf-4895-86de-d436bbadb6e4)
 
 
 For power we decided to use the POLOLU Metal Gearmotor 25Dx65L mm MP 12V with 48 CPR Encoder because it has good torque and speed, as our robot is based on 3D parts its structure is very light, which makes it go much faster, at first we decide tu use an axle bigger than the front one, but the car make drift on the turns, there´s when we notice that the back axle must need to be the same size as the front one. the motor bar is attached to a small gear, rhis gear is linked with a bigger one, this big gear is paste on a iron bar that is anckled to the back wheels that make the power of th robot. Thinking far away, we think we can use a four-wheels drive for international championship.
