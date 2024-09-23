@@ -31,8 +31,6 @@ A list of all the electrical and mechanical components in the robot.
 - RC Car wheels x2
 - Makeblock car kit wheels x2
 - Toggle-Switch SPDT 6A/125VAC x1
-- Iron bar for the engine
-- (for a more detailed explanation of the components, review the engineering journal)
 
 ## Strategy
 
