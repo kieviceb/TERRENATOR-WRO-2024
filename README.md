@@ -41,7 +41,7 @@ A list of all the electrical and mechanical components in the robot.
 - Wall detection:For this part it took us a lot of time to figure out a way of using the ultrasonic sensors to avoid the walls successfully, in our previous prototype we had the sensor horizontally and it gave us good lectures most of the time, but not always, thast way investigating a little further and using trigonometry we found out that position the ultrasonic sensors of the sides vertically is way more effective   <p align="right">
   <img src="https://github.com/user-attachments/assets/da479d5d-0a66-4abc-842d-d36a51ef9c10" alt="Imagen 1" width="300">
 </p>
-
+and the main reason we were having trouble at the curves, what was happening was that the TX and RX sides, when reaching the curves, one was further ahead than the other and the pulse did not reach the same place and was sending out erroneous data, therefore when placing them vertically this does not happen, both pulses collide equally, and the signal bounces back uniformly, sending out useful data.
 - Camera / object detection: For the second round, we are using a pixy cam v2, which is a useful and accurate camera for what we need, it has the advantage of having AI integrated, and well which makes it so much easier and faster for object detection.
   
 **-First Challenge**
