@@ -3,7 +3,7 @@
 
 Pixy2 pixy;  // Create an object to interact with the Pixy2 camera
 
-#define SLAVE_ADDR 9  // I2C slave address, should match the one on the Arduino Nano or ESP32
+#define SLAVE_ADDR 9  // I2C slave address, should match the one on the Arduino Nano ESP32
 
 void setup() {
   Wire.begin();  // Initialize I2C as master
