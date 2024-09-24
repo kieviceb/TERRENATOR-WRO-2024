@@ -56,7 +56,7 @@ Now in this challenge we got the obstacles, the green blocks, red blocks and the
 <p align="center">
 <img src="https://github.com/user-attachments/assets/cc3d6845-a564-4b15-b12f-3d4bc58545e4" alt="Imagen 1" width="300">
 </p> 
-that means that depending on what sector the block is viewed the robot will make an idea of the distance from de block and where the block is positionated in the map, for every sector it will do a different movement to avoid the obstacle, that means that are 9 movements for green blocks and 9 with red blocks, with a total of 18 diferent movements. when we are trying this we foud that the program is to heavy for a normal arduino nano procesor, that´s why we decided to use an arduino nano ESP32 for motion and measuring of distance, and a normal arduino nano only for procesing the data of the camara. We comunicate both arduino´s with i2c serial comunication between both, with arduino nano ESP32 as slave and arduino nano as master.
+that means that depending on what sector the block is viewed the robot will make an idea of the distance from de block and where the block is positionated in the map, for every sector it will do a different movement to avoid the obstacle, that means that are 9 movements for green blocks and 9 with red blocks, with a total of 18 diferent movements. While trying the code we noticed that the program is to heavy for a normal arduino nano procesor, that´s why we decided to use an arduino NANO ESP32 for motion and measuring of distance, and an arduino NANO A000005 only for procesing the data of the camara. We comunicate both arduino´s with i2c serial comunication, the arduino NANO ESP32 as slave and arduino NANO A000005 as master.
 
 
 ## Mobility strategy
