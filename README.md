@@ -19,6 +19,8 @@
 A list of all the electrical and mechanical components in the robot.
 - Arduino NANO ESP32 x1
 - Arduino NANO A000005 x1
+- Step up HW317 x1
+- Step down LM2596 x1
 - Mini breadboard x2
 - TB6612 motor driver 
 - HC-SRO4 ultrasonic sensor x3
