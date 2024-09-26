@@ -62,8 +62,8 @@ that means that depending on what sector the block is viewed the robot will make
 
 
 ## Mobility strategy
-Our robot is completely custom designed, thats why we decided to design our own steering for the robot, the steering design is made to have more precision in turns. We made a steering with a gear attached to the servo motor, at the same time the gear is over a custom design piece with teeth, this allow us to make al type of turns quickly and on a precise way, this pieces are conected with the wheels that make what we call " The Sterring Wheels of the Robot".This pieces made our robot a front steering robot.
-For the interNational Championship we are planning to make a 4 wheel steering motor, that meas that te robot will have direction in all there wheels, and is going to make closest turns to avoid obstacles in a better way.
+Our robot is completely custom designed, thats why we decided to design our own steering for the robot, the steering design is made to have more precision in turns. We made a steering with a gear attached to the servo motor, at the same time the gear is over a custom design piece with teeth, this allow us to make all type of turns quickly and on a precise way, this pieces are conected to the wheels that make what we call " The Sterring Wheels of the Robot".This pieces make our robot a front steering robot.
+For the international Championship we are planning to make a 4 wheel drive motor, that means that the robot will have direction in all there wheels, and is going to make closest turns to avoid obstacles in a better way.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/c44aed28-b9c0-4dab-8f1e-8f0ccee451fe" alt="Imagen 1" width="250">
