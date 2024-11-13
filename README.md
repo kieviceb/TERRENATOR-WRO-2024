@@ -26,10 +26,10 @@ A list of all the electrical and mechanical components in the robot.
 | 400 tie (half) breadboard x1 | TB6612 motor driver| HC-SRO4 ultrasonic sensor x3 |
 | <img src="https://github.com/user-attachments/assets/22b69b73-122f-42be-bf56-a7297b1bbb23" width="150"/> |<img src="https://github.com/user-attachments/assets/dc905c65-28e3-42ff-bdde-d905bd22bd75"/>|<img src="https://github.com/user-attachments/assets/dc905c65-28e3-42ff-bdde-d905bd22bd75"/>
 | POLOLU Metal Gearmotor 25Dx65L mm MP 12V with 48 CPR Encoder x1 |INJORA 7KG 2065 micro servo motor x1| Tosiicop Airsoft Lipo Battery 11.1V x1 |
-| <img src="https://github.com/user-attachments/assets/75af90ba-1501-44d0-9cf9-13ee83422d15" width="150"/> | <img src="https://github.com/user-attachments/assets/1f0feb97-1b34-44a4-a4b9-ae579832d1af" alt="Alt 1" width="150"/> | <img src="https://github.com/user-attachments/assets/389bfa4c-f71f-4383-8090-1c02a8544d1fz" alt="Alt 1" width="150"/> |
+| <img src="https://github.com/user-attachments/assets/75af90ba-1501-44d0-9cf9-13ee83422d15" width="150"/> | <img src="https://github.com/user-attachments/assets/1f0feb97-1b34-44a4-a4b9-ae579832d1af" alt="Alt 1" width="150"/> | <img src="https://github.com/user-attachments/assets/dc0bdda4-aeda-43e9-b355-616e628742ca" alt="Alt 1" width="150"/> |
 | Pixy cam v2.1 x1 | 3d structure (you can find the printables in `models`)| Toggle-Switch SPDT 6A/125VAC x1 |
 
-![71Dt0iIS5TL](https://github.com/user-attachments/assets/389bfa4c-f71f-4383-8090-1c02a8544d1f)
+
 
 ## Strategy
 
