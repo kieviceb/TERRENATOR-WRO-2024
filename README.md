@@ -20,7 +20,7 @@
 ## Components
 A list of all the electrical and mechanical components in the robot.
 
-| <img src="https://github.com/user-attachments/assets/3312d4d8-3a2c-48f9-8fe6-120640876eb5" alt="Alt 1" width="200"/> | <img src="https://github.com/user-attachments/assets/989e28c3-e055-45da-b284-13386d09e14e" alt="Alt 1" width="200"/> | <img src="https://github.com/user-attachments/assets/ddaac9e1-450c-4d3a-bbb0-b5ebca198fa2" alt="Alt 1" width="200"/> | 
+| <img src="https://github.com/user-attachments/assets/3312d4d8-3a2c-48f9-8fe6-120640876eb5" alt="Alt 1" width="300"/> | <img src="https://github.com/user-attachments/assets/989e28c3-e055-45da-b284-13386d09e14e" alt="Alt 1" width="200"/> | <img src="https://github.com/user-attachments/assets/ddaac9e1-450c-4d3a-bbb0-b5ebca198fa2" alt="Alt 1" width="200"/> | 
 | :------------: |:-------------:| :----------:|
 |[Arduino NANO A000005 x1](https://store-usa.arduino.cc/products/arduino-nano?srsltid=AfmBOooU4-IrktQwXymxJgaV7MZPj3cBWDjg6AjQwBmYoQw8es2bz9ex)|[LTC1871 Booster Step x1](https://www.amazon.es/ICQUANZX-Converter-3-5-35VDC-Volt%C3%ADmetro-alimentaci%C3%B3n/dp/B07JL39RK2?language=en_GB)|[Step down LM2596 x1](https://a.co/d/e4jJKCS)|
 | <img src="https://github.com/user-attachments/assets/7642359b-7c35-41a2-805b-15d00704a43e" width="150"/> | <img src="https://github.com/user-attachments/assets/a8fcd7e0-c196-4b7e-b5ac-055d313b8194" alt="Alt 1" width="150"/> | <img src="https://github.com/user-attachments/assets/6791452a-f339-4d2d-ac77-07d16e8cec6d" alt="Alt 1" width="150"/> |
