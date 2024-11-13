@@ -16,9 +16,6 @@
 * `v-photos` - photos of every angle of the robot, including our previuos version .
 * `video` - the link to our youtube channel where you can see our robot in action completing both challenges.
 
-https://github.com/user-attachments/assets/b97f68dd-48d3-46a2-872b-7ddec7fb7df7
-
-
 ## Components
 A list of all the electrical and mechanical components in the robot.
 
