@@ -16,6 +16,8 @@
 * `v-photos` - photos of every angle of the robot, including our previuos version .
 * `video` - the link to our youtube channel where you can see our robot in action completing both challenges.
 
+https://github.com/user-attachments/assets/b97f68dd-48d3-46a2-872b-7ddec7fb7df7
+
 
 ## Components
 A list of all the electrical and mechanical components in the robot.
@@ -23,8 +25,8 @@ A list of all the electrical and mechanical components in the robot.
 | <img src="https://github.com/user-attachments/assets/3312d4d8-3a2c-48f9-8fe6-120640876eb5" alt="Alt 1" width="300"/> | <img src="https://github.com/user-attachments/assets/989e28c3-e055-45da-b284-13386d09e14e" alt="Alt 1" width="200"/> | <img src="https://github.com/user-attachments/assets/ddaac9e1-450c-4d3a-bbb0-b5ebca198fa2" alt="Alt 1" width="200"/> | 
 | :------------: |:-------------:| :----------:|
 |[Arduino NANO A000005 x1](https://store-usa.arduino.cc/products/arduino-nano?srsltid=AfmBOooU4-IrktQwXymxJgaV7MZPj3cBWDjg6AjQwBmYoQw8es2bz9ex)|[LTC1871 Booster Step x1](https://www.amazon.es/ICQUANZX-Converter-3-5-35VDC-Volt%C3%ADmetro-alimentaci%C3%B3n/dp/B07JL39RK2?language=en_GB)|[Step down LM2596 x1](https://a.co/d/e4jJKCS)|
-| <img src="https://github.com/user-attachments/assets/7642359b-7c35-41a2-805b-15d00704a43e" width="150"/> | <img src="https://github.com/user-attachments/assets/a8fcd7e0-c196-4b7e-b5ac-055d313b8194" alt="Alt 1" width="150"/> | <img src="https://github.com/user-attachments/assets/6791452a-f339-4d2d-ac77-07d16e8cec6d" alt="Alt 1" width="200"/> |
-| [400 tie (half) breadboard x1] |[TB6612 motor driver](https://a.co/d/fpJSHg1)|[HC-SRO4 ultrasonic sensor x3](https://a.co/d/et6RN4v) |
+| <img src="https://github.com/user-attachments/assets/b97f68dd-48d3-46a2-872b-7ddec7fb7df7" width="200"/> | <img src="https://github.com/user-attachments/assets/a8fcd7e0-c196-4b7e-b5ac-055d313b8194" alt="Alt 1" width="150"/> | <img src="https://github.com/user-attachments/assets/6791452a-f339-4d2d-ac77-07d16e8cec6d" alt="Alt 1" width="200"/> |
+| [Double Sided Prototype Universal PCB Board x2](https://a.co/d/9mUTqVe) |[TB6612 motor driver](https://a.co/d/fpJSHg1)|[HC-SRO4 ultrasonic sensor x3](https://a.co/d/et6RN4v) |
 | <img src="https://github.com/user-attachments/assets/22b69b73-122f-42be-bf56-a7297b1bbb23" width="350"/> |<img src="https://github.com/user-attachments/assets/dc905c65-28e3-42ff-bdde-d905bd22bd75" alt="Alt 1" width="200"/>| <img src="https://github.com/user-attachments/assets/dc0bdda4-aeda-43e9-b355-616e628742ca" alt="Alt 1" width="250"/> |
 |[POLOLU Metal Gearmotor 25Dx65L mm MP 12V with 48 CPR Encoder x1](https://www.pololu.com/product/4863)|[INJORA 7KG 2065 micro servo motor x1](https://a.co/d/3OIRFif)|[Tosiicop Airsoft Lipo Battery 11.1V x1](https://a.co/d/4mkS5gP)|
 | <img src="https://github.com/user-attachments/assets/75af90ba-1501-44d0-9cf9-13ee83422d15" width="250"/> | <img src="https://github.com/user-attachments/assets/1f0feb97-1b34-44a4-a4b9-ae579832d1af" alt="Alt 1" width="300"/> | <img src="https://github.com/user-attachments/assets/166d29d3-77c1-43ee-b914-0fc7dd4190bc" alt="Alt 1" width="200"/> |
