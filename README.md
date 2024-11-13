@@ -22,10 +22,12 @@ A list of all the electrical and mechanical components in the robot.
 | ------------- |:-------------:| ----------:|
 | Arduino NANO A000005 x1 |Step up HW317 x1| Step down LM2596 x1 |
 | Mini breadboard x1 | TB6612 motor driver| HC-SRO4 ultrasonic sensor x3 |
+| POLOLU Metal Gearmotor 25Dx65L mm MP 12V with 48 CPR Encoder x1 |Steren Metal gear servo motor x1| Lipo Battery x1 |
+| Pixy cam v2.1 x1 | 3d structure (you can find the printables in `models`)| Lego mindstorms wheels x4 |
+| Arduino NANO A000005 x1 |Step up HW317 x1| Step down LM2596 x1 |
+| Toggle-Switch SPDT 6A/125VAC x1 | TB6612 motor driver| HC-SRO4 ultrasonic sensor x3 |
 
-- POLOLU Metal Gearmotor 25Dx65L mm MP 12V with 48 CPR Encoder x1
-- Steren Metal gear servo motor x1
-- OVONIC 3s 2200mAh 11.1V Lipo Battery x1
+
 - Proto wires
 - Pixy cam v2 x1
 - 3d structure (you can find the printables in `models`)
