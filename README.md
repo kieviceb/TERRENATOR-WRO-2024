@@ -2,9 +2,9 @@
 ![TERRENATOR (30 x 18 cm) (25 x 6 cm) (1)](https://github.com/user-attachments/assets/5c56937c-a3a7-425d-ac0a-d61c6865f1eb)
 
 ## Team members
-> Ericka Ceballos
-
 > David Rico
+
+> Ericka Ceballos
 
 > Jean Paul Sosa
 
