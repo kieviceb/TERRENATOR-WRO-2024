@@ -14,7 +14,7 @@
 * `src` - the codes for both challenges, with and without obstacles.
 * `t-photos` - photos of the team one formal and a funny one.
 * `v-photos` - photos of every angle of the robot, including our previuos version .
-* `video` - the link to our youtube channel where you can see our robot in action.
+* `video` - the link to our youtube channel where you can see our robot in action completing both challenges.
 
 
 ## Components
