@@ -18,7 +18,7 @@
   
 ## Components
 A list of all the electrical and mechanical components in the robot.
-|  <img src="![download](https://github.com/user-attachments/assets/3312d4d8-3a2c-48f9-8fe6-120640876eb5)" alt="Alt 1" width="150"/>| foto          | Cool  |
+|  <img src="https://github.com/user-attachments/assets/3312d4d8-3a2c-48f9-8fe6-120640876eb5" alt="Alt 1" width="150"/>| foto          | Cool  |
 | ------------- |:-------------:| -----:|
 | Arduino NANO A000005 x1 |Step up HW317 x1| Arduino NANO A000005 x1 |
 | foto     | Foto | foto |
