@@ -19,7 +19,7 @@
 ## Components
 A list of all the electrical and mechanical components in the robot.
 | COMPONENTS |
-| -----------------------------------------------------------------------------------------------------------------------:|
+| :---------------------------------------------------------------------------:|
 | <img src="https://github.com/user-attachments/assets/3312d4d8-3a2c-48f9-8fe6-120640876eb5" alt="Alt 1" width="150"/> | <img src="https://github.com/user-attachments/assets/989e28c3-e055-45da-b284-13386d09e14e" alt="Alt 1" width="150"/> | <img src="https://github.com/user-attachments/assets/ddaac9e1-450c-4d3a-bbb0-b5ebca198fa2" alt="Alt 1" width="150"/> | 
 | ------------- |:-------------:| ----------:|
 | Arduino NANO A000005 x1 |Step up HW317 x1| Step down LM2596 x1 |
