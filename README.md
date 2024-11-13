@@ -18,14 +18,15 @@
   
 ## Components
 A list of all the electrical and mechanical components in the robot.
-| foto          | foto          | Cool  |
+|  <img src="![download](https://github.com/user-attachments/assets/3312d4d8-3a2c-48f9-8fe6-120640876eb5)" alt="Alt 1" width="150"/>| foto          | Cool  |
 | ------------- |:-------------:| -----:|
 | Arduino NANO A000005 x1 |Step up HW317 x1| Arduino NANO A000005 x1 |
 | foto     | Foto | foto |
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
 - Arduino NANO A000005 x1
-- Step up HW317 x1
+- Step up HW317 ![download](https://github.com/user-attachments/assets/3312d4d8-3a2c-48f9-8fe6-120640876eb5)
+x1
 - Step down LM2596 x1
 - Mini breadboard x2
 - TB6612 motor driver 
