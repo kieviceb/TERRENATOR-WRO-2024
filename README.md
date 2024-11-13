@@ -24,17 +24,10 @@ A list of all the electrical and mechanical components in the robot.
 | Arduino NANO A000005 x1 |Step up HW317 x1| Step down LM2596 x1 |
 | <img src="https://github.com/user-attachments/assets/7642359b-7c35-41a2-805b-15d00704a43e" width="150"/> | <img src="https://github.com/user-attachments/assets/a8fcd7e0-c196-4b7e-b5ac-055d313b8194" alt="Alt 1" width="150"/> | <img src="https://github.com/user-attachments/assets/6791452a-f339-4d2d-ac77-07d16e8cec6d" alt="Alt 1" width="150"/> |
 | 400 tie (half) breadboard x1 | TB6612 motor driver| HC-SRO4 ultrasonic sensor x3 |
-| POLOLU Metal Gearmotor 25Dx65L mm MP 12V with 48 CPR Encoder x1 |Steren Metal gear servo motor x1| Lipo Battery x1 |
-| Pixy cam v2.1 x1 | 3d structure (you can find the printables in `models`)| Lego mindstorms wheels x4 |
-| Arduino NANO A000005 x1 |Step up HW317 x1| Step down LM2596 x1 |
-| Toggle-Switch SPDT 6A/125VAC x1 | TB6612 motor driver| HC-SRO4 ultrasonic sensor x3 |
+| <img src="https://github.com/user-attachments/assets/22b69b73-122f-42be-bf56-a7297b1bbb23" width="150"/> | <img src="https://github.com/user-attachments/assets/4f41f789-1e8f-43ee-8987-be7e40921a6c" alt="Alt 1" width="150"/> | <img src="https://github.com/user-attachments/assets/7f75be2f-302c-4233-8569-19796af1ccb0" alt="Alt 1| POLOLU Metal Gearmotor 25Dx65L mm MP 12V with 48 CPR Encoder x1 |Steren Metal gear servo motor x1| Lipo Battery x1 |
+| <img src="https://github.com/user-attachments/assets/75af90ba-1501-44d0-9cf9-13ee83422d15" width="150"/> | <img src="https://github.com/user-attachments/assets/1f0feb97-1b34-44a4-a4b9-ae579832d1af" alt="Alt 1" width="150"/> | <img src="https://github.com/user-attachments/assets/2a42ed42-24ad-483e-bbdd-9c7c1e2aa921" alt="Alt 1" width="150"/> |
+| Pixy cam v2.1 x1 | 3d structure (you can find the printables in `models`)| Toggle-Switch SPDT 6A/125VAC x1 |
 
-
-- Proto wires
-- Pixy cam v2 x1
-- 3d structure (you can find the printables in `models`)
-- Lego mindstorms wheels x4
-- Toggle-Switch SPDT 6A/125VAC x1
 
 ## Strategy
 
