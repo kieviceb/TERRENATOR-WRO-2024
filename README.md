@@ -31,7 +31,7 @@ A list of all the electrical and mechanical components in the robot.
 
 ## Robot Developoment
 
-- For make all the structure of the robot, it took a loot of time and investigation, we decided to build our robot 
+- For make all the structure of the robot, it took a loot of time and investigation, we decided to build our robot totally by our self, we develop the robot in Onshape Platform, all the design of the robot and all the models and pieces can be found here in * `models` 
 
 ## Mobility Strategy
 
