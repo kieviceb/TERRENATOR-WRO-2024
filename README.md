@@ -27,7 +27,7 @@ A list of all the electrical and mechanical components in the robot.
 | [400 tie (half) breadboard x1] |[TB6612 motor driver](https://a.co/d/fpJSHg1)|[HC-SRO4 ultrasonic sensor x3](https://a.co/d/et6RN4v) |
 | <img src="https://github.com/user-attachments/assets/22b69b73-122f-42be-bf56-a7297b1bbb23" width="350"/> |<img src="https://github.com/user-attachments/assets/dc905c65-28e3-42ff-bdde-d905bd22bd75"/>| <img src="https://github.com/user-attachments/assets/dc0bdda4-aeda-43e9-b355-616e628742ca" alt="Alt 1" width="150"/> |
 |[POLOLU Metal Gearmotor 25Dx65L mm MP 12V with 48 CPR Encoder x1](https://www.pololu.com/product/4863)|[INJORA 7KG 2065 micro servo motor x1](https://a.co/d/3OIRFif)|[Tosiicop Airsoft Lipo Battery 11.1V x1](https://a.co/d/4mkS5gP)|
-| <img src="https://github.com/user-attachments/assets/75af90ba-1501-44d0-9cf9-13ee83422d15" width="150"/> | <img src="https://github.com/user-attachments/assets/1f0feb97-1b34-44a4-a4b9-ae579832d1af" alt="Alt 1" width="300"/> | <img src="https://github.com/user-attachments/assets/166d29d3-77c1-43ee-b914-0fc7dd4190bc" alt="Alt 1" width="150"/> |
+| <img src="https://github.com/user-attachments/assets/75af90ba-1501-44d0-9cf9-13ee83422d15" width="300"/> | <img src="https://github.com/user-attachments/assets/1f0feb97-1b34-44a4-a4b9-ae579832d1af" alt="Alt 1" width="300"/> | <img src="https://github.com/user-attachments/assets/166d29d3-77c1-43ee-b914-0fc7dd4190bc" alt="Alt 1" width="150"/> |
 |[Pixy cam v2.1 x1](https://a.co/d/hyOCC5F) | 3d structure (you can find the printables in `models`)|[Toggle-Switch SPDT 6A/125VAC x1](https://a.co/d/65AaiQM) |
 
 
