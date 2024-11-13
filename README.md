@@ -1,6 +1,7 @@
 # Terrenator's readme <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Flag_of_Panama.svg" alt="Bandera de Panamá" width="30"/>
+![TERRENATOR (30 x 18 cm) (25 x 6 cm) (1)](https://github.com/user-attachments/assets/5c56937c-a3a7-425d-ac0a-d61c6865f1eb)
 
-![TERRENATOR (30 x 18 cm) (25 x 6 cm)](https://github.com/user-attachments/assets/5a0c53f6-9c36-4f57-bae1-4557a6355215)
+//![TERRENATOR (30 x 18 cm) (25 x 6 cm)](https://github.com/user-attachments/assets/5a0c53f6-9c36-4f57-bae1-4557a6355215)
 
 ## Team members
 > Ericka Ceballos
