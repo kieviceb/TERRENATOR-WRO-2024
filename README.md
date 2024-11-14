@@ -35,7 +35,7 @@ A list of all the electrical and mechanical components in the robot.
 
 ## Robot Developoment
 
-- For make all the structure of the robot, it took a loot of time and investigation, we decided to build our robot totally by our self, we develop the robot in Onshape Platform, all the design of the robot and all the models and pieces can be found here in * `models` 
+- For make all the structure of the robot, it took a loot of time and investigation, we decided to build our robot totally by our self, we develop the robot in [OnShape](https://www.onshape.com/en/) Platform , all the design of the robot and all the models and pieces can be found here in * `models`, it is compound by 17 parts that together make an assembly. We have passed by a lot of prototypes, we are trying with the turkiye prototype, to make it more light, more smaller, more efficient, we are looking to make the things simple, to make the most efficient freelance car, to control our vehicle, we decided to use [Arduino Nano](https://store.arduino.cc/products/arduino-nano) , because it's smaller and has all that we need to control our robot, we have use a various types of Arduino nano, Like the [Arduino Nano ESP32](https://store.arduino.cc/products/nano-esp32), [Arduino Nano Every](https://store.arduino.cc/products/arduino-nano-every), [Arduino Nano Every](https://store.arduino.cc/products/arduino-nano-every)
 
 ## Mobility Strategy
 
