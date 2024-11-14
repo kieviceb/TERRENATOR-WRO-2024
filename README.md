@@ -35,14 +35,30 @@ A list of all the electrical and mechanical components in the robot.
 
 ## Robot Developoment
 
-- For make all the structure of the robot, it took a loot of time and investigation, we decided to build our robot totally by our self, we develop the robot in [OnShape](https://www.onshape.com/en/) Platform , all the design of the robot and all the models and pieces can be found here in * `models`, it is compound by 17 parts that together make an assembly. We have passed by a lot of prototypes, we are trying with the turkiye prototype, to make it more light, more smaller, more efficient, we are looking to make the things simple, to make the most efficient freelance car, to control our vehicle, we decided to use [Arduino Nano](https://store.arduino.cc/products/arduino-nano) , because it's smaller and has all that we need to control our robot, we have use a various types of Arduino nano, Like the [Arduino Nano ESP32](https://store.arduino.cc/products/nano-esp32), [Arduino Nano Every](https://store.arduino.cc/products/arduino-nano-every), [Arduino Nano Every](https://store.arduino.cc/products/arduino-nano-every)
+- For make all the structure of the robot, it took a loot of time and investigation, we decided to build our robot totally by our self, we develop the robot in [OnShape](https://www.onshape.com/en/) Platform , all the design of the robot and all the models and pieces can be found here in `models`, it is compound by 17 parts that together make an assembly. We have passed by a lot of prototypes, we are trying with the turkiye prototype, to make it more light, more smaller, more efficient, we are looking to make the things simple, to make the most efficient freelance car, to control our vehicle, we decided to use [Arduino Nano](https://store.arduino.cc/products/arduino-nano) , because it's smaller and has all that we need to control our robot, we have use a various types of Arduino nano, Like the [Arduino Nano ESP32](https://store.arduino.cc/products/nano-esp32), [Arduino Nano Every](https://store.arduino.cc/products/arduino-nano-every), [Arduino Nano Every](https://store.arduino.cc/products/arduino-nano-every). The reason of why we have used various types of arduino nano, is because everyone of them give different capacities, and sometimes we need different capacities in our robot. To understand the making and the programming of the robot please check all the parts of this `README.md`.
+  
 
 ## Mobility Strategy
 
 - Movement: Our robot is powered by a single motor (POLOLU Metal Gearmotor (see list of components)), we used a 3D printed traction system in the back axle of the car, is specifically designed to enhance performance and maneuverability. This system involves a set of precisely engineered gears that provide consistent and reliable power transfer from the motor to the rear wheels. The gear configuration ensures that torque is effectively distributed, enabling the car to maintain traction even during rapid acceleration. It provides the power, control, and reliability needed for the commpetition.
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d121cff4-57bb-49ff-abe9-caa6e58045c4" alt="Imagen 1" width="500">
+</p>
+
+
+
  
 - Steering: The steering is handled by a servomotor, during this project we discovered that using a plastic gear servo is not a good choice, because of the speed of the robot, it tends to break easily inside; thats how we ended up using at first a MG995 servo which is metal gear so it doesnt break so easily, finally for the last prototype to reduce weight and size we found a micro metal gear servo (INJORA 7KG 2065 micro servo motor) , with the power of the big one but weighting less and smaller. Having the steering on the front axle, in vertical position to make movement with more precission.  
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c44aed28-b9c0-4dab-8f1e-8f0ccee451fe" alt="Imagen 1" width="250">
+  <img src="https://github.com/user-attachments/assets/22066840-dcbf-4895-86de-d436bbadb6e4" alt="Imagen 2" width="510">
+</p>
+
+
+
+## Sensors
 
 - Wall detection:For this part it took us a lot of time to figure out a way of using the ultrasonic sensors to avoid the walls successfully, in our previous prototype we had the sensor horizontally and it gave us good lectures most of the time, but not always, thast way investigating a little further and using trigonometry we found out that position the ultrasonic sensors of the sides vertically is way more effective and the main reason we were having trouble at the curves, what was happening was that the TX and RX sides, when reaching the curves, one was further ahead than the other and the pulse did not reach the same place and was sending out erroneous data, therefore when placing them vertically this does not happen, both pulses collide equally, and the signal bounces back uniformly, sending out useful data.
 <p align="center">
@@ -65,19 +81,4 @@ Now in this challenge we got the obstacles, the green blocks, red blocks and the
 that means that depending on what sector the block is viewed the robot will make an idea of the distance from de block and where the block is positionated in the map, for every sector it will do a different movement to avoid the obstacle, that means that are 9 movements for green blocks and 9 with red blocks, with a total of 18 diferent movements. While trying the code we noticed that the program is to heavy for a normal arduino nano procesor, that´s why we decided to use an arduino NANO ESP32 for motion and measuring of distance, and an arduino NANO A000005 only for procesing the data of the camara. We comunicate both arduino´s with i2c serial comunication, the arduino NANO ESP32 as slave and arduino NANO A000005 as master.
 
 
-## Mobility strategy
-Our robot is completely custom designed, thats why we decided to design our own steering for the robot, the steering design is made to have more precision in turns. We made a steering with a gear attached to the servo motor, at the same time the gear is over a custom design piece with teeth, this allow us to make all type of turns quickly and on a precise way, this pieces are conected to the wheels that make what we call " The Sterring Wheels of the Robot".This pieces make our robot a front steering robot.
-For the international Championship we are planning to make a 4 wheel drive motor, that means that the robot will have direction in all there wheels, and is going to make closest turns to avoid obstacles in a better way.
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/c44aed28-b9c0-4dab-8f1e-8f0ccee451fe" alt="Imagen 1" width="250">
-  <img src="https://github.com/user-attachments/assets/22066840-dcbf-4895-86de-d436bbadb6e4" alt="Imagen 2" width="510">
-</p>
-
-
-For power we decided to use the POLOLU Metal Gearmotor 25Dx65L mm MP 12V with 48 CPR Encoder because it has better torque and speed, our robot is build in 3D parts, the structure is very light, which makes it go much faster, at first we decide to use an axle bigger than the front one, but the car make drift on the turns, there is when we notice that the back axle must be the same size as the front one. the motor bar is attached to a small gear, rhis gear is linked with a bigger one, this big gear is paste on a iron bar that is anckled to the back wheels that make the power of th robot. Thinking far away, we think we can use a four-wheels drive for international championship.
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/d121cff4-57bb-49ff-abe9-caa6e58045c4" alt="Imagen 1" width="500">
-</p>
 
