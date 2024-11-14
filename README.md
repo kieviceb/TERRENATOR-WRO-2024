@@ -1,7 +1,7 @@
 # Terrenator's readme <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Flag_of_Panama.svg" alt="Bandera de Panamá" width="30"/>
 ![TERRENATOR (30 x 18 cm) (25 x 6 cm) (1)](https://github.com/user-attachments/assets/5c56937c-a3a7-425d-ac0a-d61c6865f1eb)
                 
-This is the official repository of the TERRENATOR team, which is representing Panama in the World Robotics Olympics (WRO) 2024 to be held this year in Izmir, Turkey. We chose to participate in the category of Future Engineers this year winning first place in the national robotics olympics in our country. In this repository you can find everything related to the development of our robot.
+This is the official repository of the TERRENATOR team, which is representing Panama in the World Robotics Olympics (WRO) 2024 to be held this year in Izmir, Türkiye. We chose to participate in the category of Future Engineers this year winning first place in the national robotics olympics in our country. In this repository you can find everything related to the development of our robot.
 
 ## Team members
 > David Rico
@@ -10,14 +10,16 @@ This is the official repository of the TERRENATOR team, which is representing Pa
 
 > Jean Paul Sosa
 
+
 ## Overview of our repository
 * `schemes`- contains the circuit diagram.
+* `others`-  This is for other files which can be used to understand the making of the vehicle. 
 * `models` - includes all the 3d printed parts of the robot.
 * `src` - the codes for both challenges, with and without obstacles.
 * `t-photos` - photos of the team one formal and a funny one.
 * `v-photos` - photos of every angle of the robot, including our previuos version .
 * `video` - the link to our youtube channel where you can see our robot in action completing both challenges.
-
+* `README.md` - Here's all our journey in the development of our robot here we explain every part of the robot making.
 ## Components
 A list of all the electrical and mechanical components in the robot.
 
