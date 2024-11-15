@@ -45,12 +45,13 @@ A list of all the electrical and mechanical components in the robot.
 
 ### 1- Selection of Motors
 
-- Movement: Our robot is powered by a single motor (POLOLU Metal Gearmotor (see list of components)), we used a 3D printed traction system in the back axle of the car, is specifically designed to enhance performance and maneuverability. This system involves a set of precisely engineered gears that provide consistent and reliable power transfer from the motor to the rear wheels. The gear configuration ensures that torque is effectively distributed, enabling the car to maintain traction even during rapid acceleration. It provides the power, control, and reliability needed for the commpetition.
+- Movement and motors: Our  gearmotor consists of a medium-power, 12 V brushed DC motor combined with a 20.4:1 metal spur gearbox, and it has an integrated 48 CPR quadrature encoder on the motor shaft, which provides 979.62 counts per revolution of the gearbox’s output shaft. The gearmotor is cylindrical, with a diameter just under 25 mm, and the D-shaped output shaft is 4 mm in diameter and extends 12.5 mm from the face plate of the gearbox, you can find our motor [here](https://www.pololu.com/product/4863).
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/d121cff4-57bb-49ff-abe9-caa6e58045c4" alt="Imagen 1" width="500">
 </p>
 
+We used a 3D printed traction system in the back axle of the car, is specifically designed to enhance performance and maneuverability. This system involves a set of precisely engineered gears that provide consistent and reliable power transfer from the motor to the rear wheels. The gear configuration ensures that torque is effectively distributed, enabling the car to maintain traction even during rapid acceleration. It provides the power, control, and reliability needed for the commpetition.
 
 ### 2- Steering
  
