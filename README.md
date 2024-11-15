@@ -11,6 +11,7 @@ This is the official repository of the TERRENATOR team, which is representing Pa
 > Jean Paul Sosa
 
 
+
 ## Overview of our repository
 * `schemes`- contains the circuit diagram.
 * `others`-  This is for other files which can be used to understand the making of the vehicle. 
@@ -37,6 +38,7 @@ A list of all the electrical and mechanical components in the robot.
 ## Introduction
 
 - For make all the structure of the robot, it took a loot of time and investigation, we decided to build our robot totally by our self, we develop the robot in [OnShape](https://www.onshape.com/en/) Platform , all the design of the robot and all the models and pieces can be found here in `models`, it is compound by 17 parts that together make an assembly. We have passed by a lot of prototypes, we are trying with the turkiye prototype, to make it more light, more smaller, more efficient, we are looking to make the things simple, to make the most efficient freelance car, to control our vehicle, we decided to use [Arduino Nano](https://store.arduino.cc/products/arduino-nano) , because it's smaller and has all that we need to control our robot, we have use a various types of Arduino nano, Like the [Arduino Nano ESP32](https://store.arduino.cc/products/nano-esp32), [Arduino Nano Every](https://store.arduino.cc/products/arduino-nano-every), [Arduino Nano Every](https://store.arduino.cc/products/arduino-nano-every). The reason of why we have used various types of arduino nano, is because everyone of them give different capacities, and sometimes we need different capacities in our robot. To understand the making and the programming of the robot please check all the parts of this `README.md`.
+
   
 
 ## Mobility Strategy
@@ -69,7 +71,7 @@ A list of all the electrical and mechanical components in the robot.
 </p> 
 
 
-### 4- Camara
+### 4- Camera
 
 - Camera / object detection: For the second round, we are using a pixy cam v2, which is a useful and accurate camera for what we need, it has the advantage of having AI integrated, and well which makes it so much easier and faster for object detection.
 
