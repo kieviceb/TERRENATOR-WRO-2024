@@ -20,6 +20,7 @@ This is the official repository of the TERRENATOR team, which is representing Pa
 * `v-photos` - photos of every angle of the robot, including our previuos version .
 * `video` - the link to our youtube channel where you can see our robot in action completing both challenges.
 * `README.md` - Here's all our journey in the development of our robot here we explain every part of the robot making.
+
 ## Components
 A list of all the electrical and mechanical components in the robot.
 
@@ -33,12 +34,14 @@ A list of all the electrical and mechanical components in the robot.
 | <img src="https://github.com/user-attachments/assets/75af90ba-1501-44d0-9cf9-13ee83422d15" width="250"/> | <img src="https://github.com/user-attachments/assets/1f0feb97-1b34-44a4-a4b9-ae579832d1af" alt="Alt 1" width="300"/> | <img src="https://github.com/user-attachments/assets/166d29d3-77c1-43ee-b914-0fc7dd4190bc" alt="Alt 1" width="200"/> |
 |[Pixy cam v2.1 x1](https://a.co/d/hyOCC5F) | 3d structure (you can find the printables in `models`)|[Toggle-Switch SPDT 6A/125VAC x1](https://a.co/d/65AaiQM) |
 
-## Robot Developoment
+## Introduction
 
 - For make all the structure of the robot, it took a loot of time and investigation, we decided to build our robot totally by our self, we develop the robot in [OnShape](https://www.onshape.com/en/) Platform , all the design of the robot and all the models and pieces can be found here in `models`, it is compound by 17 parts that together make an assembly. We have passed by a lot of prototypes, we are trying with the turkiye prototype, to make it more light, more smaller, more efficient, we are looking to make the things simple, to make the most efficient freelance car, to control our vehicle, we decided to use [Arduino Nano](https://store.arduino.cc/products/arduino-nano) , because it's smaller and has all that we need to control our robot, we have use a various types of Arduino nano, Like the [Arduino Nano ESP32](https://store.arduino.cc/products/nano-esp32), [Arduino Nano Every](https://store.arduino.cc/products/arduino-nano-every), [Arduino Nano Every](https://store.arduino.cc/products/arduino-nano-every). The reason of why we have used various types of arduino nano, is because everyone of them give different capacities, and sometimes we need different capacities in our robot. To understand the making and the programming of the robot please check all the parts of this `README.md`.
   
 
 ## Mobility Strategy
+
+### 1- Selection of Motors
 
 - Movement: Our robot is powered by a single motor (POLOLU Metal Gearmotor (see list of components)), we used a 3D printed traction system in the back axle of the car, is specifically designed to enhance performance and maneuverability. This system involves a set of precisely engineered gears that provide consistent and reliable power transfer from the motor to the rear wheels. The gear configuration ensures that torque is effectively distributed, enabling the car to maintain traction even during rapid acceleration. It provides the power, control, and reliability needed for the commpetition.
 
@@ -47,7 +50,7 @@ A list of all the electrical and mechanical components in the robot.
 </p>
 
 
-
+### 2- Steering
  
 - Steering: The steering is handled by a servomotor, during this project we discovered that using a plastic gear servo is not a good choice, because of the speed of the robot, it tends to break easily inside; thats how we ended up using at first a MG995 servo which is metal gear so it doesnt break so easily, finally for the last prototype to reduce weight and size we found a micro metal gear servo (INJORA 7KG 2065 micro servo motor) , with the power of the big one but weighting less and smaller. Having the steering on the front axle, in vertical position to make movement with more precission.  
 
@@ -58,7 +61,7 @@ A list of all the electrical and mechanical components in the robot.
 
 
 
-## Sensors
+### 3- Sensors
 
 - Wall detection:For this part it took us a lot of time to figure out a way of using the ultrasonic sensors to avoid the walls successfully, in our previous prototype we had the sensor horizontally and it gave us good lectures most of the time, but not always, thast way investigating a little further and using trigonometry we found out that position the ultrasonic sensors of the sides vertically is way more effective and the main reason we were having trouble at the curves, what was happening was that the TX and RX sides, when reaching the curves, one was further ahead than the other and the pulse did not reach the same place and was sending out erroneous data, therefore when placing them vertically this does not happen, both pulses collide equally, and the signal bounces back uniformly, sending out useful data.
 <p align="center">
@@ -66,7 +69,13 @@ A list of all the electrical and mechanical components in the robot.
 </p> 
 
 
+### 4- Camara
+
 - Camera / object detection: For the second round, we are using a pixy cam v2, which is a useful and accurate camera for what we need, it has the advantage of having AI integrated, and well which makes it so much easier and faster for object detection.
+
+## - Chasis & 3D Parts
+
+
   
 **- Open Challenge**
 For the first challenge we use the three ultrasonic sensor to detect where te robot is using axels y points in the map, so the robot knows where it start. We divide the map onto three lanes, and the robot will try to get onto the middle of each lane, that means always will finish in the starting position, to complete the 3 laps it has to turn 12 times and for that we have a counter in the code that detect when the robot completes 12 corners and looks for the starting position, we use ultrasonic sensors, we have three sensors positioned in front and on the sides, that means the robot have the capability to make turns with more presition in least time.
