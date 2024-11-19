@@ -3,7 +3,7 @@
                 
 This is the official repository of the TERRENATOR team, which is representing Panama in the World Robotics Olympics (WRO) 2024 to be held this year in Izmir, Türkiye. We chose to participate in the category of Future Engineers this year winning first place in the national robotics olympics in our country. In this repository you can find everything related to the development of our robot.
 
-## Team members
+## Team members 👨‍💻
 > David Rico
 
 > Ericka Ceballos
@@ -12,7 +12,7 @@ This is the official repository of the TERRENATOR team, which is representing Pa
 
 
 
-## Overview of our repository
+## Overview of our repository 📜
 * `schemes`- contains the circuit diagram.
 * `others`-  This is for other files which can be used to understand the making of the vehicle. 
 * `models` - includes all the 3d printed parts of the robot.
@@ -22,7 +22,7 @@ This is the official repository of the TERRENATOR team, which is representing Pa
 * `video` - the link to our youtube channel where you can see our robot in action completing both challenges.
 * `README.md` - Here's all our journey in the development of our robot here we explain every part of the robot making.
 
-## Components
+## Components 🧱
 A list of all the electrical and mechanical components in the robot.
 
 | <img src="https://github.com/user-attachments/assets/3312d4d8-3a2c-48f9-8fe6-120640876eb5" alt="Alt 1" width="300"/> | <img src="https://github.com/user-attachments/assets/989e28c3-e055-45da-b284-13386d09e14e" alt="Alt 1" width="200"/> | <img src="https://github.com/user-attachments/assets/ddaac9e1-450c-4d3a-bbb0-b5ebca198fa2" alt="Alt 1" width="200"/> | 
@@ -35,13 +35,13 @@ A list of all the electrical and mechanical components in the robot.
 | <img src="https://github.com/user-attachments/assets/75af90ba-1501-44d0-9cf9-13ee83422d15" width="250"/> | <img src="https://github.com/user-attachments/assets/1f0feb97-1b34-44a4-a4b9-ae579832d1af" alt="Alt 1" width="300"/> | <img src="https://github.com/user-attachments/assets/166d29d3-77c1-43ee-b914-0fc7dd4190bc" alt="Alt 1" width="200"/> |
 |[Pixy cam v2.1 x1](https://a.co/d/hyOCC5F) | 3d structure (you can find the printables in `models`)|[Toggle-Switch SPDT 6A/125VAC x1](https://a.co/d/65AaiQM) |
 
-## Introduction
+## Introduction 🎓
 
 - For make all the structure of the robot, it took a loot of time and investigation, we decided to build our robot totally by our self, we develop the robot in [OnShape](https://www.onshape.com/en/) Platform , all the design of the robot and all the models and pieces can be found here in `models`, it is compound by 17 parts that together make an assembly. We have passed by a lot of prototypes, we are trying with the turkiye prototype, to make it more light, more smaller, more efficient, we are looking to make the things simple, to make the most efficient freelance car, to control our vehicle, we decided to use [Arduino Nano](https://store.arduino.cc/products/arduino-nano) , because it's smaller and has all that we need to control our robot, we have use a various types of Arduino nano, Like the [Arduino Nano ESP32](https://store.arduino.cc/products/nano-esp32), [Arduino Nano Every](https://store.arduino.cc/products/arduino-nano-every), [Arduino Nano Every](https://store.arduino.cc/products/arduino-nano-every). The reason of why we have used various types of arduino nano, is because everyone of them give different capacities, and sometimes we need different capacities in our robot. To understand the making and the programming of the robot please check all the parts of this `README.md`.
 
   
 
-## Mobility Strategy
+## Mobility Strategy 🚲
 
 ### 1- Movement
 
@@ -116,25 +116,17 @@ In this way, in the vehicle, the MPU-6050 works using the desired angles through
 
 ### 4- Camera
 
-- - [PIXY CAM 2.1](https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/): For the second round, we are using a pixy cam v2, which is a useful and accurate camera for what we need, it has the advantage of having AI integrated, and well which makes it so much easier and faster for object detection.
+- - [PIXY CAM 2.1](https://pixycam.com/2021/05/20/introducing-pixy-2-1/): 
 
-## - Chasis & 3D Parts
+
+## Chasis & 3D Parts
 
 
   
-**- Open Challenge**
-For the first challenge we use the three ultrasonic sensor to detect where te robot is using axels y points in the map, so the robot knows where it start. We divide the map onto three lanes, and the robot will try to get onto the middle of each lane, that means always will finish in the starting position, to complete the 3 laps it has to turn 12 times and for that we have a counter in the code that detect when the robot completes 12 corners and looks for the starting position, we use ultrasonic sensors, we have three sensors positioned in front and on the sides, that means the robot have the capability to make turns with more presition in least time.
-For international tournament we are planning to use PID,a PID (Proportional-Integral-Derivative) is a type of controller used in control systems to maintain a process variable (such as temperature, speed, position, etc.) at a desired value, called a setpoint. The PID controller adjusts the output of a system based on three terms: proportional, integral and derivative, each of which responds to different aspects of the error between the setpoint and the measured process variable. This allow us to have a more efficient way to make the first round in least time, we are thinking touse PID in two diferent ways, first as a subtraction between the measure of the ultraonic sensors, that means will always search for the middle o the rail, or use it as a wall follower dependind in which rail it start.
 
 
-**- Obstacle Challenge**
-Now in this challenge we got the obstacles, the green blocks, red blocks and the parking spot, we found this one much harder than the other one so we decided to go with something more advance, our main component for this round is the PIXY cam, wich is an AI cam that is connected to the arduino and sets the signatures, we recorded 3 signatures in the PIXY cam "g.block", it refers to the green blocks, "r.block", it refers to the red blocks and "pkspot", that refers to the parking spot. for avoid the color blocks, we devide de camara field of view in 9 sector using the camara pixels, 
-<p align="center">
-<img src="https://github.com/user-attachments/assets/cc3d6845-a564-4b15-b12f-3d4bc58545e4" alt="Imagen 1" width="300">
-</p> 
-that means that depending on what sector the block is viewed the robot will make an idea of the distance from de block and where the block is positionated in the map, for every sector it will do a different movement to avoid the obstacle, that means that are 9 movements for green blocks and 9 with red blocks, with a total of 18 diferent movements. While trying the code we noticed that the program is to heavy for a normal arduino nano procesor, that´s why we decided to use an arduino NANO ESP32 for motion and measuring of distance, and an arduino NANO A000005 only for procesing the data of the camara. We comunicate both arduino´s with i2c serial comunication, the arduino NANO ESP32 as slave and arduino NANO A000005 as master.
+## Code & programming
 
-## Code & programation
 
 
 ## References
