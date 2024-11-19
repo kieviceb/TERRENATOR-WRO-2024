@@ -41,6 +41,12 @@ A list of all the electrical and mechanical components in the robot.
 
 ## Vehicle Photos
 
+| Front           | Right       | Back      |
+|:---------------:|:-----------:|:---------:|
+| <img width="270" alt="front" src="https://github.com/user-attachments/assets/6f84ca38-0c9e-4d97-ad21-b614274d8c4e"> |<img width="270" alt="front" src="https://github.com/user-attachments/assets/59202f6a-d770-4736-b8df-182cf425b596"> |  <img width="270" alt="front" src="https://github.com/user-attachments/assets/1af8d922-91d6-4d32-9e84-6485ce99b156"> |
+| Left          | Top       | Bottom     |
+|<img width="270" alt="front" src="https://github.com/user-attachments/assets/3dbc8d78-e1a2-4efd-a434-4e5be9ccd376">| <img width="270" alt="front" src="https://github.com/user-attachments/assets/598fb7a0-45b2-45e9-be24-0b379a4eb9d0"> | <img width="270" alt="front" src="https://github.com/user-attachments/assets/bf297d46-d3c8-4b30-bc6e-63b9df7a281d">|
+
 ## Mobility Strategy 🚲
 
 ### 1- Movement
