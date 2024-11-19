@@ -1,7 +1,7 @@
 # Into the code
 
 ## Open Challenge
-### **1. Librerías y Constantes**
+### **1. Libraries and Constants**
 
 ```cpp
 #include <Servo.h>
@@ -13,16 +13,16 @@
 #define MPU6050_DEFAULT_ADDRESS     MPU6050_ADDRESS_AD0_LOW
 ```
 
-**Explicación**:  
-- Se incluyen las librerías necesarias para el proyecto:
-  - `Servo.h`: Para controlar el servo.
-  - `Simple_MPU6050.h`: Una biblioteca simplificada para comunicarse con el sensor MPU6050, que mide la orientación.
-  - `Wire.h`: Permite la comunicación I2C, utilizada por el MPU6050.
-- Se definen las direcciones del MPU6050 para especificar cómo se conecta al microcontrolador. En este caso, se usa la dirección `0x68` (valor por defecto).
+**Explanation**:  
+- Includes the necessary libraries for the project:  
+  - `Servo.h`: For controlling the servo motor.  
+  - `Simple_MPU6050.h`: A simplified library for working with the MPU6050 sensor, which measures orientation.  
+  - `Wire.h`: Enables I2C communication, which the MPU6050 uses.  
+- Defines the MPU6050’s I2C addresses. The default address `0x68` is used here.  
 
 ---
 
-### **2. Variables Globales**
+### **2. Global Variables**
 
 ```cpp
 Simple_MPU6050 mpu;
@@ -57,30 +57,30 @@ int bloqueadorI = 65;
 int bloqueadorD = 65;
 ```
 
-**Explicación**:  
-- **MPU6050**: 
-  - `mpu`: Objeto para interactuar con el sensor.
-  - `yawActual` y `yawInicial`: Almacenan el ángulo de orientación (yaw), clave para saber en qué dirección está orientado el robot.
-- **Servo**: 
-  - `servoDireccion`: Controla la dirección del robot.
-  - Ángulos (`anguloIzquierda`, `anguloCentro`, `anguloDerecha`): Determinan las posiciones mínimas, centrales y máximas del servo.
-- **Control PD**: 
-  - `Kp` y `Kd`: Constantes del controlador proporcional-derivativo.
-  - `lastError`: Almacena el error previo para calcular la derivada.
-- **Estado del robot**: 
-  - `curva`: Cuenta las curvas detectadas.
-  - `enMarcha`: Indica si el robot está en movimiento.
-- **Sensores ultrasónicos**: 
-  - Pines para medir distancias (izquierda, centro, derecha).
-- **Motores**: 
-  - Pines que controlan la dirección y velocidad.
-- **Control de tiempo**:
-  - `tiempoUltimaCurva`: Evita que el robot detecte la misma curva varias veces seguidas.
-  - `bloqueadorI` y `bloqueadorD`: Limitan cuándo el robot puede realizar giros en cada dirección.
+**Explanation**:  
+- **MPU6050 Variables**:  
+  - `mpu`: Object to interact with the MPU6050 sensor.  
+  - `yawActual` and `yawInicial`: Store the current and initial yaw (horizontal orientation).  
+- **Servo Variables**:  
+  - `servoDireccion`: Controls the robot’s steering.  
+  - `anguloIzquierda`, `anguloCentro`, `anguloDerecha`: Represent the leftmost, center, and rightmost angles of the servo.  
+- **PD Control**:  
+  - `Kp` and `Kd`: Proportional and derivative gains for the control system.  
+  - `lastError`: Stores the previous error to calculate the derivative.  
+- **Robot State**:  
+  - `curva`: Tracks the number of detected turns.  
+  - `enMarcha`: Indicates whether the robot is moving.  
+- **Ultrasonic Sensors**:  
+  - Define pins for the left, center, and right sensors.  
+- **Motor Pins**:  
+  - Define the pins controlling motor speed and direction.  
+- **Time Management**:  
+  - `tiempoUltimaCurva`: Prevents the robot from detecting the same turn repeatedly.  
+  - `bloqueadorI` and `bloqueadorD`: Set thresholds to determine when the robot can turn in a specific direction.  
 
 ---
 
-### **3. Procesamiento del MPU6050**
+### **3. MPU6050 Processing**
 
 ```cpp
 void procesarMPU(int16_t *gyro, int16_t *accel, int32_t *quat, uint32_t *timestamp) {
@@ -98,14 +98,14 @@ void procesarMPU(int16_t *gyro, int16_t *accel, int32_t *quat, uint32_t *timesta
 }
 ```
 
-**Explicación**:  
-Esta función procesa los datos del MPU6050 para calcular la orientación del robot en el eje yaw (rotación horizontal).  
-- Se convierten los datos del sensor en ángulos utilizando las funciones de la biblioteca `Simple_MPU6050`.
-- El ángulo `yawActual` se actualiza para que el resto del programa pueda usarlo.
+**Explanation**:  
+This function processes data from the MPU6050 to calculate the robot's yaw (horizontal rotation).  
+- The quaternion, gravity vector, and yaw-pitch-roll angles are computed using the `Simple_MPU6050` library.  
+- The result is stored in `yawActual` to be used in navigation.  
 
 ---
 
-### **4. Control del Servo**
+### **4. Servo Control**
 
 ```cpp
 void inicializarControlPD() {
@@ -113,8 +113,8 @@ void inicializarControlPD() {
 }
 ```
 
-**Explicación**:  
-Inicializa el servo conectándolo al pin especificado (`pinServo`).
+**Explanation**:  
+This function initializes the servo motor by attaching it to the specified pin (`pinServo`).
 
 ---
 
@@ -135,8 +135,8 @@ void move_steer(int pos) {
 }
 ```
 
-**Explicación**:  
-Mueve el servo de forma suave y controlada, ajustando gradualmente su posición.
+**Explanation**:  
+Moves the servo motor gradually to the desired position (`pos`) to ensure smooth transitions.
 
 ---
 
@@ -152,13 +152,13 @@ void ajustarAngulo(float error, int anguloDeseado) {
 }
 ```
 
-**Explicación**:  
-- Calcula cuánto debe ajustarse el ángulo del servo en función del error detectado y el control PD.
-- Aplica el ajuste suavemente usando `move_steer`.
+**Explanation**:  
+- Uses a proportional-derivative (PD) controller to calculate adjustments to the servo angle based on the error.  
+- The angle is constrained within the servo’s limits and applied smoothly using `move_steer`.  
 
 ---
 
-### **5. Sensores Ultrasónicos**
+### **5. Ultrasonic Sensors**
 
 ```cpp
 long medirDistancia(int trigPin, int echoPin) {
@@ -173,13 +173,13 @@ long medirDistancia(int trigPin, int echoPin) {
 }
 ```
 
-**Explicación**:  
-- Mide la distancia desde un sensor ultrasónico enviando un pulso (trig) y midiendo cuánto tarda en regresar (echo).
-- Calcula la distancia en centímetros usando la fórmula de tiempo y velocidad del sonido.
+**Explanation**:  
+- Measures the distance using an ultrasonic sensor.  
+- Sends a trigger pulse and measures the time for the echo to return, calculating the distance in centimeters.
 
 ---
 
-### **6. Control de Motores**
+### **6. Motor Control**
 
 ```cpp
 void avanzar(int velocidad) {
@@ -189,8 +189,8 @@ void avanzar(int velocidad) {
 }
 ```
 
-**Explicación**:  
-Hace que los motores giren hacia adelante a la velocidad especificada.
+**Explanation**:  
+Drives the motors forward at the specified speed (`velocidad`).
 
 ---
 
@@ -202,12 +202,12 @@ void detener() {
 }
 ```
 
-**Explicación**:  
-Detiene los motores completamente.
+**Explanation**:  
+Stops the motors by turning off all outputs.
 
 ---
 
-### **7. Detección de Curvas**
+### **7. Curve Detection**
 
 ```cpp
 void detectarCurva(long distanciaIzquierda, long distanciaCentro, long distanciaDerecha) {
@@ -218,9 +218,9 @@ void detectarCurva(long distanciaIzquierda, long distanciaCentro, long distancia
     unsigned long tiempoActual = millis();
     if (tiempoActual - tiempoUltimaCurva >= bloqueoTiempo) {
         if (error > 1 && distanciaCentro < 58 && sum > 90 && distanciaIzquierda > bloqueadorI) {
-            // Giro a la izquierda
+            // Left turn
         } else if (error < -1 && distanciaCentro < 58 && sum > 90 && distanciaDerecha > bloqueadorD) {
-            // Giro a la derecha
+            // Right turn
         } else {
             ajustarAngulo(error, anguloCentro);
             avanzar(200);
@@ -232,42 +232,43 @@ void detectarCurva(long distanciaIzquierda, long distanciaCentro, long distancia
 }
 ```
 
-**Explicación**:  
-Detecta curvas basándose en las diferencias de distancia medidas por los sensores.  
-- Determina si se debe girar a la izquierda o derecha. 
-- Evita giros innecesarios gracias a los bloqueadores de tiempo (`bloqueoTiempo`).
+**Explanation**:  
+Detects curves based on differences in the distances measured by the ultrasonic sensors.  
+- Determines whether to turn left or right based on the error.  
+- Prevents repeated turn detection using a time-based lock (`bloqueoTiempo`).  
 
 ---
 
-### **8. Setup**
+### **8. Setup Function**
 
 ```cpp
 void setup() {
     Serial.begin(115200);
-    // Configuración de pines
-    // Inicialización de servo y MPU6050
+    // Pin configurations
+    // Initialize servo and MPU6050
 }
 ```
 
-**Explicación**:  
-- Configura los pines de entrada y salida.
-- Inicializa el servo y el sensor MPU6050 para comenzar a recibir datos.
+**Explanation**:  
+- Sets up pin modes for input and output.  
+- Initializes the servo and MPU6050 to start reading data.  
+- Prepares the robot for operation.  
 
 ---
 
-### **9. Loop**
+### **9. Loop Function**
 
 ```cpp
 void loop() {
     if (!enMarcha) {
-        // Espera hasta que se presione un botón.
+        // Waits until the button is pressed.
     }
     if (enMarcha) {
-        // Lee datos del MPU y ejecuta la lógica de actualización.
+        // Reads MPU data and executes control logic.
     }
 }
 ```
 
-**Explicación**:  
-- El robot espera a que el botón sea presionado para empezar.
-- Una vez en marcha, lee datos del MPU6050 y sensores ultrasónicos, ajusta el servo y controla los motores.
+**Explanation**:  
+- The robot remains idle until a button press sets it into motion.  
+- Once active, the robot reads data from the MPU6050 and ultrasonic sensors, adjusts the servo, and controls the motors to navigate.
