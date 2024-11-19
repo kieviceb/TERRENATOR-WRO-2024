@@ -103,25 +103,20 @@ It is a 6-axis motion sensor that measures linear accelerations and angular velo
 </p> 
 For our vehicle, we are only interested in the z-axis (Yaw) of the MPU-6050, because this axis is the one that will allow us to determine the desired angles for our robot to work, in our vehicle, we have to let the sensor calibrate to start, at the time of being calibrated the angles that we are interested in are those of 90 degrees to be able to make a right angle turn and to help stabilize the PD, because we had the problem that in the straight lines the PD is well stabilized, but when making the curves it went crazy, and began to oscillate a lot, then to have more precise turns, We used the Z axis (Yaw) of the MPU-6050, but this also had its complications, because the values sent by the z axis were not so simple for the robot to understand, because the first curve, if they were 90 degrees, but the next curve for example the gyroscope threw 180 degrees, and if it is logical, but it was more difficult to implement, so we thought of several possible solutions for this, we thought of resetting or resetting the values of Yaw or the z-axis after each curve, so that if in the serial we can always see that it turns 90 degrees exactly, but this greatly affected the accuracy of the sensor.
 
+ <br>
+ <br>
 
 
+ > [!NOTE]
+>In order to see the coding of each motion component or sensor explained, please go to the coding part for further understanding, as well as you can always review the vehicle circuit diagram and review the component list, and also you can check our youtube channel. [Here](https://www.youtube.com/@TERRENATORTEAM)
 
 
-
-
-
-
-> [!NOTE]
->In order to see the coding of each motion component or sensor explained, please go to the coding part for further understanding, as well as you can always review the vehicle circuit diagram and review the component list.
 <br>
-<br>
-
-
-
+In this way, in the vehicle, the MPU-6050 works using the desired angles through functions so that the robot can make precise turns. I will go into much more detail about this in the code section.
 
 ### 4- Camera
 
-- Camera / object detection: For the second round, we are using a pixy cam v2, which is a useful and accurate camera for what we need, it has the advantage of having AI integrated, and well which makes it so much easier and faster for object detection.
+- - [PIXY CAM 2.1](https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/): For the second round, we are using a pixy cam v2, which is a useful and accurate camera for what we need, it has the advantage of having AI integrated, and well which makes it so much easier and faster for object detection.
 
 ## - Chasis & 3D Parts
 
@@ -139,11 +134,13 @@ Now in this challenge we got the obstacles, the green blocks, red blocks and the
 </p> 
 that means that depending on what sector the block is viewed the robot will make an idea of the distance from de block and where the block is positionated in the map, for every sector it will do a different movement to avoid the obstacle, that means that are 9 movements for green blocks and 9 with red blocks, with a total of 18 diferent movements. While trying the code we noticed that the program is to heavy for a normal arduino nano procesor, that´s why we decided to use an arduino NANO ESP32 for motion and measuring of distance, and an arduino NANO A000005 only for procesing the data of the camara. We comunicate both arduino´s with i2c serial comunication, the arduino NANO ESP32 as slave and arduino NANO A000005 as master.
 
+## Code & programation
+
 
 ## References
-- [Git Hub Readme Syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax):
+- [Git Hub Readme Syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 - https://howtomechatronics.com/tutorials/arduino/ultrasonic-sensor-hc-sr04/
 - https://www.sparkfun.com/products/15569
 - https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/
-
-
+- https://pixycam.com/2021/05/20/introducing-pixy-2-1/
+- https://wro-association.org/wp-content/uploads/WRO-2023-Future-Engineers-Self-Driving-Cars-General-Rules.pdf
