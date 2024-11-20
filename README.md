@@ -219,7 +219,25 @@ void inicializarControlPD() {
     servoDireccion.attach(pinServo);
 }
 ```
-### 1- PD ():
+### 1- PD (Proportional-Derivative):
+Before we explain the coding of this, we need to explain what is it:
+
+PD Control (Proportional-Derivative) is a technique in control theory used to adjust the behavior of a system based on:
+
+-The current error (Proportional): How much the system deviates from the desired value at this moment.
+-The rate of change of the error (Derivative): How quickly the error is changing over time.
+
+A PD controller is a simplified form of the PID control, omitting the Integral term. It is useful when:
+
+-Accumulated errors (integral term) do not need to be eliminated.
+-The system requires fast and stable responses.
+
+Mathematical Function of PD
+The output of the controller (referred to as adjustment or correction) is calculated as:
+![null-109](https://github.com/user-attachments/assets/fbdc2763-facf-4c3c-83a6-f9a0d5bbe00e)
+
+where Kp is the proportional gain, 
+
 
 ## References
 - [Git Hub Readme Syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
