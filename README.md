@@ -154,8 +154,72 @@ The PixyCam 2.1 is a fast and versatile vision sensor for DIY robotics, offering
 ## Chasis & 3D Parts
 
 ## Code & programming
+### 1- Motor:
+To begin we need to declare the pins of the motor, exactly is the POLOLU Metal Gearmotor 25Dx65L mm MP 12V with 48 CPR
+```ino
+int motorPin1 = 5, motorPin2 = 4, enablePin = 3, standbyPin = 16;
+```
+After this for the correct operation of the motor it is necessary to declare the pins as OUTPUT, that is to declare the pins as output, this is to initialize them, as we will be able to see next in the code:
+```ino
+pinMode(motorPin1, OUTPUT);
+pinMode(motorPin2, OUTPUT);
+pinMode(enablePin, OUTPUT);
+pinMode(standbyPin, OUTPUT);
+digitalWrite(standbyPin, HIGH);
+```
+Then we will enter the Void functions, which are functions that in determinod time we can call for certain event that we need to occur, in this case the movement of the car, the motorpin 1 in HIGH and motorpin 2 in low makes the motor advance, in case of putting this configuration backwards would make the car go in reverse, and also atravz of the PWM can adjust the speed of the motor, as we can see:
+```ino
+void avanzar(int velocidad) {
+    digitalWrite(motorPin1, HIGH); // Sentido de giro
+    digitalWrite(motorPin2, LOW);  // Inverso del otro pin
+    analogWrite(enablePin, velocidad); // Control de velocidad con PWM
+}
+```
+Now we will have the function to stop the motor, that would be with the two pins in LOW, in the code it would be like this:
+```ino
+void detener() {
+    digitalWrite(motorPin1, LOW);
+    digitalWrite(motorPin2, LOW);
+    analogWrite(enablePin, 0);
+}
+```
+Use of the motor in the detectCurve function:
 
+1- During a turn, a fixed speed (250 in PWM) is set to maintain the motion.
+2- This command works together with the position of the steering servomotor to perform the turn in a coordinated manner.Use of the motor in the detectCurve function:
+```ino
+avanzar(250); // Control del motor durante el giro
+```
+### 1- ServoMotor:
 
+To begin with, we need to declare the library that is made to facilitate its usability in the arduino IDE and optimize it in the code, This line includes the Servo library, which is essential for controlling servo motors on the Arduino. It provides easy-to-use functions, such as attach(), write() and read(), which allow you to control the servo motor angle precisely:
+```ino
+#include <Servo.h>
+```
+Declaration of variables related to the servomotor:
+Servo servoServoSteer: Create an object of the Servo class called servoSteer. This object will be used to configure and control the servo motor in charge of steering the robot.
+int pinServo = 6: Defines that the servo motor is connected to the digital pin 6 of the Arduino.
+int anguloLeft = 87: Represents the angle at which the servomotor will turn to the left.
+int anguloCenter = 90: It is the “neutral” or central angle of the servomotor, where the robot advances in a straight line.
+int anguloRight = 105: It is the angle at which the servomotor will turn to the right.
+int anguloMPU = 0: A variable used to dynamically adjust the servo motor angle based on the gyroscope data.
+```ino
+Servo servoDireccion;
+int pinServo = 6;
+int anguloIzquierda = 87;
+int anguloCentro = 90;
+int anguloDerecha = 105;
+int anguloMPU = 0;
+```
+servoDirection.attach(pinServo) is used to initialize the servo, which associates the servoDirection object with the pin defined in pinServo (pin 6 in this case). This allows the Arduino to control the servo motor connected to that pin.
+This function must be called before attempting to move the servo motor to ensure that the pin is set correctly.servoDirection.attach(pinServo) is used to initialize the servo. It associates the servoDirection object with the pin defined in pinServo (pin 6 in this case). This allows the Arduino to control the servo motor connected to that pin.
+This function should be called before attempting to move the servo motor to ensure that the pin is set correctly, look the code to understand:
+```ino
+void inicializarControlPD() {
+    servoDireccion.attach(pinServo);
+}
+```
+### 1- PD ():
 
 ## References
 - [Git Hub Readme Syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
