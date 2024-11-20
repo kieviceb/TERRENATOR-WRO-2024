@@ -236,7 +236,81 @@ Mathematical Function of PD
 The output of the controller (referred to as adjustment or correction) is calculated as:
 ![null-109](https://github.com/user-attachments/assets/fbdc2763-facf-4c3c-83a6-f9a0d5bbe00e)
 
-where Kp is the proportional gain, 
+where Kp is the proportional gain, Kd the derivative gain, the error the difference between the desired value (setpoint) and the current system value and and d multiplied by the error between d its the Derivative of the error, i.e., the rate of change of the error over time.
+
+-Implementation of PD Control in the code
+The code uses a PD controller to dynamically adjust the servo motor angle based on error. Below, I break down each step of its implementation:
+
+float Kp = 2.0;: Defines the proportional gain.
+
+A higher value means that the system responds more aggressively to error.
+Too high a value can make the system unstable (oscillate).
+float Kd = 1.0;: Defines the derivative gain.
+
+Helps to smooth the system response. If the error is changing rapidly, this term reduces the setting to avoid oscillations.
+float lastError = 0;: Variable to store the error of the previous iteration.
+```ino
+float Kp = 2.0; // Constante proporcional
+float Kd = 1.0; // Constante derivativa
+float lastError = 0; // Almacena el error previo
+```
+Now we have the function to ajust the angles, here is:
+```ino
+void ajustarAngulo(float error, int anguloDeseado) {
+    float derivada = error - lastError; // Cambio del error
+    float ajuste = (Kp * error) + (Kd * derivada); // Ajuste PD
+    lastError = error; // Actualizar el último error
+
+    anguloDeseado += ajuste; // Modificar el ángulo deseado
+    anguloDeseado = constrain(anguloDeseado, anguloIzquierda, anguloDerecha); // Limitar el ángulo
+    move_steer(anguloDeseado); // Mover el servomotor al nuevo ángulo
+}
+```
+We will be explaining it line per line, first we need to calculate the actual error and the last error, this represetn how is changing the mistake or the error in the time, if the error keeps growing quickly it means that this value is more big, and if the mistake it´s getting lower it means it will be lower or cero.
+<br>
+ <br>
+
+
+ > [!NOTE]
+>Important: The derivative term acts as a “brake” that reduces the adjustment if the system is already correcting quickly.
+
+
+<br>
+
+here is the line code:
+```ino
+float derivada = error - lastError;
+```
+Now we need to calculate the total ajust, the Kp multiplied bye the error makes a correction that is proportional to the size of the error, meanwhile the mistake it's bigger, more bigger will be the correction. The Kd multiplied by the derivative will make a correction based on the speed of the error change, it helps to get more soft the oscilations.
+- By example:
+Kp it's equial to 2.0, Kd to 1.0, Error equal 10 and the last error to 8, it means that the derivative will be 10 - 8 = 2,
+and the ajust = (2*10)+(1*2)= 20 + 2 = 22, so the final ajust will be 22, let's see it in the code:
+```ino
+float ajuste = (Kp * error) + (Kd * derivada);
+```
+Now we have to update the previous error, we use the 'LastError' Variable to update it with the value of the actual error, this is crucial to calculate the derivativee in the next action.
+```ino
+lastError = error;
+```
+Now we have to ajust the angle we want, we make this through anguloDeseado += ajuste; this ajust dinamically the angle of the servomotor in function of the result of the PD controlator. and if we do: constrain(anguloDeseado, anguloIzquierda, anguloDerecha); This will limit the angle inside of the fisic values available (anguloIzquierda y anguloDerecha) this prevent damage to the servo.
+```ino
+anguloDeseado += ajuste;
+anguloDeseado = constrain(anguloDeseado, anguloIzquierda, anguloDerecha);
+```
+Next, we make the movement of the steer applying this line:
+```ino
+move_steer(anguloDeseado);
+```
+And for last, we call the PD in the main loop, the PD it's used secuencially inside the main loop or in specific functions like, 'detectarCurva', to fix the direction of the robot, the mistake it's calculated based on the ultrasonic sensors (Desviation due to the center of the way),  with the MPU-6050, and we call 'ajustar angulo' to calculate the new angle in the servomotor to make the correction needed.
+
+### Why do we use PD?:
+1- To maintain stability: Avoid abrupt movements or overcorrections that could destabilize the robot.
+
+2- To improve precision: Adjust the steering angle based on real-time data, ensuring that the robot follows the desired path.
+
+3- For smooth motion: Thanks to the derivative term, it reduces oscillations, achieving a smooth ride.
+
+4- For adaptability: Responds dynamically to changes in the environment, such as curves or detours, by adjusting the robot's direction.
 
 
 ## References
