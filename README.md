@@ -196,7 +196,7 @@ avanzar(250); // Control del motor durante el giro
 
 
 
-### 1- ServoMotor:
+### 2- ServoMotor:
 
 To begin with, we need to declare the library that is made to facilitate its usability in the arduino IDE and optimize it in the code, This line includes the Servo library, which is essential for controlling servo motors on the Arduino. It provides easy-to-use functions, such as attach(), write() and read(), which allow you to control the servo motor angle precisely:
 ```ino
@@ -228,7 +228,7 @@ void inicializarControlPD() {
 
 
 
-### 1- PD (Proportional-Derivative):
+### 3- PD (Proportional-Derivative):
 Before we explain the coding of this, we need to explain what is it:
 
 PD Control (Proportional-Derivative) is a technique in control theory used to adjust the behavior of a system based on:
@@ -324,7 +324,7 @@ And for last, we call the PD in the main loop, the PD it's used secuencially ins
 
 
 
-### - [MPU-6050](https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/):: 
+### 4- [MPU-6050](https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/):
 
  First of all we need to initialize our MPU-6050 We need to declare all the variables for it, and it has some specific libraries that you can find it here:
 
@@ -332,7 +332,10 @@ https://github.com/jrowberg/i2cdevlib
 https://github.com/ZHomeSlice/Simple_MPU6050
 https://github.com/ZHomeSlice/Simple_Wire
 
-And if you don't know how to install it, you need to watch this video, (it's in spanish)
+And if you don't know how to install it, you need to watch this video, (it's in spanish):
+
+
+
 
 
 
