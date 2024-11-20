@@ -154,6 +154,9 @@ The PixyCam 2.1 is a fast and versatile vision sensor for DIY robotics, offering
 ## Chasis & 3D Parts
 
 ## Code & programming
+
+
+
 ### 1- Motor:
 To begin we need to declare the pins of the motor, exactly is the POLOLU Metal Gearmotor 25Dx65L mm MP 12V with 48 CPR
 ```ino
@@ -190,6 +193,9 @@ Use of the motor in the detectCurve function:
 ```ino
 avanzar(250); // Control del motor durante el giro
 ```
+
+
+
 ### 1- ServoMotor:
 
 To begin with, we need to declare the library that is made to facilitate its usability in the arduino IDE and optimize it in the code, This line includes the Servo library, which is essential for controlling servo motors on the Arduino. It provides easy-to-use functions, such as attach(), write() and read(), which allow you to control the servo motor angle precisely:
@@ -219,6 +225,9 @@ void inicializarControlPD() {
     servoDireccion.attach(pinServo);
 }
 ```
+
+
+
 ### 1- PD (Proportional-Derivative):
 Before we explain the coding of this, we need to explain what is it:
 
@@ -313,6 +322,7 @@ And for last, we call the PD in the main loop, the PD it's used secuencially ins
 4- For adaptability: Responds dynamically to changes in the environment, such as curves or detours, by adjusting the robot's direction.
 
 
+
 ## References
 - [Git Hub Readme Syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 - https://howtomechatronics.com/tutorials/arduino/ultrasonic-sensor-hc-sr04/
@@ -321,3 +331,4 @@ And for last, we call the PD in the main loop, the PD it's used secuencially ins
 - https://pixycam.com/2021/05/20/introducing-pixy-2-1/
 - https://wro-association.org/wp-content/uploads/WRO-2023-Future-Engineers-Self-Driving-Cars-General-Rules.pdf
 - https://www.onshape.com/en/
+- https://www.matthewpeterkelly.com/tutorials/pdControl/index.html#:~:text=A%20proportional%2Dderivative%20(PD),car%20at%20some%20desired%20height.
