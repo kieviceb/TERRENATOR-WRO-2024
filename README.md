@@ -1,5 +1,8 @@
 # Terrenator's readme <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Flag_of_Panama.svg" alt="Bandera de Panamá" width="30"/>
 ![TERRENATOR (30 x 18 cm) (25 x 6 cm) (1)](https://github.com/user-attachments/assets/5c56937c-a3a7-425d-ac0a-d61c6865f1eb)
+
+[![Facebook](https://img.shields.io/badge/YouTube-%23E4445F.svg?style=for-the-badge&logo=Youtube&logoColor=white)](https://www.youtube.com/@TERRENATORTEAM)
+[![Instagram](https://img.shields.io/badge/Instagram-%23E9805F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://www.instagram.com/terrenatorteam/)
                 
 This is the official repository of the TERRENATOR team, which is representing Panama in the World Robotics Olympics (WRO) 2024 to be held this year in Izmir, Türkiye. We chose to participate in the category of Future Engineers this year winning first place in the national robotics olympics in our country. In this repository you can find everything related to the development of our robot.
 
@@ -106,6 +109,14 @@ To detect the walls with the HC-SR04 it took us a lot of time to figure out a wa
 <img src="https://github.com/user-attachments/assets/da479d5d-0a66-4abc-842d-d36a51ef9c10" alt="Imagen 1" width="500">
 </p> 
 
+In addition to this, as can be seen in the photos of the vehicle, our ultrasonic sensors each have a Ceramic capacitor, and before explaining why we have it we should know what it is. A ceramic capacitor is a fixed-value capacitor where the ceramic material acts as the dielectric. It is formed by two or more alternating layers of ceramic and a metallic layer that acts as the electrode. The composition of the ceramic material defines the electrical behavior and therefore the applications.
+
+Knowing this, our intention in placing these ceramic lentils or capacitors is to be able to soften the signals of the ultrasonic sensors, so to speak filter the signals, this helped to not protrude peaks in the sound waves transmitted by the ultrasonic sensor and so that all data are received with the greatest possible clarity.
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/21413d63-e98a-49d5-9c78-977b65c0e008" alt="Imagen 1" width="350">
+</p> 
+
 - [MPU-6050](https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/):
 MPU6050 sensor module is complete 6-axis Motion Tracking Device. It combines 3-axis Gyroscope, 3-axis Accelerometer and Digital Motion Processor all in small package. Also, it has additional feature of on-chip Temperature sensor. It has I2C bus interface to communicate with the microcontrollers. It has Auxiliary I2C bus to communicate with other sensor devices like 3-axis Magnetometer, Pressure sensor etc. If 3-axis Magnetometer is connected to auxiliary I2C bus, then MPU6050 can provide complete 9-axis Motion Fusion output.
 <p align="center">
@@ -132,14 +143,15 @@ In this way, in the vehicle, the MPU-6050 works using the desired angles through
 
 ### 4- Camera
 
-- - [PIXY CAM 2.1](https://pixycam.com/2021/05/20/introducing-pixy-2-1/): 
+- [PIXY CAM 2.1](https://pixycam.com/2021/05/20/introducing-pixy-2-1/):
+The PixyCam 2.1 is a fast and versatile vision sensor for DIY robotics, offering significant improvements over its predecessor. Its horizontal field-of-view has been expanded to 80 degrees, allowing it to capture more of the environment in each frame, albeit with minor spherical distortion. The camera features a replaceable M12 lens mount with adjustable focus, enabling it to focus on objects as close as 0.25 inches. It also minimizes chromatic distortion at the edges and boasts an F-stop of 2.0, improving light gathering and reducing pixel noise, resulting in higher detection accuracy. Capable of processing images at 60 frames per second, it updates object positions every 16.7 milliseconds, making it ideal for tracking fast-moving objects or precise line-following. The Color Connected Components (CCC) algorithm allows it to detect objects based on hue and saturation, remaining robust under varying lighting conditions. It supports up to 7 unique color signatures or numerous objects using color codes. While retaining the software, firmware, and features of PixyCam 2, this version is slightly larger but significantly more efficient for detection and tracking tasks.
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/820aed1b-6fa0-4af6-b3b8-ce5495a48d07" alt="Imagen 1" width="330">
+  <img src="https://github.com/user-attachments/assets/36c5f9ee-3eb9-4901-be3e-9945540ca827" alt="Imagen 2" width="350">
+</p>
 
 ## Chasis & 3D Parts
-
-
-  
-
 
 ## Code & programming
 
@@ -152,3 +164,4 @@ In this way, in the vehicle, the MPU-6050 works using the desired angles through
 - https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/
 - https://pixycam.com/2021/05/20/introducing-pixy-2-1/
 - https://wro-association.org/wp-content/uploads/WRO-2023-Future-Engineers-Self-Driving-Cars-General-Rules.pdf
+- https://www.onshape.com/en/
