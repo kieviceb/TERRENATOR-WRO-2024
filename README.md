@@ -39,13 +39,23 @@ A list of all the electrical and mechanical components in the robot.
 
 - For make all the structure of the robot, it took a loot of time and investigation, we decided to build our robot totally by our self, we develop the robot in [OnShape](https://www.onshape.com/en/) Platform , all the design of the robot and all the models and pieces can be found here in `models`, it is compound by 17 parts that together make an assembly. We have passed by a lot of prototypes, we are trying with the turkiye prototype, to make it more light, more smaller, more efficient, we are looking to make the things simple, to make the most efficient freelance car, to control our vehicle, we decided to use [Arduino Nano](https://store.arduino.cc/products/arduino-nano) , because it's smaller and has all that we need to control our robot, we have use a various types of Arduino nano, Like the [Arduino Nano ESP32](https://store.arduino.cc/products/nano-esp32), [Arduino Nano Every](https://store.arduino.cc/products/arduino-nano-every), [Arduino Nano Every](https://store.arduino.cc/products/arduino-nano-every). The reason of why we have used various types of arduino nano, is because everyone of them give different capacities, and sometimes we need different capacities in our robot. To understand the making and the programming of the robot please check all the parts of this `README.md`.
 
-## Vehicle Photos
+## Vehicle Photos 📸
 
 | Front           | Right       | Back      |
 |:---------------:|:-----------:|:---------:|
 | <img width="270" alt="front" src="https://github.com/user-attachments/assets/6f84ca38-0c9e-4d97-ad21-b614274d8c4e"> |<img width="270" alt="front" src="https://github.com/user-attachments/assets/59202f6a-d770-4736-b8df-182cf425b596"> |  <img width="270" alt="front" src="https://github.com/user-attachments/assets/1af8d922-91d6-4d32-9e84-6485ce99b156"> |
 | Left          | Top       | Bottom     |
 |<img width="270" alt="front" src="https://github.com/user-attachments/assets/3dbc8d78-e1a2-4efd-a434-4e5be9ccd376">| <img width="270" alt="front" src="https://github.com/user-attachments/assets/598fb7a0-45b2-45e9-be24-0b379a4eb9d0"> | <img width="270" alt="front" src="https://github.com/user-attachments/assets/bf297d46-d3c8-4b30-bc6e-63b9df7a281d">|
+
+<br>
+ <br>
+
+
+ > [!NOTE]
+>In order to see the coding of each motion component or sensor explained, please go to the coding part for further understanding, as well as you can always review the vehicle circuit diagram and review the component list, and also you can check our youtube channel. [Here](https://www.youtube.com/@TERRENATORTEAM)
+
+
+<br>
 
 ## Mobility Strategy 🚲
 
