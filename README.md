@@ -357,4 +357,6 @@ Once we have all the libraries needed, we are ready to use the MPU-6050.
 - https://pixycam.com/2021/05/20/introducing-pixy-2-1/
 - https://wro-association.org/wp-content/uploads/WRO-2023-Future-Engineers-Self-Driving-Cars-General-Rules.pdf
 - https://www.onshape.com/en/
-- https://www.matthewpeterkelly.com/tutorials/pdControl/index.html#:~:text=A%20proportional%2Dderivative%20(PD),car%20at%20some%20desired%20height.
+-https://www.matthewpeterkelly.com/tutorials/pdControl/index.html#:~:text=A%20proportional%2Dderivative%20(PD),car%20at%20some%20desired%20height.
+- https://www.youtube.com/watch?v=TwFZ4BJUX5c&t=1805s
+- https://grabcad.com/library/pixycam2-case-2
