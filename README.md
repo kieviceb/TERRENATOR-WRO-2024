@@ -52,7 +52,7 @@ A list of all the electrical and mechanical components in the robot.
 
 
  > [!NOTE]
->In order to see the coding of each motion component or sensor explained, please go to the coding part for further understanding, as well as you can always review the vehicle circuit diagram and review the component list, and also you can check our youtube channel. [Here](https://www.youtube.com/@TERRENATORTEAM)
+>These photos are of the vehicle that will travel to Turkey to participate in WRO 2024, to see the photos of the car that won the robotics olympics in Panama you can go to the photos folder of the vehicle by clicking [here](https://github.com/kieviceb/TERRENATOR-WRO-2024/tree/main/v-photos)
 
 
 <br>
