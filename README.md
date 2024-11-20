@@ -323,6 +323,20 @@ And for last, we call the PD in the main loop, the PD it's used secuencially ins
 
 
 
+
+### - [MPU-6050](https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/):: 
+
+ First of all we need to initialize our MPU-6050 We need to declare all the variables for it, and it has some specific libraries that you can find it here:
+
+https://github.com/jrowberg/i2cdevlib
+https://github.com/ZHomeSlice/Simple_MPU6050
+https://github.com/ZHomeSlice/Simple_Wire
+
+And if you don't know how to install it, you need to watch this video, (it's in spanish)
+
+
+
+
 ## References
 - [Git Hub Readme Syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 - https://howtomechatronics.com/tutorials/arduino/ultrasonic-sensor-hc-sr04/
