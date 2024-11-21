@@ -68,8 +68,9 @@ A list of all the electrical and mechanical components in the robot.
 - Motor: Our  gearmotor consists of a medium-power, 12 V brushed DC motor combined with a 20.4:1 metal spur gearbox, and it has an integrated 48 CPR quadrature encoder on the motor shaft, which provides 979.62 counts per revolution of the gearbox’s output shaft. The gearmotor is cylindrical, with a diameter just under 25 mm, and the D-shaped output shaft is 4 mm in diameter and extends 12.5 mm from the face plate of the gearbox, you can find our motor [here](https://www.pololu.com/product/4863).
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/d121cff4-57bb-49ff-abe9-caa6e58045c4" alt="Imagen 1" width="500">
+  <img src="https://github.com/user-attachments/assets/01ae8f00-7621-4a3b-9e70-5e3ffdf041cc" alt="Imagen 1" width="500">
 </p>
+
 
 We used a 3D printed traction system in the back axle of the car, is specifically designed to enhance performance and maneuverability. This system involves a set of precisely engineered gears that provide consistent and reliable power transfer from the motor to the rear wheels. The gear configuration ensures that torque is effectively distributed, enabling the car to maintain traction even during rapid acceleration. It provides the power, control, and reliability needed for the commpetition.
 
@@ -78,8 +79,8 @@ We used a 3D printed traction system in the back axle of the car, is specificall
 - Steering: The steering is handled by a servomotor, during this project we discovered that using a plastic gear servo is not a good choice, because of the speed of the robot, it tends to break easily inside; thats how we ended up using at first a MG995 servo which is metal gear so it doesnt break so easily, finally for the last prototype to reduce weight and size we found a micro metal gear servo (INJORA 7KG 2065 micro servo motor) , with the power of the big one but weighting less and smaller. Having the steering on the front axle, in vertical position to make movement with more precission.  
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/c44aed28-b9c0-4dab-8f1e-8f0ccee451fe" alt="Imagen 1" width="250">
-  <img src="https://github.com/user-attachments/assets/22066840-dcbf-4895-86de-d436bbadb6e4" alt="Imagen 2" width="510">
+  <img src="https://github.com/user-attachments/assets/f614d79b-fe56-4d9f-9050-d6d1e6774f1a" alt="Imagen 1" width="250">
+  <img src="https://github.com/user-attachments/assets/e71c2fbd-4cee-4220-b352-7d41fcfda527" alt="Imagen 2" width="510">
 </p>
 
 
