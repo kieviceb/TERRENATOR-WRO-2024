@@ -17,8 +17,9 @@ This is the official repository of the TERRENATOR team, which is representing Pa
 
 ## Overview of our repository 📜
 * `schemes`- contains the circuit diagram.
+* `models` - includes all the 3d printed parts of the robot that will go to the international.
+* `old models` - includes all the 3d printed parts of the robot that wins in Panama.
 * `others`-  This is for other files which can be used to understand the making of the vehicle. 
-* `models` - includes all the 3d printed parts of the robot.
 * `src` - the codes for both challenges, with and without obstacles.
 * `t-photos` - photos of the team one formal and a funny one.
 * `v-photos` - photos of every angle of the robot, including our previuos version .
