@@ -249,7 +249,7 @@ The output of the controller (referred to as adjustment or correction) is calcul
 
 where Kp is the proportional gain, Kd the derivative gain, the error the difference between the desired value (setpoint) and the current system value and and d multiplied by the error between d its the Derivative of the error, i.e., the rate of change of the error over time.
 
--Implementation of PD Control in the code
+-Implementation of PD Control in the code:
 The code uses a PD controller to dynamically adjust the servo motor angle based on error. Below, I break down each step of its implementation:
 
 float Kp = 2.0;: Defines the proportional gain.
