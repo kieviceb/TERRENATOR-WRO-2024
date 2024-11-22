@@ -156,6 +156,292 @@ The PixyCam 2.1 is a fast and versatile vision sensor for DIY robotics, offering
 ## Chasis & 3D Parts
 
 ## Code & programming
+In this section, we will proceed to explain the codes of the First round and the second round, the codes will be explained SEQUENTIALLY in the SRC folder, but there you will have a more general explanation of the code, in this part of the readme we will break down the code of each component that integrates the code, to have a much clearer and understandable epxlicacion each part of the code. Before going to explain each code of the respective round, there will be a list to know the order in which each part of the code will be explained, and remember to see the sequential explanation, it is in the SRC folder.
+
+## First Round Code:
+To understand the explanation of the code of the first round, first we have to see the complete code, after seeing the complete code I will break down each component that integrates the code.
+
+###First Round Code
+```ino
+#include <Servo.h>
+#include "Simple_MPU6050.h"
+#include <Wire.h>
+
+// Configuración MPU6050
+#define MPU6050_ADDRESS_AD0_LOW     0x68
+#define MPU6050_ADDRESS_AD0_HIGH    0x69
+#define MPU6050_DEFAULT_ADDRESS     MPU6050_ADDRESS_AD0_LOW
+
+Simple_MPU6050 mpu;
+float yawActual = 0;  // Variable global para almacenar el Yaw actual
+// Variable para el yaw
+float yawInicial = 0;
+
+// Variables globales del PD
+Servo servoDireccion;
+int pinServo = 6;
+int anguloIzquierda = 87;
+int anguloCentro = 90;
+int anguloDerecha = 105;
+int anguloMPU = 0;
+
+float Kp = 0.63;
+float Kd = 0.4;
+float alpha = 0.15;
+float lastError = 0;
+int curva = 0;
+const int botonPin = A7;  // Pin del botón
+bool enMarcha = false;    // Estado inicial del robot: detenido
+float anguloSuavizado = anguloCentro;
+
+// Pines de sensores
+int trigIzquierdo = 9, echoIzquierdo = 10;
+int trigCentro = 15, echoCentro = 14;
+int trigDerecho = 7, echoDerecho = 8;
+
+// Pines de motor
+int motorPin1 = 5, motorPin2 = 4, enablePin = 3, standbyPin = 16;
+
+// Control de tiempo
+unsigned long tiempoUltimaCurva = 0;
+const long bloqueoTiempo = 2000;
+int bloqueadorI = 65;
+int bloqueadorD = 65;
+//*****************
+// Función para procesar datos del MPU6050
+void procesarMPU(int16_t *gyro, int16_t *accel, int32_t *quat, uint32_t *timestamp) {
+    Quaternion q;
+    VectorFloat gravity;
+    float ypr[3] = { 0, 0, 0 };
+    float xyz[3] = { 0, 0, 0 };
+    
+    mpu.GetQuaternion(&q, quat);
+    mpu.GetGravity(&gravity, &q);
+    mpu.GetYawPitchRoll(ypr, &q, &gravity);
+    mpu.ConvertToDegrees(ypr, xyz);
+    
+    yawActual = (int)xyz[0];  // Actualizar el Yaw global
+}
+//*****************
+void inicializarControlPD() {
+    servoDireccion.attach(pinServo);
+    //servoDireccion.write(anguloCentro);
+}
+//*****************
+void move_steer(int pos) {
+    int currentPos = servoDireccion.read();
+    if (pos > currentPos) {
+        for (int i = currentPos; i <= pos; i++) {
+            servoDireccion.write(i);
+            delay(10);
+        }
+    } else {
+        for (int i = currentPos; i >= pos; i--) {
+            servoDireccion.write(i);
+            delay(10);
+        }
+    }
+}
+//*****************
+void ajustarAngulo(float error, int anguloDeseado) {
+    float derivada = error - lastError;
+    float ajuste = (Kp * error) + (Kd * derivada);
+    lastError = error;
+    
+    anguloDeseado += ajuste;
+    anguloDeseado = constrain(anguloDeseado, anguloIzquierda, anguloDerecha);
+    move_steer(anguloDeseado);
+}
+//*****************
+long medirDistancia(int trigPin, int echoPin) {
+    digitalWrite(trigPin, LOW);
+    delayMicroseconds(3);
+    digitalWrite(trigPin, HIGH);
+    delayMicroseconds(10);
+    digitalWrite(trigPin, LOW);
+
+    long duracion = pulseIn(echoPin, HIGH);
+    return duracion * 0.034 / 2;
+}
+//*****************
+
+// Función para calcular el ángulo objetivo
+int calcularAnguloObjetivoI(int curva) {
+    if (curva % 4 == 1) return -70;     // Curvas 1, 5, 9, ...
+    else if (curva % 4 == 2) return -160; // Curvas 2, 6, 10, ...
+    else if (curva % 4 == 3) return 110;   // Curvas 3, 7, 11, ...
+    else return 20;                      // Curvas 4, 8, 12, ...
+}
+//*****************
+
+// Función para calcular el ángulo objetivo
+int calcularAnguloObjetivoD(int curva) {
+    if (curva % 4 == 1) return 75;     // Curvas 1, 5, 9, ...
+    else if (curva % 4 == 2) return 155; // Curvas 2, 6, 10, ...
+    else if (curva % 4 == 3) return -105;   // Curvas 3, 7, 11, ...
+    else return -15;                      // Curvas 4, 8, 12, ...
+}
+//*****************
+void avanzar(int velocidad) {
+    digitalWrite(motorPin1, HIGH);
+    digitalWrite(motorPin2, LOW);
+    analogWrite(enablePin, velocidad);
+}
+//*****************
+void detener() {
+    digitalWrite(motorPin1, LOW);
+    digitalWrite(motorPin2, LOW);
+    analogWrite(enablePin, 0);
+}
+//*****************
+void detectarCurva(long distanciaIzquierda, long distanciaCentro, long distanciaDerecha) {
+    float error = distanciaIzquierda - distanciaDerecha;
+    lastError = error;
+    float sum = distanciaIzquierda + distanciaDerecha;
+
+    unsigned long tiempoActual = millis();
+    if (tiempoActual - tiempoUltimaCurva >= bloqueoTiempo) {
+        // Verificar condiciones para iniciar una curva
+        if (error > 1 && distanciaCentro < 58 && sum > 90 && distanciaIzquierda > bloqueadorI) {
+            Serial.print("Curva detectada: ");
+            curva++;
+            Serial.println(curva);
+
+            // Determinar el ángulo objetivo
+            int anguloObjetivo = calcularAnguloObjetivoI(curva);
+
+            // Realizar el giro hasta alcanzar el ángulo objetivo
+            while (abs(yawActual - anguloObjetivo) > 2) { // Tolerancia de 2 grados
+                mpu.dmp_read_fifo();  // Leer datos del giroscopio
+                Serial.print("Yaw actual: ");
+                Serial.println(yawActual);
+                servoDireccion.write(119); // Girar a la izquierda
+                avanzar(250); // Control del motor durante el giro
+            }
+
+            // Detener el giro y volver al centro
+            servoDireccion.write(anguloCentro);
+            delay(100);
+            tiempoUltimaCurva = tiempoActual;
+            bloqueadorD = 1500;
+
+        } else if (error < -1 && distanciaCentro < 58 && sum > 90 && distanciaDerecha > bloqueadorD) {
+            Serial.print("Curva detectada: ");
+            curva++;
+            Serial.println(curva);
+
+            // Determinar el ángulo objetivo para el giro contrario
+            int anguloObjetivo = calcularAnguloObjetivoD(curva);
+
+            // Invertir el giro (invertir el control de la curva)
+            while (abs(yawActual - anguloObjetivo) > 2) { // Tolerancia de 2 grados
+                mpu.dmp_read_fifo();  // Leer datos del giroscopio
+                Serial.print("Yaw actual: ");
+                Serial.println(yawActual);
+                servoDireccion.write(69); // Girar a la derecha
+                avanzar(150); // Control del motor durante el giro
+                }     
+                
+            // Detener el giro y volver al centro
+            servoDireccion.write(anguloCentro);
+            delay(100);
+            tiempoUltimaCurva = tiempoActual;
+            bloqueadorI = 1500;
+
+        } 
+        else {
+            ajustarAngulo(error, anguloCentro); // Mantener el ángulo centrado
+            avanzar(200);
+        }
+    } else {
+        ajustarAngulo(error, anguloCentro); // Mantener el ángulo centrado
+        avanzar(200);
+    }
+}
+//*****************
+void actualizar() {
+    long distanciaIzquierda = medirDistancia(trigIzquierdo, echoIzquierdo);
+    long distanciaCentro = medirDistancia(trigCentro, echoCentro);
+    long distanciaDerecha = medirDistancia(trigDerecho, echoDerecho);
+
+    detectarCurva(distanciaIzquierda, distanciaCentro, distanciaDerecha);
+
+    if (curva == 12) {
+        servoDireccion.write(90);
+        avanzar(250);
+        delay(700);
+        detener();
+        delay(60000);
+    }
+
+    // Imprimir todos los valores
+    Serial.print("Yaw: "); Serial.print(yawActual);
+    Serial.print(" | Distancia Izquierda: "); Serial.print(distanciaIzquierda);
+    Serial.print(" | Distancia Centro: "); Serial.print(distanciaCentro);
+    Serial.print(" | Distancia Derecha: "); Serial.print(distanciaDerecha);
+    Serial.print(" | Error: "); Serial.println(lastError);
+}
+//*****************
+void setup() {
+    Serial.begin(115200);
+    
+    // Inicialización de pines
+    pinMode(trigIzquierdo, OUTPUT);
+    pinMode(echoIzquierdo, INPUT);
+    pinMode(trigCentro, OUTPUT);
+    pinMode(echoCentro, INPUT);
+    pinMode(trigDerecho, OUTPUT);
+    pinMode(echoDerecho, INPUT);
+
+    pinMode(motorPin1, OUTPUT);
+    pinMode(motorPin2, OUTPUT);
+    pinMode(enablePin, OUTPUT);
+    pinMode(standbyPin, OUTPUT);
+    digitalWrite(standbyPin, HIGH);
+    
+    // Inicialización del PD
+    inicializarControlPD();
+
+    // Inicialización del MPU6050
+    Wire.begin();
+    Wire.setClock(400000);
+    
+    Serial.println(F("Iniciando calibración del MPU6050..."));
+    mpu.SetAddress(MPU6050_ADDRESS_AD0_LOW)
+       .CalibrateMPU()
+       .load_DMP_Image();
+    mpu.on_FIFO(procesarMPU);
+    
+    delay(100);
+}
+//*****************
+void loop() {
+  if (!enMarcha) {  // Si el robot NO está en marcha
+    if (analogRead(botonPin) == 0) {  // Si el botón está presionado
+      enMarcha = true;                   // Cambiar el estado a "en marcha"
+      Serial.println("¡Robot en marcha!");
+      servoDireccion.write(anguloCentro);
+    } else {
+      detener();  // Mantener el robot detenido
+    }
+  } 
+  if (enMarcha == true) {  // Si el robot está en marcha
+    mpu.dmp_read_fifo();  // Leer datos del MPU6050
+    actualizar();         // Ejecutar el control PD
+    delay(5);
+  }
+}
+
+```
+Okey Now we will be explaining the codes by every component of the robot, and repeat to a more genera explanation of the code, click the [SRC](https://github.com/kieviceb/TERRENATOR-WRO-2024/tree/main/src) folder. The list order of the code explanation is:
+
+1- `Libraries`
+2- `Motor`
+3- `ServoMotor`
+4- `PD (Proportional-Derivative)`
+5- `MPU-6050`
+6- `Ultrasonic Sensors`
+7- `Void Functions`
 
 
 
