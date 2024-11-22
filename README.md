@@ -166,6 +166,17 @@ The PixyCam 2.1 is a fast and versatile vision sensor for DIY robotics, offering
 
 ## Chasis & 3D Parts
 
+In the chassis and 3D part, you can find all the 3D parts that made up the robot that won in Panama in the old models part.
+
+So the chassis and the design of the car that will go to Turkey took a long time because our ideas were to make the robot of the national competition much smaller, agile, faster and prettier, so we had to make a completely new chassis, in this one changing several parts of the assembly, for example in the steering system, since in our previous robot, the steering system was based on moving a cylinder with teeth that moved a line with teeth that gave direction to the robot, the problem with this steering design was that it is a bit imprecise so, we adopted a steering design similar to the Ackerman steering, and we also changed the servo motor.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/51482f0d-463b-4997-b058-2ef86033c2ad" alt="Imagen 1" width="305">
+  <img src="https://github.com/user-attachments/assets/f4bb0df8-0631-45aa-a332-39191a1dede5" alt="Imagen 2" width="350">
+</p>
+
+
+
 ## Code & programming
 In this section, we will proceed to explain the codes of the First round and the second round, the codes will be explained SEQUENTIALLY in the SRC folder, but there you will have a more general explanation of the code, in this part of the readme we will break down the code of each component that integrates the code, to have a much clearer and understandable epxlicacion each part of the code. Before going to explain each code of the respective round, there will be a list to know the order in which each part of the code will be explained, and remember to see the sequential explanation, it is in the SRC folder.
 
