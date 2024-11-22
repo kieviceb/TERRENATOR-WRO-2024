@@ -360,6 +360,22 @@ Even in this part you might have some problems to initialize and use the code, t
 Once we have all the libraries needed, we are ready to use the MPU-6050.
 
 
+First of all, we need to initialize the MPU-6050, we make this including the libraries we previously download, and defining the directions of the gyro.
+
+```ino
+#include "Simple_MPU6050.h"
+#include <Wire.h>
+
+// Configuración MPU6050
+#define MPU6050_ADDRESS_AD0_LOW     0x68
+#define MPU6050_ADDRESS_AD0_HIGH    0x69
+#define MPU6050_DEFAULT_ADDRESS     MPU6050_ADDRESS_AD0_LOW
+
+Simple_MPU6050 mpu;
+
+```
+Suddenly we need to calibate the gyro, first we use SetAddres, here we configure the I2C direction of the gyro, Second we use CalibrateMPU, this one calibrates the values of the accelerometer 
+
 
 
 
