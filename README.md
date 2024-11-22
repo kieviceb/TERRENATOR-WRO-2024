@@ -211,7 +211,7 @@ To begin with, we need to declare the library that is made to facilitate its usa
 #include <Servo.h>
 ```
 Declaration of variables related to the servomotor:
-Servo servoServoSteer: Create an object of the Servo class called servoSteer. This object will be used to configure and control the servo motor in charge of steering the robot.
+Servo servoServoSteer: Create an object of the Servo class called servoDireccionr. This object will be used to configure and control the servo motor in charge of steering the robot.
 int pinServo = 6: Defines that the servo motor is connected to the digital pin 6 of the Arduino.
 int anguloLeft = 87: Represents the angle at which the servomotor will turn to the left.
 int anguloCenter = 90: It is the “neutral” or central angle of the servomotor, where the robot advances in a straight line.
