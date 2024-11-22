@@ -175,17 +175,23 @@ digitalWrite(standbyPin, HIGH);
 Then we will enter the Void functions, which are functions that in determinod time we can call for certain event that we need to occur, in this case the movement of the car, the motorpin 1 in HIGH and motorpin 2 in low makes the motor advance, in case of putting this configuration backwards would make the car go in reverse, and also atravz of the PWM can adjust the speed of the motor, as we can see:
 ```ino
 void avanzar(int velocidad) {
-    digitalWrite(motorPin1, HIGH); // Sentido de giro
-    digitalWrite(motorPin2, LOW);  // Inverso del otro pin
-    analogWrite(enablePin, velocidad); // Control de velocidad con PWM
+    // Set the motor to rotate in a specific direction.
+    digitalWrite(motorPin1, HIGH); // Set motorPin1 to HIGH to define the forward rotation direction.
+    digitalWrite(motorPin2, LOW);  // Set motorPin2 to LOW to ensure the motor rotates in the desired direction.
+    // Control the motor's speed using PWM (Pulse Width Modulation).
+    analogWrite(enablePin, velocidad); // Generate a PWM signal on enablePin to adjust the motor speed (range: 0-255).
 }
+
 ```
 Now we will have the function to stop the motor, that would be with the two pins in LOW, in the code it would be like this:
 ```ino
 void detener() {
-    digitalWrite(motorPin1, LOW);
-    digitalWrite(motorPin2, LOW);
-    analogWrite(enablePin, 0);
+    // Stop the motor by cutting power to both motor direction pins.
+    digitalWrite(motorPin1, LOW); // Set motorPin1 to LOW to stop the motor.
+    digitalWrite(motorPin2, LOW); // Set motorPin2 to LOW to ensure no rotation.
+
+    // Set the speed to zero to fully disable the motor.
+    analogWrite(enablePin, 0); // Generate a PWM signal of 0 to turn off the motor.
 }
 ```
 Use of the motor in the detectCurve function:
@@ -193,7 +199,7 @@ Use of the motor in the detectCurve function:
 1- During a turn, a fixed speed (250 in PWM) is set to maintain the motion.
 2- This command works together with the position of the steering servomotor to perform the turn in a coordinated manner.Use of the motor in the detectCurve function:
 ```ino
-avanzar(250); // Control del motor durante el giro
+avanzar(250); // Motor control to set a high speed during the rotation.
 ```
 
 
@@ -261,21 +267,27 @@ float Kd = 1.0;: Defines the derivative gain.
 Helps to smooth the system response. If the error is changing rapidly, this term reduces the setting to avoid oscillations.
 float lastError = 0;: Variable to store the error of the previous iteration.
 ```ino
-float Kp = 2.0; // Constante proporcional
-float Kd = 1.0; // Constante derivativa
-float lastError = 0; // Almacena el error previo
+float Kp = 2.0; // Proportional constant for the PID controller, controls the reaction to the current error.
+float Kd = 1.0; // Derivative constant for the PID controller, controls the reaction to the rate of error change.
+float lastError = 0; // Stores the previous error value for derivative calculation.
 ```
 Now we have the function to ajust the angles, here is:
 ```ino
 void ajustarAngulo(float error, int anguloDeseado) {
-    float derivada = error - lastError; // Cambio del error
-    float ajuste = (Kp * error) + (Kd * derivada); // Ajuste PD
-    lastError = error; // Actualizar el último error
-
-    anguloDeseado += ajuste; // Modificar el ángulo deseado
-    anguloDeseado = constrain(anguloDeseado, anguloIzquierda, anguloDerecha); // Limitar el ángulo
-    move_steer(anguloDeseado); // Mover el servomotor al nuevo ángulo
+    // Calculate the derivative term (change in error).
+    float derivada = error - lastError; // Difference between the current and last error.
+    // Compute the adjustment using the PD (Proportional-Derivative) formula.
+    float ajuste = (Kp * error) + (Kd * derivada); // PD adjustment based on error and its rate of change.
+    // Update the last error for the next iteration.
+    lastError = error; 
+    // Adjust the desired angle by applying the calculated adjustment.
+    anguloDeseado += ajuste; 
+    // Constrain the desired angle within the valid range (between anguloIzquierda and anguloDerecha).
+    anguloDeseado = constrain(anguloDeseado, anguloIzquierda, anguloDerecha); 
+    // Move the servo to the new adjusted angle.
+    move_steer(anguloDeseado); 
 }
+
 ```
 We will be explaining it line per line, first we need to calculate the actual error and the last error, this represetn how is changing the mistake or the error in the time, if the error keeps growing quickly it means that this value is more big, and if the mistake it´s getting lower it means it will be lower or cero.
 <br>
