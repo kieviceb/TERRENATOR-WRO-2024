@@ -660,8 +660,18 @@ First of all, we need to initialize the MPU-6050, we make this including the lib
 Simple_MPU6050 mpu;
 
 ```
-Suddenly we need to calibate the gyro, first we use SetAddres, here we configure the I2C direction of the gyro, Second we use CalibrateMPU, this one calibrates the values of the accelerometer 
+Suddenly we need to calibate the gyro, first we use SetAddres, here we configure the I2C direction of the gyro, Second we use CalibrateMPU, this one calibrates the values of the accelerometer and the gyroscope to get more precise data of it.
+Then we have load_DMP_Image, this one charges the firmware of the DMP, (Digital Motion Processor) of the MPU6050, this one let the sensor calculate the quaternions, and the angles that come directly of the sensor.
+Then we have on_FIFO(procesarMPU), This one configures the callback function (procesarMPU) and this one will work once we have data on the buffer FIFO of the sensor.
 
+```ino
+Serial.println(F("Iniciando calibración del MPU6050..."));
+mpu.SetAddress(MPU6050_ADDRESS_AD0_LOW)
+   .CalibrateMPU()
+   .load_DMP_Image();
+mpu.on_FIFO(procesarMPU);
+
+```
 
 
 
