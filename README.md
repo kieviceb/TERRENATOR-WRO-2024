@@ -153,6 +153,17 @@ The PixyCam 2.1 is a fast and versatile vision sensor for DIY robotics, offering
   <img src="https://github.com/user-attachments/assets/36c5f9ee-3eb9-4901-be3e-9945540ca827" alt="Imagen 2" width="350">
 </p>
 
+<br>
+ <br>
+
+
+ > [!NOTE]
+>In the case of our pixy cam 2.1, we always need to calibrate our camera before the competition in the track of the event, this because as it has happened to us before we always need to check that the pixy cam recognizes well the blocks and the color lines, because it happens that the illumination affects the block detection of the pixy cam, then we always need to enter the track with our laptop using specifically the pixymon program, to be able to know that the signatures are being detected effectively.
+
+
+
+<br>
+
 ## Chasis & 3D Parts
 
 ## Code & programming
