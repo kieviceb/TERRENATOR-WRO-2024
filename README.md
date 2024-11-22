@@ -161,7 +161,7 @@ In this section, we will proceed to explain the codes of the First round and the
 ## First Round Code:
 To understand the explanation of the code of the first round, first we have to see the complete code, after seeing the complete code I will break down each component that integrates the code.
 
-###First Round Code
+### First Round Code
 ```ino
 #include <Servo.h>
 #include "Simple_MPU6050.h"
@@ -435,13 +435,13 @@ void loop() {
 ```
 Okey Now we will be explaining the codes by every component of the robot, and repeat to a more genera explanation of the code, click the [SRC](https://github.com/kieviceb/TERRENATOR-WRO-2024/tree/main/src) folder. The list order of the code explanation is:
 
-1- `Libraries`
-2- `Motor`
-3- `ServoMotor`
-4- `PD (Proportional-Derivative)`
-5- `MPU-6050`
-6- `Ultrasonic Sensors`
-7- `Void Functions`
+* `1- Libraries`
+* `2- Motor`
+* `3- ServoMotor`
+* `4- PD (Proportional-Derivative)`
+* `5- MPU-6050`
+* `6- Ultrasonic Sensors`
+* `7- Void Functions`
 
 
 
