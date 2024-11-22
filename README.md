@@ -672,7 +672,7 @@ void loop() {
 
 
 
-### 4- [MPU-6050](https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/):
+### 5- [MPU-6050](https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/):
 
  First of all we need to initialize our MPU-6050 We need to declare all the variables for it, and it has some specific libraries that you can find it here:
 
