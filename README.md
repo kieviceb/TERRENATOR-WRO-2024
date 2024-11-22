@@ -29,15 +29,21 @@ This is the official repository of the TERRENATOR team, which is representing Pa
 ## Components 🧱
 A list of all the electrical and mechanical components in the robot.
 
-| <img src="https://github.com/user-attachments/assets/3312d4d8-3a2c-48f9-8fe6-120640876eb5" alt="Alt 1" width="300"/> | <img src="https://github.com/user-attachments/assets/989e28c3-e055-45da-b284-13386d09e14e" alt="Alt 1" width="200"/> | <img src="https://github.com/user-attachments/assets/ddaac9e1-450c-4d3a-bbb0-b5ebca198fa2" alt="Alt 1" width="200"/> | 
-| :------------: |:-------------:| :----------:|
-|[Arduino NANO A000005 x1](https://store-usa.arduino.cc/products/arduino-nano?srsltid=AfmBOooU4-IrktQwXymxJgaV7MZPj3cBWDjg6AjQwBmYoQw8es2bz9ex)|[LTC1871 Booster Step x1](https://www.amazon.es/ICQUANZX-Converter-3-5-35VDC-Volt%C3%ADmetro-alimentaci%C3%B3n/dp/B07JL39RK2?language=en_GB)|[Step down LM2596 x1](https://a.co/d/e4jJKCS)|
-| <img src="https://github.com/user-attachments/assets/b97f68dd-48d3-46a2-872b-7ddec7fb7df7" width="200"/> | <img src="https://github.com/user-attachments/assets/a8fcd7e0-c196-4b7e-b5ac-055d313b8194" alt="Alt 1" width="150"/> | <img src="https://github.com/user-attachments/assets/6791452a-f339-4d2d-ac77-07d16e8cec6d" alt="Alt 1" width="200"/> |
+
+| <img src="https://github.com/user-attachments/assets/0b6a02dc-9252-42df-a9fa-46742892f98a" alt="Alt 1" width="200"/> | <img src="https://github.com/user-attachments/assets/8e77a2b0-b6ea-4c8d-b3eb-0b56e681f396" alt="Alt 1" width="200"/> | <img src="https://github.com/user-attachments/assets/5759c1c0-6d84-4f4d-907a-5cbe9ee2f24a" alt="Alt 1" width="200"/> | 
+| :------------: |:-------------:| :------------:|
+|[Arduino NANO A000005 x1](https://store-usa.arduino.cc/products/arduino-nano?srsltid=AfmBOooU4-IrktQwXymxJgaV7MZPj3cBWDjg6AjQwBmYoQw8es2bz9ex)|[MPU6050 Gyroscope x1](https://a.co/d/42jYlB6)|[Step down LM2596 x1](https://a.co/d/e4jJKCS)|
+| <img src="https://github.com/user-attachments/assets/b18d0b71-d5d0-44e2-b93b-2b98f50b130e" width="200"/> | <img src="https://github.com/user-attachments/assets/19b0baad-f049-460a-b44f-da65eaff72fe" alt="Alt 1" width="200"/> | <img src="https://github.com/user-attachments/assets/eb89182e-ea3c-44d7-b393-524da5d71a76" alt="Alt 1" width="200"/> |
 | [Double Sided Prototype Universal PCB Board x2](https://a.co/d/9mUTqVe) |[TB6612 motor driver](https://a.co/d/fpJSHg1)|[HC-SRO4 ultrasonic sensor x3](https://a.co/d/et6RN4v) |
-| <img src="https://github.com/user-attachments/assets/22b69b73-122f-42be-bf56-a7297b1bbb23" width="350"/> |<img src="https://github.com/user-attachments/assets/dc905c65-28e3-42ff-bdde-d905bd22bd75" alt="Alt 1" width="200"/>| <img src="https://github.com/user-attachments/assets/dc0bdda4-aeda-43e9-b355-616e628742ca" alt="Alt 1" width="250"/> |
+| <img src="https://github.com/user-attachments/assets/513880ec-f790-4aef-a47f-c8ed698db903" width="200"/> |<img src="https://github.com/user-attachments/assets/e4c588c3-7ddb-41af-b9a1-c38992c0b703" alt="Alt 1" width="200"/>| <img src="https://github.com/user-attachments/assets/94190821-27a9-408e-8576-bd84be9f907c" alt="Alt 1" width="200"/> |
 |[POLOLU Metal Gearmotor 25Dx65L mm MP 12V with 48 CPR Encoder x1](https://www.pololu.com/product/4863)|[INJORA 7KG 2065 micro servo motor x1](https://a.co/d/3OIRFif)|[Tosiicop Airsoft Lipo Battery 11.1V x1](https://a.co/d/4mkS5gP)|
-| <img src="https://github.com/user-attachments/assets/75af90ba-1501-44d0-9cf9-13ee83422d15" width="250"/> | <img src="https://github.com/user-attachments/assets/1f0feb97-1b34-44a4-a4b9-ae579832d1af" alt="Alt 1" width="300"/> | <img src="https://github.com/user-attachments/assets/166d29d3-77c1-43ee-b914-0fc7dd4190bc" alt="Alt 1" width="200"/> |
-|[Pixy cam v2.1 x1](https://a.co/d/hyOCC5F) | 3d structure (you can find the printables in `models`)|[Toggle-Switch SPDT 6A/125VAC x1](https://a.co/d/65AaiQM) |
+| <img src="https://github.com/user-attachments/assets/1f0c7367-52d3-4165-8ea6-b22f3e88f032" width="200"/> | <img src="https://github.com/user-attachments/assets/4d3086fc-fdd9-4947-800d-46909c961654" alt="Alt 1" width="200"/> | <img src="https://github.com/user-attachments/assets/9ce8ac59-2668-4852-ba10-070150a25bd4" alt="Alt 1" width="200"/> |
+|[Pixy cam v2.1 x1](https://a.co/d/hyOCC5F) |[Electrolytic Capacitor x2](https://a.co/d/2Hp40r2)|[Rocker switch x1](https://a.co/d/dZaNOAK) |
+| <img src="https://github.com/user-attachments/assets/a027eed4-f979-4a64-a0f9-7b02da086671" width="200"/> | <img src="https://github.com/user-attachments/assets/0e4da4f4-ee5b-4876-ae01-5a39e919df58" alt="Alt 1" width="200"/> | <img src="https://github.com/user-attachments/assets/5b3d24e6-3a5f-4243-bc55-937bfcc426c0" alt="Alt 1" width="200"/> |
+|[10K ohm Resistor x1](https://a.co/d/g2p8k1C) |[UTP cable CAT6 ](https://a.co/d/9NCzytp)|[Push button x1](https://a.co/d/8YSMDxr) |
+| <img src="https://github.com/user-attachments/assets/42004542-2963-4c63-9a00-3c3436a9d0dd" width="200"/> | <img src="https://github.com/user-attachments/assets/9305a521-439d-440e-b3a1-d9f97c2a0cd8" alt="Alt 1" width="200"/> | <img src="https://github.com/user-attachments/assets/d0b32f61-361f-4375-b3a1-cdbcc37469d6" alt="Alt 1" width="200"/> |
+|[Fuse Holder Inline screw type x1](https://a.co/d/7VGbSVK) |[Jumper wires x12 ](https://a.co/d/0rLEQiV)|[Ceramic capacitor x3](https://amzn.eu/d/0qPpxa0) |
+
 
 ## Introduction 🎓
 
@@ -181,370 +187,49 @@ So the chassis and the design of the car that will go to Turkey took a long time
 In this section, we will proceed to explain the codes of the First round and the second round, the codes will be explained SEQUENTIALLY in the SRC folder, but there you will have a more general explanation of the code, in this part of the readme we will break down the code of each component that integrates the code, to have a much clearer and understandable epxlicacion each part of the code. Before going to explain each code of the respective round, there will be a list to know the order in which each part of the code will be explained, and remember to see the sequential explanation, it is in the SRC folder.
 
 ## First Round Code:
-To understand the explanation of the code of the first round, first we have to see the complete code, after seeing the complete code I will break down each component that integrates the code.
 
-### First Round Code
+### 1. **Library Imports**
+
 ```ino
 #include <Servo.h>
 #include "Simple_MPU6050.h"
 #include <Wire.h>
-
-// Configuración MPU6050
-#define MPU6050_ADDRESS_AD0_LOW     0x68
-#define MPU6050_ADDRESS_AD0_HIGH    0x69
-#define MPU6050_DEFAULT_ADDRESS     MPU6050_ADDRESS_AD0_LOW
-
-Simple_MPU6050 mpu;
-float yawActual = 0;  // Variable global para almacenar el Yaw actual
-// Variable para el yaw
-float yawInicial = 0;
-
-// Variables globales del PD
-Servo servoDireccion;
-int pinServo = 6;
-int anguloIzquierda = 87;
-int anguloCentro = 90;
-int anguloDerecha = 105;
-int anguloMPU = 0;
-
-float Kp = 0.63;
-float Kd = 0.4;
-float alpha = 0.15;
-float lastError = 0;
-int curva = 0;
-const int botonPin = A7;  // Pin del botón
-bool enMarcha = false;    // Estado inicial del robot: detenido
-float anguloSuavizado = anguloCentro;
-
-// Pines de sensores
-int trigIzquierdo = 9, echoIzquierdo = 10;
-int trigCentro = 15, echoCentro = 14;
-int trigDerecho = 7, echoDerecho = 8;
-
-// Pines de motor
-int motorPin1 = 5, motorPin2 = 4, enablePin = 3, standbyPin = 16;
-
-// Control de tiempo
-unsigned long tiempoUltimaCurva = 0;
-const long bloqueoTiempo = 2000;
-int bloqueadorI = 65;
-int bloqueadorD = 65;
-//*****************
-// Función para procesar datos del MPU6050
-void procesarMPU(int16_t *gyro, int16_t *accel, int32_t *quat, uint32_t *timestamp) {
-    Quaternion q;
-    VectorFloat gravity;
-    float ypr[3] = { 0, 0, 0 };
-    float xyz[3] = { 0, 0, 0 };
-    
-    mpu.GetQuaternion(&q, quat);
-    mpu.GetGravity(&gravity, &q);
-    mpu.GetYawPitchRoll(ypr, &q, &gravity);
-    mpu.ConvertToDegrees(ypr, xyz);
-    
-    yawActual = (int)xyz[0];  // Actualizar el Yaw global
-}
-//*****************
-void inicializarControlPD() {
-    servoDireccion.attach(pinServo);
-    //servoDireccion.write(anguloCentro);
-}
-//*****************
-void move_steer(int pos) {
-    int currentPos = servoDireccion.read();
-    if (pos > currentPos) {
-        for (int i = currentPos; i <= pos; i++) {
-            servoDireccion.write(i);
-            delay(10);
-        }
-    } else {
-        for (int i = currentPos; i >= pos; i--) {
-            servoDireccion.write(i);
-            delay(10);
-        }
-    }
-}
-//*****************
-void ajustarAngulo(float error, int anguloDeseado) {
-    float derivada = error - lastError;
-    float ajuste = (Kp * error) + (Kd * derivada);
-    lastError = error;
-    
-    anguloDeseado += ajuste;
-    anguloDeseado = constrain(anguloDeseado, anguloIzquierda, anguloDerecha);
-    move_steer(anguloDeseado);
-}
-//*****************
-long medirDistancia(int trigPin, int echoPin) {
-    digitalWrite(trigPin, LOW);
-    delayMicroseconds(3);
-    digitalWrite(trigPin, HIGH);
-    delayMicroseconds(10);
-    digitalWrite(trigPin, LOW);
-
-    long duracion = pulseIn(echoPin, HIGH);
-    return duracion * 0.034 / 2;
-}
-//*****************
-
-// Función para calcular el ángulo objetivo
-int calcularAnguloObjetivoI(int curva) {
-    if (curva % 4 == 1) return -70;     // Curvas 1, 5, 9, ...
-    else if (curva % 4 == 2) return -160; // Curvas 2, 6, 10, ...
-    else if (curva % 4 == 3) return 110;   // Curvas 3, 7, 11, ...
-    else return 20;                      // Curvas 4, 8, 12, ...
-}
-//*****************
-
-// Función para calcular el ángulo objetivo
-int calcularAnguloObjetivoD(int curva) {
-    if (curva % 4 == 1) return 75;     // Curvas 1, 5, 9, ...
-    else if (curva % 4 == 2) return 155; // Curvas 2, 6, 10, ...
-    else if (curva % 4 == 3) return -105;   // Curvas 3, 7, 11, ...
-    else return -15;                      // Curvas 4, 8, 12, ...
-}
-//*****************
-void avanzar(int velocidad) {
-    digitalWrite(motorPin1, HIGH);
-    digitalWrite(motorPin2, LOW);
-    analogWrite(enablePin, velocidad);
-}
-//*****************
-void detener() {
-    digitalWrite(motorPin1, LOW);
-    digitalWrite(motorPin2, LOW);
-    analogWrite(enablePin, 0);
-}
-//*****************
-void detectarCurva(long distanciaIzquierda, long distanciaCentro, long distanciaDerecha) {
-    float error = distanciaIzquierda - distanciaDerecha;
-    lastError = error;
-    float sum = distanciaIzquierda + distanciaDerecha;
-
-    unsigned long tiempoActual = millis();
-    if (tiempoActual - tiempoUltimaCurva >= bloqueoTiempo) {
-        // Verificar condiciones para iniciar una curva
-        if (error > 1 && distanciaCentro < 58 && sum > 90 && distanciaIzquierda > bloqueadorI) {
-            Serial.print("Curva detectada: ");
-            curva++;
-            Serial.println(curva);
-
-            // Determinar el ángulo objetivo
-            int anguloObjetivo = calcularAnguloObjetivoI(curva);
-
-            // Realizar el giro hasta alcanzar el ángulo objetivo
-            while (abs(yawActual - anguloObjetivo) > 2) { // Tolerancia de 2 grados
-                mpu.dmp_read_fifo();  // Leer datos del giroscopio
-                Serial.print("Yaw actual: ");
-                Serial.println(yawActual);
-                servoDireccion.write(119); // Girar a la izquierda
-                avanzar(250); // Control del motor durante el giro
-            }
-
-            // Detener el giro y volver al centro
-            servoDireccion.write(anguloCentro);
-            delay(100);
-            tiempoUltimaCurva = tiempoActual;
-            bloqueadorD = 1500;
-
-        } else if (error < -1 && distanciaCentro < 58 && sum > 90 && distanciaDerecha > bloqueadorD) {
-            Serial.print("Curva detectada: ");
-            curva++;
-            Serial.println(curva);
-
-            // Determinar el ángulo objetivo para el giro contrario
-            int anguloObjetivo = calcularAnguloObjetivoD(curva);
-
-            // Invertir el giro (invertir el control de la curva)
-            while (abs(yawActual - anguloObjetivo) > 2) { // Tolerancia de 2 grados
-                mpu.dmp_read_fifo();  // Leer datos del giroscopio
-                Serial.print("Yaw actual: ");
-                Serial.println(yawActual);
-                servoDireccion.write(69); // Girar a la derecha
-                avanzar(150); // Control del motor durante el giro
-                }     
-                
-            // Detener el giro y volver al centro
-            servoDireccion.write(anguloCentro);
-            delay(100);
-            tiempoUltimaCurva = tiempoActual;
-            bloqueadorI = 1500;
-
-        } 
-        else {
-            ajustarAngulo(error, anguloCentro); // Mantener el ángulo centrado
-            avanzar(200);
-        }
-    } else {
-        ajustarAngulo(error, anguloCentro); // Mantener el ángulo centrado
-        avanzar(200);
-    }
-}
-//*****************
-void actualizar() {
-    long distanciaIzquierda = medirDistancia(trigIzquierdo, echoIzquierdo);
-    long distanciaCentro = medirDistancia(trigCentro, echoCentro);
-    long distanciaDerecha = medirDistancia(trigDerecho, echoDerecho);
-
-    detectarCurva(distanciaIzquierda, distanciaCentro, distanciaDerecha);
-
-    if (curva == 12) {
-        servoDireccion.write(90);
-        avanzar(250);
-        delay(700);
-        detener();
-        delay(60000);
-    }
-
-    // Imprimir todos los valores
-    Serial.print("Yaw: "); Serial.print(yawActual);
-    Serial.print(" | Distancia Izquierda: "); Serial.print(distanciaIzquierda);
-    Serial.print(" | Distancia Centro: "); Serial.print(distanciaCentro);
-    Serial.print(" | Distancia Derecha: "); Serial.print(distanciaDerecha);
-    Serial.print(" | Error: "); Serial.println(lastError);
-}
-//*****************
-void setup() {
-    Serial.begin(115200);
-    
-    // Inicialización de pines
-    pinMode(trigIzquierdo, OUTPUT);
-    pinMode(echoIzquierdo, INPUT);
-    pinMode(trigCentro, OUTPUT);
-    pinMode(echoCentro, INPUT);
-    pinMode(trigDerecho, OUTPUT);
-    pinMode(echoDerecho, INPUT);
-
-    pinMode(motorPin1, OUTPUT);
-    pinMode(motorPin2, OUTPUT);
-    pinMode(enablePin, OUTPUT);
-    pinMode(standbyPin, OUTPUT);
-    digitalWrite(standbyPin, HIGH);
-    
-    // Inicialización del PD
-    inicializarControlPD();
-
-    // Inicialización del MPU6050
-    Wire.begin();
-    Wire.setClock(400000);
-    
-    Serial.println(F("Iniciando calibración del MPU6050..."));
-    mpu.SetAddress(MPU6050_ADDRESS_AD0_LOW)
-       .CalibrateMPU()
-       .load_DMP_Image();
-    mpu.on_FIFO(procesarMPU);
-    
-    delay(100);
-}
-//*****************
-void loop() {
-  if (!enMarcha) {  // Si el robot NO está en marcha
-    if (analogRead(botonPin) == 0) {  // Si el botón está presionado
-      enMarcha = true;                   // Cambiar el estado a "en marcha"
-      Serial.println("¡Robot en marcha!");
-      servoDireccion.write(anguloCentro);
-    } else {
-      detener();  // Mantener el robot detenido
-    }
-  } 
-  if (enMarcha == true) {  // Si el robot está en marcha
-    mpu.dmp_read_fifo();  // Leer datos del MPU6050
-    actualizar();         // Ejecutar el control PD
-    delay(5);
-  }
-}
-
 ```
-Okey Now we will be explaining the codes by every component of the robot, and repeat to a more genera explanation of the code, click the [SRC](https://github.com/kieviceb/TERRENATOR-WRO-2024/tree/main/src) folder. The list order of the code explanation is:
+- **Servo.h**: Used to control a servo motor.
+- **Simple_MPU6050.h**: Library for interfacing with the MPU6050 sensor (used for orientation).
+- **Wire.h**: Library for I2C communication, necessary for interacting with the MPU6050.
 
-* `1- Libraries`
-* `2- Motor`
-* `3- ServoMotor`
-* `4- PD (Proportional-Derivative)`
-* `5- MPU-6050`
-* `6- Ultrasonic Sensors`
-* `7- Void Functions`
+---
 
-
-
-### 1- Motor:
-To begin we need to declare the pins of the motor, exactly is the POLOLU Metal Gearmotor 25Dx65L mm MP 12V with 48 CPR
+### 2. **MPU6050 Configuration**
 ```ino
-int motorPin1 = 5, motorPin2 = 4, enablePin = 3, standbyPin = 16;
+#define MPU6050_ADDRESS_AD0_LOW     0x68   // I2C address when AD0 pin is LOW
+#define MPU6050_ADDRESS_AD0_HIGH    0x69   // I2C address when AD0 pin is HIGH
+#define MPU6050_DEFAULT_ADDRESS     MPU6050_ADDRESS_AD0_LOW  // Default I2C address for the MPU6050
+
+Simple_MPU6050 mpu;  // Create an instance of the MPU6050 object
+float yawActual = 0;  // Global variable to store the current Yaw (rotation around the Z-axis)
+float yawInicial = 0; // Initial yaw value for reference
 ```
-After this for the correct operation of the motor it is necessary to declare the pins as OUTPUT, that is to declare the pins as output, this is to initialize them, as we will be able to see next in the code:
+- Defines the I2C addresses for the MPU6050 sensor, depending on the state of the AD0 pin.
+- Initializes the `Simple_MPU6050` object for reading data from the sensor.
+- `yawActual` holds the current yaw angle (rotation around the Z-axis).
+- `yawInicial` stores the initial yaw value, often used for calculating differences in orientation.
+
+---
+
+### 3. **Servo configuration**
 ```ino
-pinMode(motorPin1, OUTPUT);
-pinMode(motorPin2, OUTPUT);
-pinMode(enablePin, OUTPUT);
-pinMode(standbyPin, OUTPUT);
-digitalWrite(standbyPin, HIGH);
+Servo servoDireccion;  // Servo object to control the steering
+int pinServo = 6;      // Pin to which the servo is connected
+int anguloIzquierda = 87;  // Angle for left turn
+int anguloCentro = 90;      // Angle for straight position (centered)
+int anguloDerecha = 105;    // Angle for right turn
+int anguloMPU = 0;         // Angle value derived from MPU data
 ```
-Then we will enter the Void functions, which are functions that in determinod time we can call for certain event that we need to occur, in this case the movement of the car, the motorpin 1 in HIGH and motorpin 2 in low makes the motor advance, in case of putting this configuration backwards would make the car go in reverse, and also atravz of the PWM can adjust the speed of the motor, as we can see:
-```ino
-void avanzar(int velocidad) {
-    // Set the motor to rotate in a specific direction.
-    digitalWrite(motorPin1, HIGH); // Set motorPin1 to HIGH to define the forward rotation direction.
-    digitalWrite(motorPin2, LOW);  // Set motorPin2 to LOW to ensure the motor rotates in the desired direction.
-    // Control the motor's speed using PWM (Pulse Width Modulation).
-    analogWrite(enablePin, velocidad); // Generate a PWM signal on enablePin to adjust the motor speed (range: 0-255).
-}
+Initializes the servo and assigns specific angles for left, center, and right turns; also a derivated angle from the mpu6050.
 
-```
-Now we will have the function to stop the motor, that would be with the two pins in LOW, in the code it would be like this:
-```ino
-void detener() {
-    // Stop the motor by cutting power to both motor direction pins.
-    digitalWrite(motorPin1, LOW); // Set motorPin1 to LOW to stop the motor.
-    digitalWrite(motorPin2, LOW); // Set motorPin2 to LOW to ensure no rotation.
-
-    // Set the speed to zero to fully disable the motor.
-    analogWrite(enablePin, 0); // Generate a PWM signal of 0 to turn off the motor.
-}
-```
-Use of the motor in the detectCurve function:
-
-1- During a turn, a fixed speed (250 in PWM) is set to maintain the motion.
-2- This command works together with the position of the steering servomotor to perform the turn in a coordinated manner.Use of the motor in the detectCurve function:
-```ino
-avanzar(250); // Motor control to set a high speed during the rotation.
-```
-
-
-
-### 2- ServoMotor:
-
-To begin with, we need to declare the library that is made to facilitate its usability in the arduino IDE and optimize it in the code, This line includes the Servo library, which is essential for controlling servo motors on the Arduino. It provides easy-to-use functions, such as attach(), write() and read(), which allow you to control the servo motor angle precisely:
-```ino
-#include <Servo.h>
-```
-Declaration of variables related to the servomotor:
-Servo servoServoSteer: Create an object of the Servo class called servoDireccionr. This object will be used to configure and control the servo motor in charge of steering the robot.
-int pinServo = 6: Defines that the servo motor is connected to the digital pin 6 of the Arduino.
-int anguloLeft = 87: Represents the angle at which the servomotor will turn to the left.
-int anguloCenter = 90: It is the “neutral” or central angle of the servomotor, where the robot advances in a straight line.
-int anguloRight = 105: It is the angle at which the servomotor will turn to the right.
-int anguloMPU = 0: A variable used to dynamically adjust the servo motor angle based on the gyroscope data.
-```ino
-Servo servoDireccion;
-int pinServo = 6;
-int anguloIzquierda = 87;
-int anguloCentro = 90;
-int anguloDerecha = 105;
-int anguloMPU = 0;
-```
-servoDirection.attach(pinServo) is used to initialize the servo, which associates the servoDirection object with the pin defined in pinServo (pin 6 in this case). This allows the Arduino to control the servo motor connected to that pin.
-This function must be called before attempting to move the servo motor to ensure that the pin is set correctly.servoDirection.attach(pinServo) is used to initialize the servo. It associates the servoDirection object with the pin defined in pinServo (pin 6 in this case). This allows the Arduino to control the servo motor connected to that pin.
-This function should be called before attempting to move the servo motor to ensure that the pin is set correctly, look the code to understand:
-```ino
-void inicializarControlPD() {
-    servoDireccion.attach(pinServo);
-}
-```
-
-
-
-### 3- PD (Proportional-Derivative):
+### 4. **PD Control (Proportional-Derivative Control) Variables**
 Before we explain the coding of this, we need to explain what is it:
 
 PD Control (Proportional-Derivative) is a technique in control theory used to adjust the behavior of a system based on:
@@ -575,64 +260,405 @@ float Kd = 1.0;: Defines the derivative gain.
 Helps to smooth the system response. If the error is changing rapidly, this term reduces the setting to avoid oscillations.
 float lastError = 0;: Variable to store the error of the previous iteration.
 ```ino
-float Kp = 2.0; // Proportional constant for the PID controller, controls the reaction to the current error.
-float Kd = 1.0; // Derivative constant for the PID controller, controls the reaction to the rate of error change.
-float lastError = 0; // Stores the previous error value for derivative calculation.
+float Kp = 0.63;  // Proportional gain for PD control
+float Kd = 0.4;   // Derivative gain for PD control
+float alpha = 0.15;  // Smoothing factor for yaw
+float lastError = 0; // Stores the last error value for derivative calculation
+int curva = 0;      // Counter for curves detected by the robot
+const int botonPin = A7;  // Button pin used to start/stop the robot
+bool enMarcha = false;    // Robot's state: false = stopped, true = running
 ```
-Now we have the function to ajust the angles, here is:
+- **PD control constants** (`Kp` and `Kd`): Used to tune the proportional and derivative responses of the control loop.
+- **Yaw smoothing** (`alpha`): A factor used to smooth the yaw (orientation) readings from the MPU6050 to avoid abrupt changes.
+- **Button and robot state**: The button on pin `A7` is used to start or stop the robot. `enMarcha` indicates whether the robot is running or stopped.
+
+---
+
+### 5. **Ultrasonic Sensor and MotorPin Setup**
+
+```ino
+int trigIzquierdo = 9, echoIzquierdo = 10;  // Left sensor pins
+int trigCentro = 15, echoCentro = 14;        // Center sensor pins
+int trigDerecho = 7, echoDerecho = 8;        // Right sensor pins
+
+int motorPin1 = 5, motorPin2 = 4, enablePin = 3, standbyPin = 16;  // Motor pins for control
+```
+- Defines the pins for the three ultrasonic sensors (left, center, right). These are used to detect obstacles.
+- Motor control pins: These pins are used to control the motors (direction, enable, and standby).
+
+---
+
+### 6. **Time Control and Blocking Variables**
+
+```ino
+unsigned long tiempoUltimaCurva = 0;
+const long bloqueoTiempo = 2000;  // Time between turns to avoid continuous turning
+int bloqueadorI = 65;  // Blocking threshold for left sensor
+int bloqueadorD = 65;  // Blocking threshold for right sensor
+```
+- `tiempoUltimaCurva`: Stores the last time a curve was detected to prevent rapid consecutive curve turns.
+- `bloqueoTiempo`: Time interval (in milliseconds) that defines how often the robot can turn to avoid constant turns.
+- `bloqueadorI` and `bloqueadorD`: Thresholds for the left and right sensors to prevent false readings from triggering unnecessary turns.
+
+---
+
+### 7. **MPU6050 Data Processing Function**
+
+```ino
+void procesarMPU(int16_t *gyro, int16_t *accel, int32_t *quat, uint32_t *timestamp) {
+    Quaternion q;  // Quaternion object to store rotation data
+    VectorFloat gravity;  // Gravity vector for accurate yaw calculation
+    float ypr[3] = { 0, 0, 0 };  // Yaw, pitch, roll values
+    float xyz[3] = { 0, 0, 0 };  // Raw sensor data values
+
+    // Get quaternion, gravity, and yaw-pitch-roll data from the MPU
+    mpu.GetQuaternion(&q, quat);
+    mpu.GetGravity(&gravity, &q);
+    mpu.GetYawPitchRoll(ypr, &q, &gravity);
+    mpu.ConvertToDegrees(ypr, xyz);
+
+    // Update the yaw value globally
+    yawActual = (int)xyz[0];
+}
+```
+- **`procesarMPU`**: This function processes the MPU6050 data (gyroscope, accelerometer) to extract yaw, pitch, and roll values using quaternions and gravity data. The yaw value (`yawActual`) is updated globally.
+
+---
+
+### 8. **PD Control Initialization**
+
+```ino
+void inicializarControlPD() {
+    servoDireccion.attach(pinServo);  // Attach the servo to the pin
+    //servoDireccion.write(anguloCentro); // Optional: Set the servo to the center position (straight)
+}
+```
+- **`inicializarControlPD`**: Initializes the PD control by attaching the servo to the specified pin and optionally setting it to the center position.
+
+---
+
+### 9. **Servo Control Function**
+
+```ino
+void move_steer(int pos) {
+    int currentPos = servoDireccion.read();  // Get the current position of the servo
+    if (pos > currentPos) {
+        // Move the servo to the right (gradually increasing position)
+        for (int i = currentPos; i <= pos; i++) {
+            servoDireccion.write(i);
+            delay(10);  // Small delay to smooth the movement
+        }
+    } else {
+        // Move the servo to the left (gradually decreasing position)
+        for (int i = currentPos; i >= pos; i--) {
+            servoDireccion.write(i);
+            delay(10);  // Small delay to smooth the movement
+        }
+    }
+}
+```
+- **`move_steer`**: This function smoothly moves the servo to a target position (`pos`). It adjusts the servo's position incrementally (with small delays) to avoid abrupt movements.
+
+
+### 10. **PD Control Adjustment Function**
+
 ```ino
 void ajustarAngulo(float error, int anguloDeseado) {
-    // Calculate the derivative term (change in error).
-    float derivada = error - lastError; // Difference between the current and last error.
-    // Compute the adjustment using the PD (Proportional-Derivative) formula.
-    float ajuste = (Kp * error) + (Kd * derivada); // PD adjustment based on error and its rate of change.
-    // Update the last error for the next iteration.
-    lastError = error; 
-    // Adjust the desired angle by applying the calculated adjustment.
-    anguloDeseado += ajuste; 
-    // Constrain the desired angle within the valid range (between anguloIzquierda and anguloDerecha).
-    anguloDeseado = constrain(anguloDeseado, anguloIzquierda, anguloDerecha); 
-    // Move the servo to the new adjusted angle.
-    move_steer(anguloDeseado); 
+    float derivada = error - lastError;  // Calculate the derivative term (rate of change of error)
+    float ajuste = (Kp * error) + (Kd * derivada);  // PD control formula
+    lastError = error;  // Update the last error value for the next iteration
+
+    anguloDeseado += ajuste;  // Apply the adjustment to the desired angle
+    anguloDeseado = constrain(anguloDeseado, anguloIzquierda, anguloDerecha);  // Constrain the angle to avoid exceeding limits
+    move_steer(anguloDeseado);  // Move the servo to the adjusted angle
+}
+```
+- **`ajustarAngulo`**: This function adjusts the steering angle based on the error (difference between desired and actual angles) using the PD control formula. It ensures the angle stays within limits (`anguloIzquierda` and `anguloDerecha`) and moves the servo accordingly.
+
+---
+### 11. **Ultrasonic Sensor Distance Measurement**
+
+```ino
+long medirDistancia(int trigPin, int echoPin) {
+    // Trigger the ultrasonic sensor
+    digitalWrite(trigPin, LOW);  // Start with LOW to ensure a clean pulse
+    delayMicroseconds(3);
+    digitalWrite(trigPin, HIGH);  // Send a HIGH pulse to trigger the sensor
+    delayMicroseconds(10);
+    digitalWrite(trigPin, LOW);  // End the pulse
+
+    // Measure the duration of the echo pulse
+    long duracion = pulseIn(echoPin, HIGH);  // Get the duration of the echo signal
+    return duracion * 0.034 / 2;  // Convert the duration into distance (in cm)
+}
+```
+- **`medirDistancia`**: This function triggers the ultrasonic sensor and calculates the distance based on the time it takes for the echo to return.
+
+---
+
+### 12. **Function: `calcularAnguloObjetivoI(int curva)`**
+
+```ino
+int calcularAnguloObjetivoI(int curva) {
+    if (curva % 4 == 1) return -70;     // Curvas 1, 5, 9, ...
+    else if (curva % 4 == 2) return -160; // Curvas 2, 6, 10, ...
+    else if (curva % 4 == 3) return 110;   // Curvas 3, 7, 11, ...
+    else return 20;                      // Curvas 4, 8, 12, ...
+}
+```
+
+This function calculates the target angle for the servo motor (or steering mechanism) based on the curve number. The variable `curva` represents the current curve number.
+- The function uses the modulo operator (`%`) to determine the remainder when dividing `curva` by 4. This helps categorize the curve into one of four possible cases (1 through 4).
+- Based on the result of the modulo operation, the function returns a specific angle for the servo.
+Here’s how the curve number determines the angle:
+- **When `curva % 4 == 1`** (i.e., curves 1, 5, 9, ...): The servo will turn to **-70°**.
+- **When `curva % 4 == 2`** (i.e., curves 2, 6, 10, ...): The servo will turn to **-160°**.
+- **When `curva % 4 == 3`** (i.e., curves 3, 7, 11, ...): The servo will turn to **110°**.
+- **When `curva % 4 == 0`** (i.e., curves 4, 8, 12, ...): The servo will turn to **20°**.
+
+### 13. **Function: `calcularAnguloObjetivoD(int curva)`**
+
+```ino
+int calcularAnguloObjetivoD(int curva) {
+    if (curva % 4 == 1) return 75;     // Curvas 1, 5, 9, ...
+    else if (curva % 4 == 2) return 155; // Curvas 2, 6, 10, ...
+    else if (curva % 4 == 3) return -105;   // Curvas 3, 7, 11, ...
+    else return -15;                      // Curvas 4, 8, 12, ...
+}
+```
+This function also calculates the target angle for the servo motor based on the curve number. The input `curva` represents the current curve number.
+Similar to the previous function, the modulo operator (`%`) is used to categorize the curve number, and the function returns a specific angle based on that categorization.
+Here’s how the curve number determines the angle:
+- **When `curva % 4 == 1`** (i.e., curves 1, 5, 9, ...): The servo will turn to **75°**.
+- **When `curva % 4 == 2`** (i.e., curves 2, 6, 10, ...): The servo will turn to **155°**.
+- **When `curva % 4 == 3`** (i.e., curves 3, 7, 11, ...): The servo will turn to **-105°**.
+- **When `curva % 4 == 0`** (i.e., curves 4, 8, 12, ...): The servo will turn to **-15°**.
+### 14. **Motor control**
+Then we will enter the Void functions, which are functions that in determinod time we can call for certain event that we need to occur, in this case the movement of the car, the motorpin 1 in HIGH and motorpin 2 in low makes the motor advance, in case of putting this configuration backwards would make the car go in reverse, and also atravz of the PWM can adjust the speed of the motor, as we can see:
+```ino
+void avanzar(int velocidad) {
+    // Set the motor to rotate in a specific direction.
+    digitalWrite(motorPin1, HIGH); // Set motorPin1 to HIGH to define the forward rotation direction.
+    digitalWrite(motorPin2, LOW);  // Set motorPin2 to LOW to ensure the motor rotates in the desired direction.
+    // Control the motor's speed using PWM (Pulse Width Modulation).
+    analogWrite(enablePin, velocidad); // Generate a PWM signal on enablePin to adjust the motor speed (range: 0-255).
 }
 
 ```
-We will be explaining it line per line, first we need to calculate the actual error and the last error, this represetn how is changing the mistake or the error in the time, if the error keeps growing quickly it means that this value is more big, and if the mistake it´s getting lower it means it will be lower or cero.
-<br>
- <br>
-
-
- > [!NOTE]
->Important: The derivative term acts as a “brake” that reduces the adjustment if the system is already correcting quickly.
-
-
-<br>
-
-here is the line code:
+Now we will have the function to stop the motor, that would be with the two pins in LOW, in the code it would be like this:
 ```ino
-float derivada = error - lastError;
+void detener() {
+    // Stop the motor by cutting power to both motor direction pins.
+    digitalWrite(motorPin1, LOW); // Set motorPin1 to LOW to stop the motor.
+    digitalWrite(motorPin2, LOW); // Set motorPin2 to LOW to ensure no rotation.
+
+    // Set the speed to zero to fully disable the motor.
+    analogWrite(enablePin, 0); // Generate a PWM signal of 0 to turn off the motor.
+}
 ```
-Now we need to calculate the total ajust, the Kp multiplied bye the error makes a correction that is proportional to the size of the error, meanwhile the mistake it's bigger, more bigger will be the correction. The Kd multiplied by the derivative will make a correction based on the speed of the error change, it helps to get more soft the oscilations.
-- By example:
-Kp it's equial to 2.0, Kd to 1.0, Error equal 10 and the last error to 8, it means that the derivative will be 10 - 8 = 2,
-and the ajust = (2*10)+(1*2)= 20 + 2 = 22, so the final ajust will be 22, let's see it in the code:
+
+### 15. **Function: `detectarCurva(long distanciaIzquierda, long distanciaCentro, long distanciaDerecha)`**
+This function is responsible for detecting curves on the path and adjusting the robot's movements to navigate those curves. It uses data from distance sensors (left, center, and right) and a gyroscope to determine the robot's orientation and make real-time adjustments. Below is a step-by-step breakdown of how the function works:
+**Input Parameters**:
+   - `distanciaIzquierda`: Distance measured by the left sensor.
+   - `distanciaCentro`: Distance measured by the center sensor.
+   - `distanciaDerecha`: Distance measured by the right sensor.
+**Calculating the Error and Sum**:
+   - **Error Calculation**:
+     ```ino
+     float error = distanciaIzquierda - distanciaDerecha;
+     ```
+     This computes the difference between the distances measured by the left and right sensors. This difference (`error`) indicates whether the robot is closer to the left or right side. A positive error suggests the left sensor detects a closer object, and a negative error suggests the right sensor detects a closer object.
+
+   - **Sum Calculation**:
+     ```ino
+     float sum = distanciaIzquierda + distanciaDerecha;
+     ```
+     The sum of the left and right distances gives an overall sense of the space around the robot, used to assess whether there is enough open space to proceed.
+
+   - **Storing Last Error**:
+     ```cpp
+     lastError = error;
+     ```
+     The current error is stored for later use (possibly for debugging or future calculations).
+**Time Check for Curve Blocking**:
+   - **Time Since Last Curve**:
+     ```cpp
+     unsigned long tiempoActual = millis(); 
+     if (tiempoActual - tiempoUltimaCurva >= bloqueoTiempo)
+     ```
+     This checks whether enough time has passed since the last detected curve (`tiempoUltimaCurva`). The purpose of this is to prevent the robot from continuously detecting curves or making unnecessary turns too quickly. If the time difference exceeds `bloqueoTiempo`, the robot is allowed to detect and adjust to another curve.
+**Curve Detection and Navigation**:
+   - **Left Turn Detection**:
+     ```cpp
+     if (error > 1 && distanciaCentro < 58 && sum > 90 && distanciaIzquierda > bloqueadorI) {
+     ```
+     This condition checks if the robot should turn left:
+     - If `error > 1`, it suggests the left side is closer, indicating the need to turn left.
+     - If `distanciaCentro < 58`, the center sensor detects something close, indicating the robot is navigating near an obstacle or a curve.
+     - If `sum > 90`, the combined distance on the left and right sides suggests there’s enough room for a curve.
+     - If `distanciaIzquierda > bloqueadorI`, the robot ensures it’s not too close to the left obstacle.
+     
+     If all these conditions are met, the robot recognizes a left curve and proceeds with the turn:
+     - **Increment Curve Counter**: 
+       ```cpp
+       curva++;
+       ```
+       The `curva` counter is incremented to keep track of how many curves the robot has encountered.
+     - **Calculate Target Angle for Left Turn**: 
+       ```cpp
+       int anguloObjetivo = calcularAnguloObjetivoI(curva);
+       ```
+       The function `calcularAnguloObjetivoI()` determines the target angle for the robot to turn to navigate the curve, based on the curve count (`curva`).
+     - **Perform the Turn**: 
+       ```cpp
+       while (abs(yawActual - anguloObjetivo) > 2) {
+           servoDireccion.write(119);  // Turn left
+           avanzar(250);  // Move forward while turning
+       }
+       ```
+       The robot keeps turning left (by controlling the servo direction) until the current yaw angle (`yawActual`) reaches the target angle (`anguloObjetivo`). A tolerance of 2 degrees is allowed.
+     - **Stop Turning and Return to Center**:
+       ```cpp
+       servoDireccion.write(anguloCentro);
+       delay(100);  // Short delay to stabilize
+       tiempoUltimaCurva = tiempoActual;  // Update last curve time
+       bloqueadorD = 1500;  // Block right turns temporarily
+       ```
+       After completing the left turn, the robot’s servo is reset to the center, and a brief delay is added to stabilize. It also updates the time of the last curve and blocks right turns temporarily with `bloqueadorD`.
+
+   - **Right Turn Detection**:
+     ```cpp
+     else if (error < -1 && distanciaCentro < 58 && sum > 90 && distanciaDerecha > bloqueadorD) {
+     ```
+     Similar to the left turn detection, but this condition checks if the robot should turn right:
+     - If `error < -1`, it suggests the right side is closer, indicating a need to turn right.
+     - If `distanciaDerecha > bloqueadorD`, the robot ensures it’s not too close to the right obstacle.
+
+     The steps for a right turn are almost identical to the left turn, with a few changes:
+     - The target angle for the right turn is calculated using `calcularAnguloObjetivoD(curva)`.
+     - The robot turns right by writing to the servo with `servoDireccion.write(69)`.
+
+   - **If No Curve is Detected**:
+     ```cpp
+     else {
+         ajustarAngulo(error, anguloCentro);
+         avanzar(200);  // Move forward normally
+     }
+     ```
+     If no curve is detected (i.e., neither left nor right conditions are met), the robot simply adjusts its angle to stay centered (`ajustarAngulo()`) and continues moving forward.
+
+**Final else Block**:
+If the time since the last curve is not enough (`tiempoActual - tiempoUltimaCurva < bloqueoTiempo`), the robot will again adjust its angle and move forward normally:
+```cpp
+else {
+    ajustarAngulo(error, anguloCentro);
+    avanzar(200);  // Move forward normally
+}
+```
+This function helps the robot navigate curves effectively by constantly adjusting its heading and movement based on real-time sensor data.
+
+### 16. **Function: `actualizar()`**
+This function updates the sensor readings, checks for curves, and provides debug output on the serial monitor.
 ```ino
-float ajuste = (Kp * error) + (Kd * derivada);
+void actualizar() {
+    // Measure distances from the left, center, and right sensors
+    long distanciaIzquierda = medirDistancia(trigIzquierdo, echoIzquierdo);
+    long distanciaCentro = medirDistancia(trigCentro, echoCentro);
+    long distanciaDerecha = medirDistancia(trigDerecho, echoDerecho);
+
+    // Call the function to detect a curve based on sensor data
+    detectarCurva(distanciaIzquierda, distanciaCentro, distanciaDerecha);
+
+    // If 12 curves have been detected, stop the robot and pause for 60 seconds
+    if (curva == 12) {
+        servoDireccion.write(90);  // Center the servo
+        avanzar(250);  // Move forward briefly
+        delay(700);  // Wait for 700 ms
+        detener();  // Stop the robot
+        delay(60000);  // Wait for 60 seconds
+    }
+
+    // Print sensor and robot state data to the serial monitor for debugging
+    Serial.print("Yaw: "); Serial.print(yawActual);
+    Serial.print(" | Distancia Izquierda: "); Serial.print(distanciaIzquierda);
+    Serial.print(" | Distancia Centro: "); Serial.print(distanciaCentro);
+    Serial.print(" | Distancia Derecha: "); Serial.print(distanciaDerecha);
+    Serial.print(" | Error: "); Serial.println(lastError);
+}
 ```
-Now we have to update the previous error, we use the 'LastError' Variable to update it with the value of the actual error, this is crucial to calculate the derivativee in the next action.
+- **Sensor data**: Reads the distance from the left, center, and right sensors.
+- **Curve detection**: Calls the `detectarCurva()` function to check for curves.
+- **Robot control**: Stops the robot after 12 curves and pauses for 60 seconds.
+- **Debugging output**: Prints useful information (yaw, distances, error) to the serial monitor.
+---
+### 17. **Function: `setup()`**
+This function initializes the robot’s hardware, including sensors, motors, and communication interfaces.
 ```ino
-lastError = error;
+void setup() {
+    Serial.begin(115200);  // Start serial communication at 115200 baud rate
+    
+    // Initialize sensor pins (left, center, right sensors)
+    pinMode(trigIzquierdo, OUTPUT);
+    pinMode(echoIzquierdo, INPUT);
+    pinMode(trigCentro, OUTPUT);
+    pinMode(echoCentro, INPUT);
+    pinMode(trigDerecho, OUTPUT);
+    pinMode(echoDerecho, INPUT);
+
+    // Initialize motor control pins
+    pinMode(motorPin1, OUTPUT);
+    pinMode(motorPin2, OUTPUT);
+    pinMode(enablePin, OUTPUT);
+    pinMode(standbyPin, OUTPUT);
+    digitalWrite(standbyPin, HIGH);  // Set standby pin to HIGH to enable motors
+    
+    // Initialize PD control system
+    inicializarControlPD();
+
+    // Initialize MPU6050 (gyroscope/accelerometer)
+    Wire.begin();  // Start I2C communication
+    Wire.setClock(400000);  // Set I2C clock speed to 400 kHz
+    
+    Serial.println(F("Iniciando calibración del MPU6050..."));
+    mpu.SetAddress(MPU6050_ADDRESS_AD0_LOW)
+       .CalibrateMPU()  // Calibrate the MPU6050 sensor
+       .load_DMP_Image();  // Load the DMP (Digital Motion Processor) image for data processing
+    mpu.on_FIFO(procesarMPU);  // Set up a callback function to process the MPU data from the FIFO buffer
+    
+    delay(100);  // Wait for the system to stabilize before starting the main loop
+}
 ```
-Now we have to ajust the angle we want, we make this through anguloDeseado += ajuste; this ajust dinamically the angle of the servomotor in function of the result of the PD controlator. and if we do: constrain(anguloDeseado, anguloIzquierda, anguloDerecha); This will limit the angle inside of the fisic values available (anguloIzquierda y anguloDerecha) this prevent damage to the servo.
+
+- **Serial communication**: Initializes communication for debugging and monitoring.
+- **Sensor pin configuration**: Sets up the pins for the distance sensors.
+- **Motor control**: Configures the pins used to control the robot’s motors.
+- **MPU6050 sensor setup**: Initializes and calibrates the MPU6050 sensor to track the robot’s orientation.
+- **Control system initialization**: Sets up the PD controller for motor and servo control.
+---
+These functions together enable the robot to detect curves, navigate based on sensor data, and output debug information, while ensuring proper initialization and configuration of the robot's hardware.
+### 18. **Main Control Loop**
+
 ```ino
-anguloDeseado += ajuste;
-anguloDeseado = constrain(anguloDeseado, anguloIzquierda, anguloDerecha);
+void loop() {
+    if (!enMarcha) {  // If the robot is NOT running
+        if (analogRead(botonPin) == 0) {  // If the button is pressed
+            enMarcha = true;                   // Change the state to "running"
+            Serial.println("Robot running!");
+            servoDireccion.write(anguloCentro);  // Center the servo
+        } else {
+            detener();  // Keep the robot stopped if the button is not pressed
+        }
+    } 
+    if (enMarcha == true) {  // If the robot is running
+        mpu.dmp_read_fifo();  // Read data from the MPU6050 sensor
+        actualizar();         // Execute PD control for adjusting the steering
+        delay(5);             // Small delay for smooth operation
+    }
+}
 ```
-Next, we make the movement of the steer applying this line:
-```ino
-move_steer(anguloDeseado);
-```
-And for last, we call the PD in the main loop, the PD it's used secuencially inside the main loop or in specific functions like, 'detectarCurva', to fix the direction of the robot, the mistake it's calculated based on the ultrasonic sensors (Desviation due to the center of the way),  with the MPU-6050, and we call 'ajustar angulo' to calculate the new angle in the servomotor to make the correction needed.
+- **`loop`**: The main loop that continuously checks if the robot is running. If it is running, the loop reads sensor data, adjusts the steering based on PD control, and moves the robot accordingly. If the button is pressed, the robot starts.
+---
 
 ### Why do we use PD?:
 1- To maintain stability: Avoid abrupt movements or overcorrections that could destabilize the robot.
