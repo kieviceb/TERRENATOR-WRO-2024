@@ -174,7 +174,7 @@ Once we have all the libraries needed, we are ready to use the MPU-6050.
 
 - 5-[PIXY CAM 2.1](https://pixycam.com/2021/05/20/introducing-pixy-2-1/):
 The PixyCam 2.1 is a fast and versatile vision sensor for DIY robotics, offering significant improvements over its predecessor. Its horizontal field-of-view has been expanded to 80 degrees, allowing it to capture more of the environment in each frame, albeit with minor spherical distortion. The camera features a replaceable M12 lens mount with adjustable focus, enabling it to focus on objects as close as 0.25 inches. It also minimizes chromatic distortion at the edges and boasts an F-stop of 2.0, improving light gathering and reducing pixel noise, resulting in higher detection accuracy. Capable of processing images at 60 frames per second, it updates object positions every 16.7 milliseconds, making it ideal for tracking fast-moving objects or precise line-following. The Color Connected Components (CCC) algorithm allows it to detect objects based on hue and saturation, remaining robust under varying lighting conditions. It supports up to 7 unique color signatures or numerous objects using color codes. While retaining the software, firmware, and features of PixyCam 2, this version is slightly larger but significantly more efficient for detection and tracking tasks.
-
+---
 <p align="center">
   <img src="https://github.com/user-attachments/assets/820aed1b-6fa0-4af6-b3b8-ce5495a48d07" alt="Imagen 1" width="330">
   <img src="https://github.com/user-attachments/assets/36c5f9ee-3eb9-4901-be3e-9945540ca827" alt="Imagen 2" width="350">
@@ -182,10 +182,12 @@ The PixyCam 2.1 is a fast and versatile vision sensor for DIY robotics, offering
 
 <br>
  <br>
+ 
+---
 
 
  > [!NOTE]
->In the case of our pixy cam 2.1, we always need to calibrate our camera before the competition in the track of the event, this because as it has happened to us before we always need to check that the pixy cam recognizes well the blocks and the color lines, because it happens that the illumination affects the block detection of the pixy cam, then we always need to enter the track with our laptop using specifically the pixymon program, to be able to know that the signatures are being detected effectively.
+>In the case of our pixy cam 2.1, we always need to calibrate our camera before the competition in the track of the event, this because as it has happened to us before we always need to check that the pixy cam recognizes well the blocks and the color lines, because it happens that the illumination affects the block detection of the pixy cam, then we always need to enter the track with our laptop using specifically the pixymon program, to be able to know that the signatures are being detected effectively, we to calibrate our pixy cam we need to use a microUSB cable that connect to the laptop to opne the pixymon, thanks.
 
 
 
@@ -200,10 +202,54 @@ In the chassis and 3D part, you can find all the 3D parts that made up the robot
 
 So the chassis and the design of the car that will go to Turkey took a long time because our ideas were to make the robot of the national competition much smaller, agile, faster and prettier, so we had to make a completely new chassis, in this one changing several parts of the assembly, for example in the steering system, since in our previous robot, the steering system was based on moving a cylinder with teeth that moved a line with teeth that gave direction to the robot, the problem with this steering design was that it is a bit imprecise so, we adopted a steering design similar to the Ackerman steering, and we also changed the servo motor.
 
+---
 <p align="center">
   <img src="https://github.com/user-attachments/assets/51482f0d-463b-4997-b058-2ef86033c2ad" alt="Imagen 1" width="305">
   <img src="https://github.com/user-attachments/assets/f4bb0df8-0631-45aa-a332-39191a1dede5" alt="Imagen 2" width="350">
 </p>
+---
+
+Then for the traction, we have four parts, the big gear for motor that this is the gear that give us the torque to move the robot, we have a game of gears that we can modify in case we need speed or more torque, and we have a fixed drive motor retainer, here we have a support for the motor, and we have the small gear for the drive axle, and we have the traction support.
+
+---
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c83ed2f5-87f1-4d6b-8bce-bf20d6079f44" alt="Imagen 1" width="360">
+  <img src="https://github.com/user-attachments/assets/7953a24a-1a05-472e-b7c0-25cc03c3624d" alt="Imagen 2" width="350">
+</p>
+
+---
+Then we have the skeleton: 
+Here in the skeleton is the main base chasis of the robot, here we can find in the physical one the motor game with his gears, the servo motor, and the modifications that make the steering have better movements.
+
+And also here we have the main shell, here we can find all that makes our robot, here are all the circuits for the robot and the base for the camera.
+
+---
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/494ede7c-720d-4730-986b-6f228c7efcc0" alt="Imagen 1" width="320">
+  <img src="https://github.com/user-attachments/assets/04a91e91-05f8-4a22-87e1-63df63bba776" alt="Imagen 2" width="350">
+</p>
+
+---
+
+Now for the sensors, we have made a lot of support for them, but with this one we made the correct one, it is more outside beacuase they give us better data in this way.
+
+---
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9d75d1a6-65fd-44ae-aa53-132b60ba3d92" alt="Imagen 1" width="320">
+</p>
+
+---
+
+Now with the wheels, we have designed it by ourself, because in that way we can ajust eveything by ourself and it's so much better in that way. For the traction wheels they are a little bit so more big.
+
+---
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c0ed90f5-269b-4e7e-b33b-5cce38890710" alt="Imagen 1" width="320">
+  <img src="https://github.com/user-attachments/assets/888879fc-d396-48cf-862a-c55d8efb368a" alt="Imagen 1" width="300">
+</p>
+
+
 
 
 
