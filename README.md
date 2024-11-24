@@ -192,26 +192,6 @@ The PixyCam 2.1 is a fast and versatile vision sensor for DIY robotics, offering
 <br>
 
 
-### 5- [MPU-6050 LIBRARIES](https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/):
-
- First of all we need to initialize our MPU-6050 We need to declare all the variables for it, and it has some specific libraries that you can find it here:
-
-https://github.com/jrowberg/i2cdevlib
-https://github.com/ZHomeSlice/Simple_MPU6050
-https://github.com/ZHomeSlice/Simple_Wire
-
-And if you don't know how to install it, you need to watch this video, (it's in spanish):
-
-- [MPU-6050  Youtube](https://www.youtube.com/watch?v=TwFZ4BJUX5c&t=1805s)
-
-But i´ll explain here:
-First we need to donwload the I2C Library that will make easy the 12c conection with the arduino nano, this library it´s of free software and multiplatform, and this library complement the wire library with the arduino IDE, so, we need to goon the first link i put here and [here](https://github.com/jrowberg/i2cdevlib) then, in the part of code, the green part on the git hub, we will donwnload the zip, so once it is installed we need to extract the file, once it is extracted, we need to go to the 12cdevlib master folder, then the arduino folder, here are a lot of libraries we can use for different proyects, so here we have to search the 12cdev folder, once we find it we have to select it an copy it, so once we do this we have to go to arduino folder, in most of cases it is set default on document, once there we go to libraries and then we paste 12cdev there.
-
-That was our first library, now we need to download the [Simple_MPU6050](https://github.com/ZHomeSlice/Simple_MPU6050)  library, wich this is most simple to use, so we have to intalle the zip of this library, and then in the arduino IDE we have to install the library there, in other words we have to add the zip file to his library inside the IDE.
-
-Even in this part you might have some problems to initialize and use the code, that´s because in the video they dont say this but we need another library, that is for comunication, espacifically the [Simple_Wire](https://github.com/ZHomeSlice/Simple_Wire), to install it you have to follow the same steps of the second library.
-
-Once we have all the libraries needed, we are ready to use the MPU-6050.
 
 
 ## Chasis & 3D Parts
