@@ -694,7 +694,26 @@ void loop() {
 4- For adaptability: Responds dynamically to changes in the environment, such as curves or detours, by adjusting the robot's direction.
 
 
+## Second Challenge Code:
 
+To see the complete code go to the [SRC](https://github.com/kieviceb/TERRENATOR-WRO-2024/tree/main/src) File on the git hub.
+
+### Libraries and MPU6050 directions
+first we need to include all the libraries that we are gonna use for the second challegne code, here we use **`Servo.h`**, **`Pixy2.h`**, **`Simple_MPU6050.h`**, **`Wire.h`**.
+
+Then we have the MPU6050 configurations, first we have the **`MPU6050_ADDRESS_AD0_LOW `** (0X68), this is the default addres of the MPU6050 when the AD0 pin (addres pin) is tied to the ground (logic LOW). Then we have **`MPU6050_ADDRESS_AD0_HIGH `** (0x69), this the alternative address used when the AD0 pin is connected to VCC (logic HIGH). For third we have **`MPU6050_DEFAULT_ADRESS`** (0x68) This macro defines the default I2C address the program will use to communicate with the MPU6050. In this case, it is set to **`MPU6050_ADDRESS_AD0_LOW `**, meaning the AD0 pin is assumed to be connected to ground.
+
+```ino
+#include <Servo.h>
+#include <Pixy2.h>
+#include "Simple_MPU6050.h"
+#include <Wire.h>
+
+// Configuración MPU6050
+#define MPU6050_ADDRESS_AD0_LOW     0x68
+#define MPU6050_ADDRESS_AD0_HIGH    0x69
+#define MPU6050_DEFAULT_ADDRESS     MPU6050_ADDRESS_AD0_LOW
+```
 
 
 ## References
