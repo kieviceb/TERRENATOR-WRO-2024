@@ -744,6 +744,8 @@ void loop() {
 
 To see the complete code go to the [SRC](https://github.com/kieviceb/TERRENATOR-WRO-2024/tree/main/src) File on the git hub.
 
+---
+
 ### Libraries and MPU6050 directions
 first we need to include all the libraries that we are gonna use for the second challegne code, here we use **`Servo.h`**, **`Pixy2.h`**, **`Simple_MPU6050.h`**, **`Wire.h`**.
 
@@ -760,6 +762,155 @@ Then we have the MPU6050 configurations, first we have the **`MPU6050_ADDRESS_AD
 #define MPU6050_ADDRESS_AD0_HIGH    0x69
 #define MPU6050_DEFAULT_ADDRESS     MPU6050_ADDRESS_AD0_LOW
 ```
+
+---
+
+### MPU6050, Pixy 2.1, an the Servo initialization:
+
+This section of the code sets up essential components for the robot's operation: the MPU6050 sensor for orientation, the Pixy2 camera for vision processing, and a servo motor for steering.
+
+The Simple_MPU6050 mpu; object is initialized to interface with the MPU6050 sensor, which measures the robot's rotation and acceleration. Two global variables, yawActual and yawInicial, are defined to track the current yaw (rotation around the vertical axis) and the initial yaw value, respectively. These variables are crucial for detecting and responding to changes in the robot's orientation during movement.
+
+The Pixy2 pixy; object is created to control the Pixy2 camera, which can recognize visual patterns or objects. Although its specific use is not detailed in the current code, it is prepared for future tasks related to vision-based navigation or obstacle avoidance.
+
+For steering, the Servo servoDireccion; object is declared. The servo is connected to pin 6, as defined by int pinServo = 6;. Predefined angles are assigned to constants (anguloIzquierda = 87, anguloCentro = 90, and anguloDerecha = 105) to represent left, center, and right steering positions, respectively. These angles ensure precise control of the servo for effective navigation. Additionally, int anguloMPU = 0; is introduced to dynamically adjust the steering angle based on real-time yaw readings from the MPU6050, enabling the robot to correct its path automatically.
+
+This setup provides the foundation for integrating sensor data, visual feedback, and motor control to achieve smooth and responsive robotic movement.
+
+```ino
+Simple_MPU6050 mpu;
+float yawActual = 0;  // Variable global para almacenar el Yaw actual
+// Variable para el yaw
+float yawInicial = 0;
+
+// Variables globales del PD
+Pixy2 pixy;
+Servo servoDireccion;
+int pinServo = 6;
+int anguloIzquierda = 87;
+int anguloCentro = 90;
+int anguloDerecha = 105;
+int anguloMPU = 0;
+
+```
+---
+
+### Variables and Pin Configuration:
+
+PD Controller Variables
+Kp = 0.5, Kd = 0.5: PD gains for response and damping.
+alpha = 0.15: Smooths steering adjustments.
+lastError = 0: Previous error for derivative calculation.
+curva = 0: Current turning action.
+Robot State and Button
+botonPin = A7: Button pin to start/stop movement.
+enMarcha = false: Initial movement state (stopped).
+anguloSuavizado = anguloCentro: Smoothed steering angle.
+Vision Zones
+Boundaries for camera detection:
+
+deltaX, epsilonX, and zetaX ranges define vision zones.
+Ultrasonic Sensor Pins
+Left: trigIzquierdo = 10, echoIzquierdo = 9.
+Center: trigCentro = 15, echoCentro = 14.
+Right: trigDerecho = 7, echoDerecho = 8.
+Motor Pins
+motorPin1 = 5, motorPin2 = 4: Motor direction.
+enablePin = 3, standbyPin = 16: Motor enable and standby.
+
+```ino
+float Kp = 0.5;
+float Kd = 0.5;
+float alpha = 0.15;
+float lastError = 0;
+int curva = 0;
+const int botonPin = A7;  // Pin del botón
+bool enMarcha = false;    // Estado inicial del robot: detenido
+float anguloSuavizado = anguloCentro;
+
+const int deltaXMin = 88, deltaXMax = 98;
+const int epsilonXMin = 101, epsilonXMax = 213;
+const int zetaXMin = 190, zetaXMax = 274;
+
+
+// Pines de sensores
+int trigIzquierdo = 10, echoIzquierdo = 9;
+int trigCentro = 15, echoCentro = 14;
+int trigDerecho = 7, echoDerecho = 8;
+
+// Pines de motor
+int motorPin1 = 5, motorPin2 = 4, enablePin = 3, standbyPin = 16;
+
+```
+
+---
+
+### 
+
+**`procesarMPU`** Function:
+This function processes gyroscope and accelerometer data from the **`MPU6050`** sensor:
+
+1- **`mpu.GetQuaternion`**, **`mpu.GetGravity`**, and **`mpu.GetYawPitchRoll`**: Extract quaternion, gravity vector, and yaw-pitch-roll angles.
+2- **`mpu.ConvertToDegrees`**: Converts yaw-pitch-roll angles from radians to degrees.
+3- Updates **`yawActual`**: The current yaw angle is stored globally for robot orientation.
+
+This function ensures the robot can interpret and use orientation data for navigation and control.
+
+**`inicializarControlPD Function
+This function sets up the PD control by initializing the servo:
+
+1- **`servoDireccion.attach(pinServo)`**: Links the servo to the specified pin for directional control.
+2- Optionally centers the steering using a commented **`move_steer(anguloCentro)`** call, which positions the servo to a neutral angle.
+It prepares the robot for smooth and precise directional adjustments.
+
+**`move_steer`** Function
+This function controls the servo motor for gradual steering adjustments:
+
+1- Reads the current servo position using **`servoDireccion.read()`**.
+2- If the target position is greater than the current position, the servo angle is incremented.
+3- If the target position is smaller, the servo angle is decremented.
+4- **`delay(10)`** ensures smooth transitions without abrupt movements.
+This gradual movement prevents sudden turns, improving robot stability and precision during navigation.
+
+```ino
+// Función para procesar datos del MPU6050
+void procesarMPU(int16_t *gyro, int16_t *accel, int32_t *quat, uint32_t *timestamp) {
+    Quaternion q;
+    VectorFloat gravity;
+    float ypr[3] = { 0, 0, 0 };
+    float xyz[3] = { 0, 0, 0 };
+    
+    mpu.GetQuaternion(&q, quat);
+    mpu.GetGravity(&gravity, &q);
+    mpu.GetYawPitchRoll(ypr, &q, &gravity);
+    mpu.ConvertToDegrees(ypr, xyz);
+    
+    yawActual = (int)xyz[0];  // Actualizar el Yaw global
+}
+//*******
+void inicializarControlPD() {
+    servoDireccion.attach(pinServo);
+    //move_steer(anguloCentro);
+}
+//*******
+void move_steer(int pos) {
+    int currentPos = servoDireccion.read();
+    if (pos > currentPos) {
+        for (int i = currentPos; i <= pos; i++) {
+            servoDireccion.write(i);
+            delay(10);
+        }
+    } else {
+        for (int i = currentPos; i >= pos; i--) {
+            servoDireccion.write(i);
+            delay(10);
+        }
+    }
+}
+```
+
+---
+
 
 
 ## References
