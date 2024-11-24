@@ -911,7 +911,138 @@ void move_steer(int pos) {
 
 ---
 
+### Functions for angle adjustment and distant measurement:
 
+ajustarAngulo Function
+This function adjusts the steering angle using PD control:
+
+error and derivada calculate the proportional and derivative terms.
+The angle is updated based on the error and constrained between anguloIzquierda and anguloDerecha.
+move_steer(anguloDeseado) applies the adjusted angle.
+It helps maintain smooth and precise steering.
+
+medirDistancia Function
+This function measures the distance using an ultrasonic sensor:
+
+It triggers the sensor and calculates the distance based on the pulse duration.
+It provides distance data for obstacle detection or navigation.
+
+Angle Calculation Functions
+calcularAnguloObjetivoI, calcularAnguloObjetivoDC, calcularAnguloObjetivoIC, and calcularAnguloObjetivoD Functions
+These functions calculate the target steering angles for various curve types. The angle depends on the curva value:
+
+Each curve type (based on curva % 4) has a unique angle to handle different turns.
+
+```ino
+//*******
+void ajustarAngulo(float error, int anguloDeseado) {
+    float derivada = error - lastError;
+    float ajuste = (Kp * error) + (Kd * derivada);
+    lastError = error;
+    
+    anguloDeseado += ajuste;
+    anguloDeseado = constrain(anguloDeseado, anguloIzquierda, anguloDerecha);
+    move_steer(anguloDeseado);
+}
+//*******
+long medirDistancia(int trigPin, int echoPin) {
+    digitalWrite(trigPin, LOW);
+    delayMicroseconds(3);
+    digitalWrite(trigPin, HIGH);
+    delayMicroseconds(10);
+    digitalWrite(trigPin, LOW);
+
+    long duracion = pulseIn(echoPin, HIGH);
+    return duracion * 0.034 / 2;
+}
+//*******
+
+// Función para calcular el ángulo objetivo
+int calcularAnguloObjetivoI(int curva) {
+    if (curva % 4 == 1) return -75;     // Curvas 1, 5, 9, ...
+    else if (curva % 4 == 2) return -165; // Curvas 2, 6, 10, ...
+    else if (curva % 4 == 3) return 105;   // Curvas 3, 7, 11, ...
+    else return 15;                      // Curvas 4, 8, 12, ...
+}
+
+//*******
+
+// Función para calcular el ángulo objetivo
+int calcularAnguloObjetivoDC(int curva) {
+    if (curva % 4 == 1) return 90;     // Curvas 1, 5, 9, ...
+    else if (curva % 4 == 2) return 180; // Curvas 2, 6, 10, ...
+    else if (curva % 4 == 3) return -90;   // Curvas 3, 7, 11, ...
+    else return 0;                      // Curvas 4, 8, 12, ...
+}
+
+//*******
+
+// Función para calcular el ángulo objetivo
+int calcularAnguloObjetivoIC(int curva) {
+    if (curva % 4 == 1) return -90;     // Curvas 1, 5, 9, ...
+    else if (curva % 4 == 2) return -180; // Curvas 2, 6, 10, ...
+    else if (curva % 4 == 3) return 90;   // Curvas 3, 7, 11, ...
+    else return 0;                      // Curvas 4, 8, 12, ...
+}
+
+//*******
+
+// Función para calcular el ángulo objetivo
+int calcularAnguloObjetivoD(int curva) {
+    if (curva % 4 == 1) return 75;     // Curvas 1, 5, 9, ...
+    else if (curva % 4 == 2) return 165; // Curvas 2, 6, 10, ...
+    else if (curva % 4 == 3) return -105;   // Curvas 3, 7, 11, ...
+    else return -15;                      // Curvas 4, 8, 12, ...
+}
+```
+
+---
+
+### Motor Control Functions
+
+avanzar Function
+This function controls the forward movement of the robot:
+
+1- motorPin1 is set to HIGH and motorPin2 to LOW, which activates the motor in the forward direction.
+2- analogWrite(enablePin, velocidad) controls the motor speed by applying a PWM signal to the enable pin.
+This function allows the robot to move forward at a specified speed.
+
+retroceder Function
+This function handles the backward movement of the robot:
+
+1- motorPin1 is set to LOW and motorPin2 to HIGH to drive the motor in reverse.
+2- analogWrite(enablePin, velocidad) adjusts the reverse speed of the motor using a PWM signal.
+It enables the robot to move backward with the desired speed.
+
+detener Function
+This function stops the robot:
+
+1- It sets both motorPin1 and motorPin2 to LOW, turning off the motor.
+2- analogWrite(enablePin, 0) disables the motor by setting the PWM signal to 0.
+
+```ino
+//*******
+void avanzar(int velocidad) {
+    digitalWrite(motorPin1, HIGH);
+    digitalWrite(motorPin2, LOW);
+    analogWrite(enablePin, velocidad);
+}
+//*******
+void retroceder(int velocidad) {
+    digitalWrite(motorPin1, LOW);
+    digitalWrite(motorPin2, HIGH);
+    analogWrite(enablePin, velocidad);
+}
+//*******
+
+void detener() {
+    digitalWrite(motorPin1, LOW);
+    digitalWrite(motorPin2, LOW);
+    analogWrite(enablePin, 0);
+}
+```
+
+---
 
 ## References
 - [Git Hub Readme Syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
