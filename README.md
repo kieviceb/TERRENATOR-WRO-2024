@@ -171,7 +171,7 @@ The PixyCam 2.1 is a fast and versatile vision sensor for DIY robotics, offering
 <br>
 
 
-### 5- [MPU-6050](https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/):
+### 5- [MPU-6050 LIBRARIES](https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/):
 
  First of all we need to initialize our MPU-6050 We need to declare all the variables for it, and it has some specific libraries that you can find it here:
 
@@ -191,35 +191,6 @@ That was our first library, now we need to download the [Simple_MPU6050](https:/
 Even in this part you might have some problems to initialize and use the code, that´s because in the video they dont say this but we need another library, that is for comunication, espacifically the [Simple_Wire](https://github.com/ZHomeSlice/Simple_Wire), to install it you have to follow the same steps of the second library.
 
 Once we have all the libraries needed, we are ready to use the MPU-6050.
-
-
-First of all, we need to initialize the MPU-6050, we make this including the libraries we previously download, and defining the directions of the gyro.
-
-```ino
-#include "Simple_MPU6050.h"
-#include <Wire.h>
-
-// Configuración MPU6050
-#define MPU6050_ADDRESS_AD0_LOW     0x68
-#define MPU6050_ADDRESS_AD0_HIGH    0x69
-#define MPU6050_DEFAULT_ADDRESS     MPU6050_ADDRESS_AD0_LOW
-
-Simple_MPU6050 mpu;
-
-```
-Suddenly we need to calibate the gyro, first we use SetAddres, here we configure the I2C direction of the gyro, Second we use CalibrateMPU, this one calibrates the values of the accelerometer and the gyroscope to get more precise data of it.
-Then we have load_DMP_Image, this one charges the firmware of the DMP, (Digital Motion Processor) of the MPU6050, this one let the sensor calculate the quaternions, and the angles that come directly of the sensor.
-Then we have on_FIFO(procesarMPU), This one configures the callback function (procesarMPU) and this one will work once we have data on the buffer FIFO of the sensor.
-
-```ino
-Serial.println(F("Iniciando calibración del MPU6050..."));
-mpu.SetAddress(MPU6050_ADDRESS_AD0_LOW)
-   .CalibrateMPU()
-   .load_DMP_Image();
-mpu.on_FIFO(procesarMPU);
-
-```
-
 
 
 ## Chasis & 3D Parts
