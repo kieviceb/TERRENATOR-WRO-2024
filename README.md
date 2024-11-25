@@ -67,6 +67,13 @@ A list of all the electrical and mechanical components in the robot.
 
 <br>
 
+---
+
+## Circuit Diagram
+
+---
+
+
 ## Mobility Strategy 🚲
 
 ### 1- Movement
