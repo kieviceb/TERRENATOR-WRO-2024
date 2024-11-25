@@ -14,6 +14,8 @@ This is the official repository of the TERRENATOR team, which is representing Pa
 
  ## David Rico:
  ### Age: 17
+
+ <img src="https://github.com/user-attachments/assets/bc8692f4-8684-43f2-9f63-c58fa50af432" alt="Imagen 1" width="400">
  
  David is someone who always tries to solve and constantly seeks the union in the team, he likes sports specifically baseball and likes anime and likes to win.
 
