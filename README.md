@@ -6,13 +6,31 @@
                 
 This is the official repository of the TERRENATOR team, which is representing Panama in the World Robotics Olympics (WRO) 2024 to be held this year in Izmir, Türkiye. We chose to participate in the category of Future Engineers this year winning first place in the national robotics olympics in our country. In this repository you can find everything related to the development of our robot.
 
+---
+
 ## Team members 👨‍💻
-> David Rico
 
-> Ericka Ceballos
+<img src="https://github.com/user-attachments/assets/b320a2f7-4b2c-4409-85b7-ca4b43df1ef7" alt="Imagen 1" width="700">
 
-> Jean Paul Sosa
+ ## David Rico:
+ ### Age: 17
+ 
+ David is someone who always tries to solve and constantly seeks the union in the team, he likes sports specifically baseball and likes anime and likes to win.
 
+His role in the team is to design the chassis and 3d parts of the robot, also the circuit and all the components of the robot as well as programming.
+
+## Ericka Ceballos:
+### Age: 17
+She is very determined and strong, she is always very tidy and organized and above all she doesn't like to lose, ericka likes programming especially in python, she also likes to socialize a lot, as she is the sociable member of the team.
+
+Her role in the team is the programming of the robot, as well as documenting the whole process of the robot.
+
+## Jean Paul Sosa:
+### Age: 17
+
+He is the quietest of the team, but at the same time he always likes to be neutral in everything, he is someone that you will hardly make him angry, he is a quiet, chill guy. He loves music and enjoys listening to rock and playing instruments like the guitar, bass and saxo, as well as robotics.
+
+His role in the team is to do some of the robot programming as well as help with the circuitry and documenting everything on the robot.
 
 
 ## Overview of our repository 📜
