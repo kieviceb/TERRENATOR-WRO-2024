@@ -71,6 +71,10 @@ A list of all the electrical and mechanical components in the robot.
 
 ## Circuit Diagram
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/3060d1a8-dab2-4dfc-81c6-21b5988e575b" alt="Imagen 1" width="500">
+</p>
+
 ---
 
 
