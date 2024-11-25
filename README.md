@@ -1114,6 +1114,142 @@ void detener() {
 
 ---
 
+### DetectarCurva Function
+
+The detectarCurva function manages the robot's behavior when encountering curves, based on sensor readings and gyroscopic data.
+
+1- Distance and Error Calculations: It calculates error as the difference between distanciaIzquierda and distanciaDerecha, which helps determine the direction to steer. The sum of both distances helps validate curve conditions.
+
+2- Pixy2 Object Detection: The Pixy2 camera checks for objects by calling pixy.ccc.getBlocks, and based on the detected signature (e.g., 4 or 5), it initiates curve detection logic.
+
+3- Yaw-Angle Adjustment: It calculates AnguloObjetivo using predefined functions like calcularAnguloObjetivoIC or calcularAnguloObjetivoDC, depending on the context. Using the gyroscope, the robot adjusts its yaw angle by steering left or right with move_steer and moving with avanzar.
+
+4- Lamp Feedback: The Pixy2 lamp provides visual feedback, turning on or off based on the robot's central distance.
+
+5- Post-Curve Navigation: After navigating the curve, the robot advances while checking the central distance via medirDistancia, ensuring a clear path.
+
+6- Curve Adjustment: Depending on the error, it adjusts the yaw angle further using calcularAnguloObjetivoD or calcularAnguloObjetivoI, steering left or right accordingly.
+
+7- Straight Path Maintenance: If no curve is detected, the robot adjusts its angle to remain centered with ajustarAngulo, based on the calculated error, and continues advancing.
+
+```ino
+void detectarCurva(long distanciaIzquierda, long distanciaCentro, long distanciaDerecha) {
+  
+    float error = distanciaIzquierda - distanciaDerecha;
+    lastError = error;
+    float sum = distanciaIzquierda + distanciaDerecha;
+    int AnguloObjetivo = 0;
+    uint8_t signature ;
+    unsigned long tiempoActual = millis();
+    pixy.ccc.getBlocks();
+
+    if (pixy.ccc.numBlocks > 0) {
+    Serial.println(pixy.ccc.numBlocks);
+    signature = pixy.ccc.blocks[0].m_signature;
+
+    if (tiempoActual - tiempoUltimaCurva >= bloqueoTiempo) {
+        if(signature == 4 || signature == 5){
+        detener();
+        delay(1000);
+        if(bloqueadorI == true){
+          AnguloObjetivo = calcularAnguloObjetivoIC(curva);
+        }
+       else{
+         AnguloObjetivo = calcularAnguloObjetivoDC(curva);
+       }
+         
+        // Verificar condiciones para iniciar una curva
+        if (yawActual <  AnguloObjetivo){
+         while (abs(yawActual - AnguloObjetivo) > 2) { // Tolerancia de 2 grados
+          mpu.dmp_read_fifo();  // Leer datos del giroscopio
+          Serial.print("Yaw actual: ");
+          Serial.println(yawActual);
+          move_steer(75); // Girar a la izquierda
+           avanzar(120); // Control del motor durante el giro
+         }
+        }
+           else if(yawActual > AnguloObjetivo){
+             //AnguloObjetivo = calcularAnguloObjetivo(curva);
+            while (abs(yawActual - AnguloObjetivo) > 2) { // Tolerancia de 2 grados
+             mpu.dmp_read_fifo();  // Leer datos del giroscopio
+             Serial.print("Yaw actual: ");
+             Serial.println(yawActual);
+             move_steer(105); // Girar a la izquierda
+             avanzar(120); // Control del motor durante el giro
+         }
+       }
+       detener();
+       delay(1000);
+       move_steer(90); // Girar a la izquierda
+       if(distanciaCentro > 30){ 
+         pixy.setLamp(0, 0);
+         delay(50);
+         pixy.setLamp(1, 0);
+      }
+      else pixy.setLamp(0, 0);
+      delay(100);
+      
+      while(true){
+       long distanciaCentrowhile = medirDistancia(trigCentro, echoCentro);
+        Serial.print(" while Distancia Centro: "); Serial.println(distanciaCentrowhile);
+        avanzar(130);
+        delay(10);
+        if(distanciaCentrowhile <30) break;
+      }
+
+      
+      detener();
+      delay(1000);
+      curva++ ;
+      long distanciaIzquierda = medirDistancia(trigIzquierdo, echoIzquierdo);
+      long distanciaDerecha = medirDistancia(trigCentro, echoCentro);
+      if(error < -1 && sum > 100){
+        AnguloObjetivo = calcularAnguloObjetivoD(curva);
+        while (abs(yawActual - AnguloObjetivo) > 2) { // Tolerancia de 2 grados
+          mpu.dmp_read_fifo();  // Leer datos del giroscopio
+          Serial.print("Yaw actual: ");
+          Serial.println(yawActual);
+          move_steer(119); // Girar a la izquierda
+          retroceder(150); // Control del motor durante el giro
+        }
+      }
+      else if(error > 1 && sum > 100){
+        AnguloObjetivo = calcularAnguloObjetivoI(curva);
+        while (abs(yawActual - AnguloObjetivo) > 2) { // Tolerancia de 2 grados
+          mpu.dmp_read_fifo();  // Leer datos del giroscopio
+          Serial.print("Yaw actual: ");
+          Serial.println(yawActual);
+          move_steer(69); // Girar a la izquierda
+          retroceder(150); // Control del motor durante el giro
+        }
+      }
+      detener();
+      delay(1000);
+      move_steer(anguloCentro);
+      
+    }
+  }
+  tiempoUltimaCurva = tiempoActual;
+  }
+  else{
+    ajustarAngulo(error, anguloCentro); // Mantener el ángulo centrado
+    avanzar(120);
+     // Imprimir todos los valores
+    Serial.print("Yaw: "); Serial.print(yawActual);
+    Serial.print(" | Distancia Izquierda: "); Serial.print(distanciaIzquierda);
+    Serial.print(" | Distancia Centro: "); Serial.print(distanciaCentro);
+    Serial.print(" | Distancia Derecha: "); Serial.print(distanciaDerecha);
+    Serial.print(" | Error: "); Serial.println(lastError);
+    }
+
+    
+}
+
+```
+
+---
+
+
 ## References
 - [Git Hub Readme Syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 - https://howtomechatronics.com/tutorials/arduino/ultrasonic-sensor-hc-sr04/
