@@ -181,7 +181,7 @@ To detect the walls with the HC-SR04 it took us a lot of time to figure out a wa
 
 In addition to this, as can be seen in the photos of the vehicle, our ultrasonic sensors each have a Ceramic capacitor, and before explaining why we have it we should know what it is. A ceramic capacitor is a fixed-value capacitor where the ceramic material acts as the dielectric. It is formed by two or more alternating layers of ceramic and a metallic layer that acts as the electrode. The composition of the ceramic material defines the electrical behavior and therefore the applications.
 
-Knowing this, our intention in placing these ceramic lentils or capacitors is to be able to soften the signals of the ultrasonic sensors, so to speak filter the signals, this helped to not protrude peaks in the sound waves transmitted by the ultrasonic sensor and so that all data are received with the greatest possible clarity.
+Knowing this, our intention in placing these ceramic lentils or capacitors is to be able to soften the signals of the ultrasonic sensors, so to speak, filter the signals; this helped to not protrude peaks in the sound waves transmitted by the ultrasonic sensor and so that all data are received with the greatest possible clarity.
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/21413d63-e98a-49d5-9c78-977b65c0e008" alt="Imagen 1" width="350">
@@ -198,7 +198,7 @@ It is a 6-axis motion sensor that measures linear accelerations and angular velo
 <p align="center">
 <img src="https://github.com/user-attachments/assets/2ade620d-4395-4257-9a37-d1a50e8ead96" alt="Imagen 1" width="200">
 </p> 
-For our vehicle, we are only interested in the z-axis (Yaw) of the MPU-6050, because this axis is the one that will allow us to determine the desired angles for our robot to work, in our vehicle, we have to let the sensor calibrate to start, at the time of being calibrated the angles that we are interested in are those of 90 degrees to be able to make a right angle turn and to help stabilize the PD, because we had the problem that in the straight lines the PD is well stabilized, but when making the curves it went crazy, and began to oscillate a lot, then to have more precise turns, We used the Z axis (Yaw) of the MPU-6050, but this also had its complications, because the values sent by the z axis were not so simple for the robot to understand, because the first curve, if they were 90 degrees, but the next curve for example the gyroscope threw 180 degrees, and if it is logical, but it was more difficult to implement, so we thought of several possible solutions for this, we thought of resetting or resetting the values of Yaw or the z-axis after each curve, so that if in the serial we can always see that it turns 90 degrees exactly, but this greatly affected the accuracy of the sensor.
+For our vehicle, we are only interested in the z-axis (Yaw) of the MPU-6050, because this axis is the one that will allow us to determine the desired angles for our robot to work, in our vehicle, we have to let the sensor calibrate to start, at the time of being calibrated the angles that we are interested in are those of 90 degrees to be able to make a right angle turn and to help stabilize the PD, we had an issue that in the straight lines the PD is well stabilized, but when making the curves it went crazy, and began to oscillate a lot, then to have more precise turns, We used the Z axis (Yaw) of the MPU-6050, but this also had its complications, because the values sent by the z axis were not so simple for the robot to understand, because the first curve, if they were 90 degrees, but the next curve for example the gyroscope threw 180 degrees, and it is logical, but it was more difficult to implement, so we thought of several possible solutions for this, we thought of resetting the values of Yaw or the z-axis after each curve, so that if in the serial we can always see that it turns 90 degrees exactly, this greatly affected the accuracy of the sensor.
 
  <br>
  <br>
@@ -226,7 +226,7 @@ And if you don't know how to install it, you need to watch this video, (it's in 
 But i´ll explain here:
 First we need to donwload the I2C Library that will make easy the 12c conection with the arduino nano, this library it´s of free software and multiplatform, and this library complement the wire library with the arduino IDE, so, we need to goon the first link i put here and [here](https://github.com/jrowberg/i2cdevlib) then, in the part of code, the green part on the git hub, we will donwnload the zip, so once it is installed we need to extract the file, once it is extracted, we need to go to the 12cdevlib master folder, then the arduino folder, here are a lot of libraries we can use for different proyects, so here we have to search the 12cdev folder, once we find it we have to select it an copy it, so once we do this we have to go to arduino folder, in most of cases it is set default on document, once there we go to libraries and then we paste 12cdev there.
 
-That was our first library, now we need to download the [Simple_MPU6050](https://github.com/ZHomeSlice/Simple_MPU6050)  library, wich this is most simple to use, so we have to intalle the zip of this library, and then in the arduino IDE we have to install the library there, in other words we have to add the zip file to his library inside the IDE.
+That was our first library, now we need to download the [Simple_MPU6050](https://github.com/ZHomeSlice/Simple_MPU6050)  library, wich this is most simple to use, so we have to intall the zip of this library, and then in the arduino IDE we have to include the library there, in other words we have to add the zip file to his library inside the IDE.
 
 Even in this part you might have some problems to initialize and use the code, that´s because in the video they dont say this but we need another library, that is for comunication, espacifically the [Simple_Wire](https://github.com/ZHomeSlice/Simple_Wire), to install it you have to follow the same steps of the second library.
 
@@ -235,7 +235,7 @@ Once we have all the libraries needed, we are ready to use the MPU-6050.
 ### 4- Camera
 
 - 5-[PIXY CAM 2.1](https://pixycam.com/2021/05/20/introducing-pixy-2-1/):
-The PixyCam 2.1 is a fast and versatile vision sensor for DIY robotics, offering significant improvements over its predecessor. Its horizontal field-of-view has been expanded to 80 degrees, allowing it to capture more of the environment in each frame, albeit with minor spherical distortion. The camera features a replaceable M12 lens mount with adjustable focus, enabling it to focus on objects as close as 0.25 inches. It also minimizes chromatic distortion at the edges and boasts an F-stop of 2.0, improving light gathering and reducing pixel noise, resulting in higher detection accuracy. Capable of processing images at 60 frames per second, it updates object positions every 16.7 milliseconds, making it ideal for tracking fast-moving objects or precise line-following. The Color Connected Components (CCC) algorithm allows it to detect objects based on hue and saturation, remaining robust under varying lighting conditions. It supports up to 7 unique color signatures or numerous objects using color codes. While retaining the software, firmware, and features of PixyCam 2, this version is slightly larger but significantly more efficient for detection and tracking tasks.
+The PixyCam 2.1 is a fast and versatile vision sensor for DIY robotics, offering significant improvements over its predecessor. Its horizontal field-of-view has been expanded to 80 degrees, allowing it to capture more of the environment in each frame, albeit with minor spherical distortion. The camera features a replaceable M12 lens mount with adjustable focus, enabling it to focus on objects as close as 0.25 inches. It also minimizes chromatic distortion at the edges and boasts an F-stop of 2.0, improving light gathering and reducing pixel noise, resulting in higher detection accuracy. Capable of processing images at 60 frames per second, it updates object positions every 16.7 milliseconds, making it ideal for tracking fast-moving objects or precise line-following. The Color Connected Components (CCC) algorithm allows to detect objects based on hue and saturation, remaining robust under varying lighting conditions. It supports up to 7 color signatures or numerous objects using color codes. While retaining the software, firmware, and features of PixyCam 2, this version is slightly larger but significantly more efficient for detection and tracking tasks.
 ---
 <p align="center">
   <img src="https://github.com/user-attachments/assets/820aed1b-6fa0-4af6-b3b8-ce5495a48d07" alt="Imagen 1" width="330">
@@ -249,7 +249,7 @@ The PixyCam 2.1 is a fast and versatile vision sensor for DIY robotics, offering
 
 
  > [!NOTE]
->In the case of our pixy cam 2.1, we always need to calibrate our camera before the competition in the track of the event, this because as it has happened to us before we always need to check that the pixy cam recognizes well the blocks and the color lines, because it happens that the illumination affects the block detection of the pixy cam, then we always need to enter the track with our laptop using specifically the pixymon program, to be able to know that the signatures are being detected effectively, we to calibrate our pixy cam we need to use a microUSB cable that connect to the laptop to opne the pixymon, thanks.
+>In the case of our pixy cam 2.1, we always need to calibrate our camera before the competition in the track of the event, this because as it has happened to us before we always need to check that the pixy cam recognizes well the blocks and the color lines, because it happens that the illumination affects the block detection of the pixy cam, then we always need to enter the track with our laptop using specifically the pixymon program, to be able to know that the signatures are being detected effectively, to calibrate our pixy cam we need to use a microUSB cable connected to the laptop to open the pixymon, pixymon is to check the view of the camera.
 
 
 
@@ -262,7 +262,7 @@ The PixyCam 2.1 is a fast and versatile vision sensor for DIY robotics, offering
 
 In the chassis and 3D part, you can find all the 3D parts that made up the robot that won in Panama in the old models part.
 
-So the chassis and the design of the car that will go to Turkey took a long time because our ideas were to make the robot of the national competition much smaller, agile, faster and prettier, so we had to make a completely new chassis, in this one changing several parts of the assembly, for example in the steering system, since in our previous robot, the steering system was based on moving a cylinder with teeth that moved a line with teeth that gave direction to the robot, the problem with this steering design was that it is a bit imprecise so, we adopted a steering design similar to the Ackerman steering, and we also changed the servo motor.
+So the chassis and the design of the car going to Turkey took a long time because our ideas; to make the robot of the national competition much smaller, agile, faster and prettier, we had to make a completely new chassis, in this one changing several parts of the assembly, for example in the steering system, since in our previous robot, the steering system was based on moving a cylinder with teeth that moved a stripped line that gave direction to the robot, the problem with this steering design was that its a bit imprecise so, we adopted a steering design similar to the Ackerman steering, and we also changed the servo motor.
 
 ---
 <p align="center">
@@ -303,7 +303,7 @@ Now for the sensors, we have made a lot of support for them, but with this one w
 
 ---
 
-Now with the wheels, we have designed it by ourself, because in that way we can ajust eveything by ourself and it's so much better in that way. For the traction wheels they are a little bit so more big.
+Now with the wheels, we have designed it by ourself, because in that way we can ajust everything we want and it's so much better in that way. For the traction wheels they are a little bit bigger.
 
 ---
 <p align="center">
@@ -316,14 +316,14 @@ Now with the wheels, we have designed it by ourself, because in that way we can 
 
 
  > [!NOTE]
-> All this can be find in the main [README](https://github.com/kieviceb/TERRENATOR-WRO-2024/blob/main/README.md) And very important you cand see a tutorial video with voice over with all the structure of the robot by clicking [here](https://www.youtube.com/@TERRENATORTEAM)
+> All this can be find in the main [README](https://github.com/kieviceb/TERRENATOR-WRO-2024/blob/main/README.md) And very important you can see a tutorial video of all the structure of the robot by clicking [here](https://www.youtube.com/@TERRENATORTEAM)
 
 
 <br>
 
 
 ## Code & programming
-In this section, we will proceed to explain the codes of the First round and the second round, the codes will be explained SEQUENTIALLY in the SRC folder, but there you will have a more general explanation of the code, in this part of the readme we will break down the code of each component that integrates the code, to have a much clearer and understandable epxlicacion each part of the code. Before going to explain each code of the respective round, there will be a list to know the order in which each part of the code will be explained, and remember to see the sequential explanation, it is in the SRC folder.
+In this section, we will proceed to explain the codes of the open and obstacle challenge, the codes will be explained SEQUENTIALLY in the SRC folder, there you will have a more general explanation of the code, in this part of the readme we will break down the code of each component that integrates the code, to have a much clearer and understandable epxlicacion each part of the code. Before going to explain each code of the respective round, there will be a list to know the order in which each part of the code will be explained, and remember to see the sequential explanation, it is in the SRC folder.
 
 ## Open Challenge Code:
 
@@ -810,7 +810,7 @@ void loop() {
 
 ---
 
-## Second Challenge Code:
+## Obstacle Challenge Code:
 
 To see the complete code go to the [SRC](https://github.com/kieviceb/TERRENATOR-WRO-2024/tree/main/src) File on the git hub.
 
@@ -849,8 +849,7 @@ This setup provides the foundation for integrating sensor data, visual feedback,
 
 ```ino
 Simple_MPU6050 mpu;
-float yawActual = 0;  // Variable global para almacenar el Yaw actual
-// Variable para el yaw
+float yawActual = 0;  
 float yawInicial = 0;
 
 // Variables globales del PD
@@ -894,8 +893,8 @@ float Kd = 0.5;
 float alpha = 0.15;
 float lastError = 0;
 int curva = 0;
-const int botonPin = A7;  // Pin del botón
-bool enMarcha = false;    // Estado inicial del robot: detenido
+const int botonPin = A7;  // button pin
+bool enMarcha = false;    // initial state of the robot: stoped
 float anguloSuavizado = anguloCentro;
 
 const int deltaXMin = 88, deltaXMax = 98;
@@ -943,7 +942,7 @@ This function controls the servo motor for gradual steering adjustments:
 This gradual movement prevents sudden turns, improving robot stability and precision during navigation.
 
 ```ino
-// Función para procesar datos del MPU6050
+// process data of the MP6050
 void procesarMPU(int16_t *gyro, int16_t *accel, int32_t *quat, uint32_t *timestamp) {
     Quaternion q;
     VectorFloat gravity;
@@ -955,7 +954,7 @@ void procesarMPU(int16_t *gyro, int16_t *accel, int32_t *quat, uint32_t *timesta
     mpu.GetYawPitchRoll(ypr, &q, &gravity);
     mpu.ConvertToDegrees(ypr, xyz);
     
-    yawActual = (int)xyz[0];  // Actualizar el Yaw global
+    yawActual = (int)xyz[0];  // REFRESH YAW global variable
 }
 //*******
 void inicializarControlPD() {
@@ -1004,7 +1003,6 @@ These functions calculate the target steering angles for various curve types. Th
 Each curve type (based on curva % 4) has a unique angle to handle different turns.
 
 ```ino
-//*******
 void ajustarAngulo(float error, int anguloDeseado) {
     float derivada = error - lastError;
     float ajuste = (Kp * error) + (Kd * derivada);
@@ -1014,7 +1012,6 @@ void ajustarAngulo(float error, int anguloDeseado) {
     anguloDeseado = constrain(anguloDeseado, anguloIzquierda, anguloDerecha);
     move_steer(anguloDeseado);
 }
-//*******
 long medirDistancia(int trigPin, int echoPin) {
     digitalWrite(trigPin, LOW);
     delayMicroseconds(3);
@@ -1025,9 +1022,8 @@ long medirDistancia(int trigPin, int echoPin) {
     long duracion = pulseIn(echoPin, HIGH);
     return duracion * 0.034 / 2;
 }
-//*******
 
-// Función para calcular el ángulo objetivo
+// Calculate specific angle I
 int calcularAnguloObjetivoI(int curva) {
     if (curva % 4 == 1) return -75;     // Curvas 1, 5, 9, ...
     else if (curva % 4 == 2) return -165; // Curvas 2, 6, 10, ...
@@ -1035,9 +1031,7 @@ int calcularAnguloObjetivoI(int curva) {
     else return 15;                      // Curvas 4, 8, 12, ...
 }
 
-//*******
-
-// Función para calcular el ángulo objetivo
+// calculate specific  DC
 int calcularAnguloObjetivoDC(int curva) {
     if (curva % 4 == 1) return 90;     // Curvas 1, 5, 9, ...
     else if (curva % 4 == 2) return 180; // Curvas 2, 6, 10, ...
@@ -1045,9 +1039,7 @@ int calcularAnguloObjetivoDC(int curva) {
     else return 0;                      // Curvas 4, 8, 12, ...
 }
 
-//*******
-
-// Función para calcular el ángulo objetivo
+// calculate specific angle IC
 int calcularAnguloObjetivoIC(int curva) {
     if (curva % 4 == 1) return -90;     // Curvas 1, 5, 9, ...
     else if (curva % 4 == 2) return -180; // Curvas 2, 6, 10, ...
