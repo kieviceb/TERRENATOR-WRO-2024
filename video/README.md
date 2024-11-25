@@ -2,7 +2,8 @@
 
 ---
 
-![Copy of TERRENATOR (30 x 18 cm)](https://github.com/user-attachments/assets/c476d5c1-b40f-4692-aab1-066ac5ee53a1)
+![Copy of TERRENATOR (30 x 18 cm) (1)](https://github.com/user-attachments/assets/4d3d0941-acc6-4f0c-9d2b-5830cc684cfb)
+
 
 
 Click down below for the demonstration of the first round of our robot.
@@ -21,9 +22,6 @@ Click dowon here to go to the video of the second challenge of the WRO Future En
 [CLICK HERE!](https://www.youtube.com/@TERRENATORTEAM)
 
 ---
-
-
-
 
 
 
