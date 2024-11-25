@@ -770,6 +770,7 @@ void loop() {
 
 4- For adaptability: Responds dynamically to changes in the environment, such as curves or detours, by adjusting the robot's direction.
 
+---
 
 ## Second Challenge Code:
 
