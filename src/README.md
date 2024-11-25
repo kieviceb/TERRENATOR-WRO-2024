@@ -1,3 +1,7 @@
+![Copy of TERRENATOR (30 x 18 cm) (5)](https://github.com/user-attachments/assets/710e4716-3b6f-4e79-99c2-809fecb8279f)
+
+---
+
 # Into the code
 
 ## Open Challenge
