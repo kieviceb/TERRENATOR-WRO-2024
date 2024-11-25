@@ -14,6 +14,17 @@ here you can find the circuit that integrates our robot that will go to turkey, 
 
 <br>
 
+---
+
+
+
+![Circuit Diagram](https://github.com/user-attachments/assets/3060d1a8-dab2-4dfc-81c6-21b5988e575b)
+
+
+
+
+---
+
 ### Explanation:
 
 ---
