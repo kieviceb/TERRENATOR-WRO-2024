@@ -75,6 +75,19 @@ A list of all the electrical and mechanical components in the robot.
   <img src="https://github.com/user-attachments/assets/3060d1a8-dab2-4dfc-81c6-21b5988e575b" alt="Imagen 1" width="500">
 </p>
 
+This circuit diagram represents the connections of a robotic system powered by a battery pack and controlled by an Arduino Nano. It integrates four ultrasonic sensors for obstacle detection, a servo motor for steering, and a DC motor for propulsion via a TB6612 motor driver module. The MPU6050 sensor provides orientation data (gyroscope and accelerometer), likely used for navigation adjustments. A Pixy Cam is included for visual object tracking. Connections include multiple power and ground lines to ensure stable operation, while the battery supplies energy to the motors and sensors. Signal wires link the Arduino to the motor driver, servo, and sensors, ensuring precise control and data flow.
+
+<br>
+ <br>
+
+
+ > [!NOTE]
+> To a more detailed explanation go to the schemes readme by clicking [here](https://github.com/kieviceb/TERRENATOR-WRO-2024/tree/main/Schemes)
+
+
+<br>
+
+
 ---
 
 
