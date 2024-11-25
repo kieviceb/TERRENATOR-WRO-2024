@@ -1,9 +1,22 @@
-# Video.md
+# VIDEO
 
-![Negro Rojo Videojuegos Arte Canal de YouTube (Banner mediano con formato EE  UU  (horizontal)) (Banner mediano con formato EE  UU  (horizontal))](https://github.com/user-attachments/assets/55f20e35-ef2b-45b0-b3f2-a3e3696d0070)
+---
+
+![Copy of TERRENATOR (30 x 18 cm)](https://github.com/user-attachments/assets/c476d5c1-b40f-4692-aab1-066ac5ee53a1)
 
 
-Click down below to go watch the demonstration video on our youtube channel.
+Click down below for the demonstration of the first round of our robot.
 
-[CLICK HERE!](https://youtu.be/rc-81RJBaEU)
+---
 
+[CLICK HERE!](https://www.youtube.com/@TERRENATORTEAM)
+
+---
+
+![Copy of TERRENATOR (30 x 18 cm) (1)](https://github.com/user-attachments/assets/57eb6a92-5166-487d-aac3-3e7b74e36267)
+
+Click dowon here to go to the video of the second challenge of the WRO Future Engineers category.
+
+[CLICK HERE!](https://www.youtube.com/@TERRENATORTEAM)
+
+---
