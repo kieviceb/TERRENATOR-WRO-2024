@@ -1208,11 +1208,11 @@ void detectarCurva(long distanciaIzquierda, long distanciaCentro, long distancia
       else if(error > 1 && sum > 100){
         AnguloObjetivo = calcularAnguloObjetivoI(curva);
         while (abs(yawActual - AnguloObjetivo) > 2) { // Tolerancia de 2 grados
-          mpu.dmp_read_fifo();  // Leer datos del giroscopio
+          mpu.dmp_read_fifo();  // Read that gyroscope
           Serial.print("Yaw actual: ");
           Serial.println(yawActual);
-          move_steer(69); // Girar a la izquierda
-          retroceder(150); // Control del motor durante el giro
+          move_steer(69); // turn to left
+          retroceder(150); // Control of the motor
         }
       }
       detener();
@@ -1224,9 +1224,9 @@ void detectarCurva(long distanciaIzquierda, long distanciaCentro, long distancia
   tiempoUltimaCurva = tiempoActual;
   }
   else{
-    ajustarAngulo(error, anguloCentro); // Mantener el ángulo centrado
+    ajustarAngulo(error, anguloCentro); // mantain the center of the angle
     avanzar(120);
-     // Imprimir todos los valores
+     // this print all the values
     Serial.print("Yaw: "); Serial.print(yawActual);
     Serial.print(" | Distancia Izquierda: "); Serial.print(distanciaIzquierda);
     Serial.print(" | Distancia Centro: "); Serial.print(distanciaCentro);
