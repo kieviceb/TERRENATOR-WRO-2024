@@ -28,6 +28,9 @@ Her role in the team is the programming of the robot, as well as documenting the
 ## Jean Paul Sosa:
 ### Age: 17
 
+
+ <img src="https://github.com/user-attachments/assets/20f0f74e-7906-4858-ab06-a2495685e409" alt="Imagen 1" width="400">
+
 He is the quietest of the team, but at the same time he always likes to be neutral in everything, he is someone that you will hardly make him angry, he is a quiet, chill guy. He loves music and enjoys listening to rock and playing instruments like the guitar, bass and saxo, as well as robotics.
 
 His role in the team is to do some of the robot programming as well as help with the circuitry and documenting everything on the robot.
