@@ -23,6 +23,11 @@ His role in the team is to design the chassis and 3d parts of the robot, also th
 
 ## Ericka Ceballos:
 ### Age: 17
+
+<img src="https://github.com/user-attachments/assets/cdee5464-12ee-4d0f-b3ce-6b65d4287793" alt="Imagen 1" width="400">
+
+ 
+
 She is very determined and strong, she is always very tidy and organized and above all she doesn't like to lose, ericka likes programming especially in python, she also likes to socialize a lot, as she is the sociable member of the team.
 
 Her role in the team is the programming of the robot, as well as documenting the whole process of the robot.
