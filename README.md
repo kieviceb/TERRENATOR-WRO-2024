@@ -32,6 +32,16 @@ He is the quietest of the team, but at the same time he always likes to be neutr
 
 His role in the team is to do some of the robot programming as well as help with the circuitry and documenting everything on the robot.
 
+<br>
+ <br>
+
+
+ > [!NOTE]
+> To see the funny photo [here](https://github.com/kieviceb/TERRENATOR-WRO-2024/tree/main/t-photos)
+
+
+<br>
+
 
 ## Overview of our repository 📜
 * `schemes`- contains the circuit diagram.
