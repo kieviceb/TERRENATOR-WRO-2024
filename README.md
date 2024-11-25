@@ -249,8 +249,15 @@ Now with the wheels, we have designed it by ourself, because in that way we can 
   <img src="https://github.com/user-attachments/assets/888879fc-d396-48cf-862a-c55d8efb368a" alt="Imagen 1" width="300">
 </p>
 
+<br>
+ <br>
 
 
+ > [!NOTE]
+> All this can be find in the main [README](https://github.com/kieviceb/TERRENATOR-WRO-2024/blob/main/README.md) And very important you cand see a tutorial video with voice over with all the structure of the robot by clicking [here](https://www.youtube.com/@TERRENATORTEAM)
+
+
+<br>
 
 
 ## Code & programming
