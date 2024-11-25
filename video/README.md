@@ -8,7 +8,6 @@
 
 Click down below for the demonstration of the first round of our robot.
 
----
 
 [CLICK HERE!](https://www.youtube.com/@TERRENATORTEAM)
 
