@@ -1,5 +1,8 @@
 # Circuit diagram
 
+![Copy of TERRENATOR (30 x 18 cm) (2)](https://github.com/user-attachments/assets/4d2711bd-bfa3-4d22-b769-2643c4dbe3a5)
+
+
 here you can find the circuit that integrates our robot that will go to turkey, as well as we can find a small explanation of it.
 <br>
  <br>
