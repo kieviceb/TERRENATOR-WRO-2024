@@ -810,6 +810,15 @@ void loop() {
 
 ---
 
+### Obstacle avoidance strategy
+To avoid the obstacles we changed our previous strategy that consisted of dividing the vision of the pixy cam in 9 sections and creating movements according to each function, but we had problems with that since each section had to have two movements, one for each color block, which took up a lot of space and we could not use a single arduino and we decided to use 2 which over time we realized was quite impractical, so, for the international final we created a new strategy, we divided the camera vision but this time we used something like a kind of limit for each color using the X coordinates of the camera; so as you can see in the image, 
+
+![Green limit](https://github.com/user-attachments/assets/c7e9195b-c118-439d-8d3c-c2a9209a4553)
+
+the limit of the green blocks is on the right side of the camera or in the code the limit "zetaXmin", for the red blocks the limit is on the left side, which we call "deltaXmin", our strategy consists of the limits being what mark the safe zone of each block, so every time it detects a block outside its limit it What it will do is move until the block of its respective color is in its safe zone, the corresponding limit.
+
+---
+
 ## Obstacle Challenge Code:
 
 To see the complete code go to the [SRC](https://github.com/kieviceb/TERRENATOR-WRO-2024/tree/main/src) File on the git hub.
