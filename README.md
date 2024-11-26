@@ -827,7 +827,7 @@ Then we have the MPU6050 configurations, first we have the **`MPU6050_ADDRESS_AD
 #include "Simple_MPU6050.h"
 #include <Wire.h>
 
-// Configuración MPU6050
+// MPU6050 Configuration
 #define MPU6050_ADDRESS_AD0_LOW     0x68
 #define MPU6050_ADDRESS_AD0_HIGH    0x69
 #define MPU6050_DEFAULT_ADDRESS     MPU6050_ADDRESS_AD0_LOW
@@ -852,7 +852,6 @@ Simple_MPU6050 mpu;
 float yawActual = 0;  
 float yawInicial = 0;
 
-// Variables globales del PD
 Pixy2 pixy;
 Servo servoDireccion;
 int pinServo = 6;
