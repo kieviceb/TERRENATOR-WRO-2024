@@ -572,6 +572,7 @@ Here’s how the curve number determines the angle:
 - **When `curva % 4 == 2`** (i.e., curves 2, 6, 10, ...): The servo will turn to **155°**.
 - **When `curva % 4 == 3`** (i.e., curves 3, 7, 11, ...): The servo will turn to **-105°**.
 - **When `curva % 4 == 0`** (i.e., curves 4, 8, 12, ...): The servo will turn to **-15°**.
+  
 ### 14. **Motor control**
 Then we will enter the Void functions, which are functions that in determinod time we can call for certain event that we need to occur, in this case the movement of the car, the motorpin 1 in HIGH and motorpin 2 in low makes the motor advance, in case of putting this configuration backwards would make the car go in reverse, and also atravz of the PWM can adjust the speed of the motor, as we can see:
 ```ino
@@ -825,7 +826,7 @@ To see the complete code go to the [SRC](https://github.com/kieviceb/TERRENATOR-
 
 ---
 
-### Libraries and MPU6050 directions
+### 1. Libraries and MPU6050 directions
 first we need to include all the libraries that we are gonna use for the second challegne code, here we use **`Servo.h`**, **`Pixy2.h`**, **`Simple_MPU6050.h`**, **`Wire.h`**.
 
 Then we have the MPU6050 configurations, first we have the **`MPU6050_ADDRESS_AD0_LOW `** (0X68), this is the default addres of the MPU6050 when the AD0 pin (addres pin) is tied to the ground (logic LOW). Then we have **`MPU6050_ADDRESS_AD0_HIGH `** (0x69), this the alternative address used when the AD0 pin is connected to VCC (logic HIGH). For third we have **`MPU6050_DEFAULT_ADRESS`** (0x68) This macro defines the default I2C address the program will use to communicate with the MPU6050. In this case, it is set to **`MPU6050_ADDRESS_AD0_LOW `**, meaning the AD0 pin is assumed to be connected to ground.
@@ -844,7 +845,7 @@ Then we have the MPU6050 configurations, first we have the **`MPU6050_ADDRESS_AD
 
 ---
 
-### MPU6050, Pixy 2.1, an the Servo initialization:
+### 2. MPU6050, Pixy 2.1, an the Servo initialization:
 
 This section of the code sets up essential components for the robot's operation: the MPU6050 sensor for orientation, the Pixy2 camera for vision processing, and a servo motor for steering.
 
@@ -872,7 +873,7 @@ int anguloMPU = 0;
 ```
 ---
 
-### Variables and Pin Configuration:
+### 3. Variables and Pin Configuration:
 
 PD Controller Variables
 Kp = 0.5, Kd = 0.5: PD gains for response and damping.
@@ -910,21 +911,19 @@ const int epsilonXMin = 101, epsilonXMax = 213;
 const int zetaXMin = 190, zetaXMax = 274;
 
 
-// Pines de sensores
+//Sensor pins
 int trigIzquierdo = 10, echoIzquierdo = 9;
 int trigCentro = 15, echoCentro = 14;
 int trigDerecho = 7, echoDerecho = 8;
 
-// Pines de motor
+// Motor pins
 int motorPin1 = 5, motorPin2 = 4, enablePin = 3, standbyPin = 16;
 
 ```
 
 ---
 
-### 
-
-**`procesarMPU`** Function:
+### 4. **`procesarMPU`** Function:
 This function processes gyroscope and accelerometer data from the **`MPU6050`** sensor:
 
 1- **`mpu.GetQuaternion`**, **`mpu.GetGravity`**, and **`mpu.GetYawPitchRoll`**: Extract quaternion, gravity vector, and yaw-pitch-roll angles.
@@ -988,7 +987,7 @@ void move_steer(int pos) {
 
 ---
 
-### Functions for angle adjustment and distant measurement:
+### 5.Functions for angle adjustment and distant measurement:
 
 ajustarAngulo Function
 This function adjusts the steering angle using PD control:
@@ -1068,7 +1067,7 @@ int calcularAnguloObjetivoD(int curva) {
 
 ---
 
-### Motor Control Functions
+### 6. Motor Control Functions
 
 avanzar Function
 This function controls the forward movement of the robot:
@@ -1114,7 +1113,7 @@ void detener() {
 
 ---
 
-### DetectarCurva Function
+### 7. DetectarCurva Function
 
 The detectarCurva function manages the robot's behavior when encountering curves, based on sensor readings and gyroscopic data.
 
