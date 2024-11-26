@@ -1136,106 +1136,104 @@ void detectarCurva(long distanciaIzquierda, long distanciaCentro, long distancia
     pixy.ccc.getBlocks();
 
     if (pixy.ccc.numBlocks > 0) {
-    Serial.println(pixy.ccc.numBlocks);
-    signature = pixy.ccc.blocks[0].m_signature;
+        Serial.println(pixy.ccc.numBlocks);
+        signature = pixy.ccc.blocks[0].m_signature;
 
-    if (tiempoActual - tiempoUltimaCurva >= bloqueoTiempo) {
-        if(signature == 4 || signature == 5){
-        detener();
-        delay(1000);
-        if(bloqueadorI == true){
-          AnguloObjetivo = calcularAnguloObjetivoIC(curva);
-        }
-       else{
-         AnguloObjetivo = calcularAnguloObjetivoDC(curva);
-       }
+        if (tiempoActual - tiempoUltimaCurva >= bloqueoTiempo) {
+            if(signature == 4 || signature == 5){
+                detener();
+                delay(1000);
+                if(bloqueadorI == true){
+                    AnguloObjetivo = calcularAnguloObjetivoIC(curva);
+                }
+                else{
+                    AnguloObjetivo = calcularAnguloObjetivoDC(curva);
+                }
          
-        // Verificar condiciones para iniciar una curva
-        if (yawActual <  AnguloObjetivo){
-         while (abs(yawActual - AnguloObjetivo) > 2) { // Tolerancia de 2 grados
-          mpu.dmp_read_fifo();  // Leer datos del giroscopio
-          Serial.print("Yaw actual: ");
-          Serial.println(yawActual);
-          move_steer(75); // Girar a la izquierda
-           avanzar(120); // Control del motor durante el giro
-         }
-        }
-           else if(yawActual > AnguloObjetivo){
-             //AnguloObjetivo = calcularAnguloObjetivo(curva);
-            while (abs(yawActual - AnguloObjetivo) > 2) { // Tolerancia de 2 grados
-             mpu.dmp_read_fifo();  // Leer datos del giroscopio
-             Serial.print("Yaw actual: ");
-             Serial.println(yawActual);
-             move_steer(105); // Girar a la izquierda
-             avanzar(120); // Control del motor durante el giro
-         }
-       }
-       detener();
-       delay(1000);
-       move_steer(90); // Girar a la izquierda
-       if(distanciaCentro > 30){ 
-         pixy.setLamp(0, 0);
-         delay(50);
-         pixy.setLamp(1, 0);
-      }
-      else pixy.setLamp(0, 0);
-      delay(100);
+                // Verify conditions to start a turn
+                if (yawActual <  AnguloObjetivo){
+                    while (abs(yawActual - AnguloObjetivo) > 2) { // Tolerance of 2 degrees
+                        mpu.dmp_read_fifo();  // Read gyroscope data
+                        Serial.print("Yaw actual: ");
+                        Serial.println(yawActual);
+                        move_steer(75); // Turn to the left
+                        avanzar(120); // Motor control during the turn
+                    }
+                }
+                else if(yawActual > AnguloObjetivo){
+                    //AnguloObjetivo = calcularAnguloObjetivo(curva);
+                    while (abs(yawActual - AnguloObjetivo) > 2) { // Tolerance of 2 degrees
+                        mpu.dmp_read_fifo();  // Read gyroscope data
+                        Serial.print("Yaw actual: ");
+                        Serial.println(yawActual);
+                        move_steer(105); // Turn to the left
+                        avanzar(120); // Motor control during the turn
+                    }
+                }
+                detener();
+                delay(1000);
+                move_steer(90); // Turn to the left
+                if(distanciaCentro > 30){ 
+                    pixy.setLamp(0, 0);
+                    delay(50);
+                    pixy.setLamp(1, 0);
+                }
+                else pixy.setLamp(0, 0);
+                delay(100);
       
-      while(true){
-       long distanciaCentrowhile = medirDistancia(trigCentro, echoCentro);
-        Serial.print(" while Distancia Centro: "); Serial.println(distanciaCentrowhile);
-        avanzar(130);
-        delay(10);
-        if(distanciaCentrowhile <30) break;
-      }
+                while(true){
+                    long distanciaCentrowhile = medirDistancia(trigCentro, echoCentro);
+                    Serial.print(" while Distancia Centro: "); Serial.println(distanciaCentrowhile);
+                    avanzar(130);
+                    delay(10);
+                    if(distanciaCentrowhile <30) break;
+                }
 
       
-      detener();
-      delay(1000);
-      curva++ ;
-      long distanciaIzquierda = medirDistancia(trigIzquierdo, echoIzquierdo);
-      long distanciaDerecha = medirDistancia(trigCentro, echoCentro);
-      if(error < -1 && sum > 100){
-        AnguloObjetivo = calcularAnguloObjetivoD(curva);
-        while (abs(yawActual - AnguloObjetivo) > 2) { // Tolerancia de 2 grados
-          mpu.dmp_read_fifo();  // Leer datos del giroscopio
-          Serial.print("Yaw actual: ");
-          Serial.println(yawActual);
-          move_steer(119); // Girar a la izquierda
-          retroceder(150); // Control del motor durante el giro
+                detener();
+                delay(1000);
+                curva++ ;
+                long distanciaIzquierda = medirDistancia(trigIzquierdo, echoIzquierdo);
+                long distanciaDerecha = medirDistancia(trigCentro, echoCentro);
+                if(error < -1 && sum > 100){
+                    AnguloObjetivo = calcularAnguloObjetivoD(curva);
+                    while (abs(yawActual - AnguloObjetivo) > 2) { // Tolerance of 2 degrees
+                        mpu.dmp_read_fifo();  // Read gyroscope data
+                        Serial.print("Yaw actual: ");
+                        Serial.println(yawActual);
+                        move_steer(119); // Turn to the left
+                        retroceder(150); // Motor control during the turn
+                    }
+                }
+                else if(error > 1 && sum > 100){
+                    AnguloObjetivo = calcularAnguloObjetivoI(curva);
+                    while (abs(yawActual - AnguloObjetivo) > 2) { // Tolerance of 2 degrees
+                        mpu.dmp_read_fifo();  // Read gyroscope data
+                        Serial.print("Yaw actual: ");
+                        Serial.println(yawActual);
+                        move_steer(69); // Turn to the left
+                        retroceder(150); // Motor control during the turn
+                    }
+                }
+                detener();
+                delay(1000);
+                move_steer(anguloCentro);
+            }
         }
-      }
-      else if(error > 1 && sum > 100){
-        AnguloObjetivo = calcularAnguloObjetivoI(curva);
-        while (abs(yawActual - AnguloObjetivo) > 2) { // Tolerancia de 2 grados
-          mpu.dmp_read_fifo();  // Read that gyroscope
-          Serial.print("Yaw actual: ");
-          Serial.println(yawActual);
-          move_steer(69); // turn to left
-          retroceder(150); // Control of the motor
-        }
-      }
-      detener();
-      delay(1000);
-      move_steer(anguloCentro);
-      
+        tiempoUltimaCurva = tiempoActual;
     }
-  }
-  tiempoUltimaCurva = tiempoActual;
-  }
-  else{
-    ajustarAngulo(error, anguloCentro); // mantain the center of the angle
-    avanzar(120);
-     // this print all the values
-    Serial.print("Yaw: "); Serial.print(yawActual);
-    Serial.print(" | Distancia Izquierda: "); Serial.print(distanciaIzquierda);
-    Serial.print(" | Distancia Centro: "); Serial.print(distanciaCentro);
-    Serial.print(" | Distancia Derecha: "); Serial.print(distanciaDerecha);
-    Serial.print(" | Error: "); Serial.println(lastError);
+    else{
+        ajustarAngulo(error, anguloCentro); // Maintain the center of the angle
+        avanzar(120);
+        // Print all the values
+        Serial.print("Yaw: "); Serial.print(yawActual);
+        Serial.print(" | Distancia Izquierda: "); Serial.print(distanciaIzquierda);
+        Serial.print(" | Distancia Centro: "); Serial.print(distanciaCentro);
+        Serial.print(" | Distancia Derecha: "); Serial.print(distanciaDerecha);
+        Serial.print(" | Error: "); Serial.println(lastError);
     }
-
-    
 }
+
 
 ```
 
