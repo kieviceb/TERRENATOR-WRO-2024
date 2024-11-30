@@ -280,7 +280,7 @@ void loop() {
 
 
 #Obstacle Challenge
-
+```ino
 #include <Servo.h> 
 #include <Pixy2.h>
 #include "Simple_MPU6050.h"
@@ -489,7 +489,7 @@ void detectarBloques() {
         if (signature == 1) {
           while (x < zetaXMin) {
             avanzar(100);
-            move_steer(119);  // Gira a la izquierda
+            move_steer(119);  // Turn left
             pixy.ccc.getBlocks();
             if (pixy.ccc.numBlocks > 0) {
               for (int i = 0; i < pixy.ccc.numBlocks; i++) {
@@ -530,7 +530,7 @@ void detectarBloques() {
         else if (signature == 2) {
           while (x > deltaXMin) {
             avanzar(100);
-            move_steer(69);  // Gira a la derecha
+            move_steer(69);  // Turn right
             pixy.ccc.getBlocks();
             if (pixy.ccc.numBlocks > 0) {
               for (int i = 0; i < pixy.ccc.numBlocks; i++) {
@@ -595,7 +595,6 @@ void actualizar() {
     Serial.print(" | Distancia Derecha: "); Serial.print(distanciaDerecha);
     Serial.print(" | Error: "); Serial.println(lastError);*/
 }
-//*******
 void setup() {
   Serial.begin(115200);
   Wire.begin();
@@ -609,7 +608,7 @@ void setup() {
   }
 
 
-  // Inicialización de pines
+  // Iniciate pins
   pinMode(trigIzquierdo, OUTPUT);
   pinMode(echoIzquierdo, INPUT);
   pinMode(trigCentro, OUTPUT);
@@ -623,10 +622,10 @@ void setup() {
   pinMode(standbyPin, OUTPUT);
   digitalWrite(standbyPin, HIGH);
 
-  // Inicialización del PD
+  // Iniciate PD
   inicializarControlPD();
 
-  // Inicialización del MPU6050
+  // Iniciate MPU6050
   Serial.println(F("Iniciando calibración del MPU6050..."));
   mpu.SetAddress(MPU6050_ADDRESS_AD0_LOW)
     .CalibrateMPU()
@@ -637,20 +636,21 @@ void setup() {
   delay(100);
 }
 void loop() {
-  if (!enMarcha) {  // Si el robot NO está en marcha
+  if (!enMarcha) {  // If the robot is NOT going
     delay(100);
-    if (analogRead(botonPin) == 0) {  // Si el botón está presionado
-      enMarcha = true;                // Cambiar el estado a "en marcha"
+    if (analogRead(botonPin) == 0) {  // If the botton is press
+      enMarcha = true;                // Change state to "en marcha"
       Serial.println("¡Robot en marcha!");
       move_steer(anguloCentro);
     } else {
-      detener();  // Mantener el robot detenido
+      detener();  // keep the robot stopped
     }
   }
-  if (enMarcha == true) {  // Si el robot está en marcha
+  if (enMarcha == true) {  // If the robot is going
     //pixy.setLamp(0, 0);
-    mpu.dmp_read_fifo();  // Leer datos del MPU6050
-    actualizar();         // Ejecutar el control PD
+    mpu.dmp_read_fifo();  // Read MPU6050 lectures
+    actualizar();         // Do PD control
     delay(5);
   }
 }
+```
